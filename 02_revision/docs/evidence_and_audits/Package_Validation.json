@@ -1,0 +1,72 @@
+{
+  "sources_unchanged": true,
+  "baseline": "C:\\Users\\user\\Desktop\\Round1\\2020440-SECRETARY-R0-V1-20260828233914.docx",
+  "original_all_227_blocks_recoverable": true,
+  "accepted_all_274_blocks_recoverable": true,
+  "marked_block_roles": {
+    "word_diff": 58,
+    "unchanged": 117,
+    "removed": 52,
+    "added": 99
+  },
+  "accepted_scientific_content_matches_audited_draft": true,
+  "deleted_original_tables_equations_and_figures_retained": true,
+  "unchanged_blocks_not_marked": true,
+  "removed_text_struck_and_added_text_yellow": true,
+  "original_title_abstract_body_typography_restored": true,
+  "clean_has_no_strike_highlight_or_trackchange_markup": true,
+  "current_numbered_equations": 8,
+  "current_tables": 10,
+  "current_figures": 4,
+  "bibliography_numbering": "1-48; no dangling exact numeric body citation",
+  "bibliography_full_source_verification": "Outstanding; not certified by numbering check.",
+  "reviewer_comments": {
+    "Reviewer 1": 21,
+    "Reviewer 2": 5
+  },
+  "responses_changes_and_locations": 26,
+  "response_statuses": {
+    "Addressed": 14,
+    "Partial": 12
+  },
+  "xlsx_rows_including_header": 27,
+  "proper_sentences_source_used": true,
+  "current_path_metrics_and_matched_benchmark_rechecked": true,
+  "clean_document_geometric_widths": "All inline figures and data-table grid widths within text area.",
+  "rendered_pagination": "NOT VERIFIED: no Word/LibreOffice/PDF renderer found. Manual Word/PDF proofing required.",
+  "xlsx_visual_opening": "XML and row content validated; not visually opened in Excel.",
+  "file_checks": [
+    {
+      "file": "01_revised_manuscript\\Revised_Manuscript_Clean.docx",
+      "sha256": "ce9eba1fa390c3f051f90aa1c2a620f8ab8cf8e0ae7bdcf1dfc6420c68138fc0"
+    },
+    {
+      "file": "01_revised_manuscript\\Revised_Manuscript_Highlighted.docx",
+      "sha256": "9e280f4898bc83f5ba60863c0152676ab4ebfc7e2e3ea60ed27527f5e5d7e610"
+    },
+    {
+      "file": "02_response_to_reviewers\\Response_to_Reviewers.docx",
+      "sha256": "ded4600f7f2210482106ef876ebc6f5469f4bb55a6cbc8cfabc401da2557a44b"
+    },
+    {
+      "file": "03_revision_tracking\\Reviewer_Comment_Matrix.xlsx",
+      "sha256": "b5d7a389cd9abcb76ac71d0b2e694272a31949b2fbdf27227bcee490675550c7"
+    },
+    {
+      "file": "04_evidence_and_audits\\Additional_Classification_Metrics.docx",
+      "sha256": "a061aa65336a5b5a697245fc066afc0627793696f32afca845bf4656a8e6324a"
+    },
+    {
+      "file": "04_evidence_and_audits\\Author_Checks.docx",
+      "sha256": "da34a2cabc5cc7cea7ef05065af315af455cc421c63982e76f17db600dd6e1c3"
+    },
+    {
+      "file": "04_evidence_and_audits\\Completed_Experiments_Evidence.docx",
+      "sha256": "f133c0a275ab54921dae319b803d8ae15409f19c39e5cee4e83c598fd9f37fac"
+    },
+    {
+      "file": "04_evidence_and_audits\\Prior_Reference_Citation_Audit.docx",
+      "sha256": "6a27bc84140a3e2c7a83a961dec219863267c80b2a657108da45504af5491f9e"
+    }
+  ]
+}

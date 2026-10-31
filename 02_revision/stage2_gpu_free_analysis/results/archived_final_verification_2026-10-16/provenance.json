@@ -1,0 +1,40 @@
+{
+  "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+  "torch": "2.9.1+cpu",
+  "timm": "1.0.30",
+  "numpy": "2.3.5",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "device": "cpu",
+  "threads": 4,
+  "training": false,
+  "pretrained_downloads": false,
+  "input": "RGB bilinear 224x224 float32 0..255, no normalization",
+  "test_ids_provenance": "Reconstructed split seed 42, matched post-hoc manifest; not a training-time ID log",
+  "source_sha256": {
+    "D:\\m1\\Documents\\train_lowdata_hybrid_distill.ipynb": "3c12497859853585e7238e9441e06a9dbfe60039c3a83a53c182364d7b38a4a3",
+    "<repo_root>\\APTOS2019\\train.csv": "b2a3479695922e62c83c94a1a9ef669b4b6d68cc26a1d7090ebedecdd7dd79a5",
+    "<repo_root>\\APTOS2019\\cache_224.npz": "03ae18b25fd50af259dd43a709415dde8bf5ab612c5f8a235f00ccb1a4d4f84e",
+    "<repo_root>\\results\\split_manifest.json": "c185dc432225e2f74ab0621207acca2045cda3332a0c5c2d2d43df550b47a23a",
+    "<repo_root>\\revision_experiments\\verify_archived_final.py": "1c31f18eed9499af69e6335d7e77b2807467eb66473a453bfa2655fa8d1521e3",
+    "D:\\m1\\Documents\\TS_ConvNeXtTiny_Residual_Package\\advanced_model_configs.py": "e368c9229e182b891927101cb67e7b2738d14f20f02dea7b564382faa97a9268",
+    "D:\\m1\\Documents\\TS_ConvNeXtTiny_Residual_Package\\models\\advanced_hybrid_models.py": "891d0b9c240e43d59d56555dbf92fe04d6c6a483bb9786fbb06fb68a9bed12ed",
+    "D:\\m1\\Documents\\TS_ConvNeXtTiny_Residual_Package\\models\\cnn_branch.py": "b2a545edbf0188a644e55b9174ad4bf366f2bd5f4388edcccef2139610377fdb",
+    "D:\\m1\\Documents\\TS_ConvNeXtTiny_Residual_Package\\models\\cross_attention.py": "369fe66a91153a04adcf43aeb4eba964db52d59cb307178d6ac61346c7d0a085",
+    "D:\\m1\\Documents\\TS_ConvNeXtTiny_Residual_Package\\models\\hybrid_cnn_vit_base.py": "7d7969d860e9c1bf8c43200b891b9284d0af72a6ff2613dd04b9da980013f1bd",
+    "D:\\m1\\Documents\\TS_ConvNeXtTiny_Residual_Package\\models\\lamca_net.py": "96b2a35848c746a61e971ceaae696c344f45342268acfa6126d008929602f751",
+    "D:\\m1\\Documents\\TS_ConvNeXtTiny_Residual_Package\\models\\lesion_attention.py": "4c2aa63ca8aa3c00825e6357e37e54f84d67a8f1ef3fce578ba9a97f3769be99",
+    "D:\\m1\\Documents\\TS_ConvNeXtTiny_Residual_Package\\models\\transformer_branch.py": "c96d95540c9365e3505461b2dd91475cc0663593e567c59dd6e89e9e2848a6f4"
+  },
+  "checkpoint_sha256": {
+    "D:\\m1\\Documents\\seed 42\\best_model.pth": "d3327f355a51ac810431094f2e79505f1d43e31f13988ea1abd78caa65bd4eee",
+    "D:\\m1\\Documents\\seed 52\\best_model.pth": "c3a056f1d1557121d83fed26c5527eae86feab10fd4415b79d3eb03252aada43",
+    "D:\\m1\\Documents\\seed 62\\best_model.pth": "8027a8aa6a39e298f9189ed4c2f9c591f95b24abb46524adfd2476e5ced8e2b7"
+  },
+  "original_server_hash_comparison": "Not available; these are hashes of local copies only",
+  "runtime_note": "CPU validation only, not a manuscript GPU latency benchmark",
+  "fusion_settings": {
+    "residual_scale": 0.7,
+    "conflict_threshold": 0.82,
+    "conflict_gmax": 0.66
+  }
+}

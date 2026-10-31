@@ -1,0 +1,420 @@
+{
+  "single_vs_ce/student": {
+    "mean_difference": -0.22637158927579568,
+    "percentile95": [
+      -0.2536436348280307,
+      -0.1994025492886256
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "single_vs_ce/equal": {
+    "mean_difference": 0.2709337259044841,
+    "percentile95": [
+      0.22909883622502372,
+      0.3182687075673247
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "single_vs_ce/primary": {
+    "mean_difference": 0.006018258328776338,
+    "percentile95": [
+      -0.002759398657620051,
+      0.01624278428707102
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "multi_vs_single/student": {
+    "mean_difference": -0.10060530664545309,
+    "percentile95": [
+      -0.13541188895876088,
+      -0.06656194598887179
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "multi_vs_single/equal": {
+    "mean_difference": -0.05567902771941872,
+    "percentile95": [
+      -0.07662678835420458,
+      -0.036099400857486565
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "multi_vs_single/primary": {
+    "mean_difference": -0.003267215725504887,
+    "percentile95": [
+      -0.010749792085892561,
+      0.0028667692007883086
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "ordinal/student": {
+    "mean_difference": 0.2505688982790202,
+    "percentile95": [
+      0.2164135103509408,
+      0.28359442872940926
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "ordinal/equal": {
+    "mean_difference": 0.07327298376821485,
+    "percentile95": [
+      0.052051334665908514,
+      0.09589371033884728
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "ordinal/primary": {
+    "mean_difference": 0.0012431189871820643,
+    "percentile95": [
+      -0.004773669468622812,
+      0.008589751061076704
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "hinge/student": {
+    "mean_difference": 0.26023930698080117,
+    "percentile95": [
+      0.22935228383056339,
+      0.29243027699841756
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "hinge/equal": {
+    "mean_difference": 0.10184048427473132,
+    "percentile95": [
+      0.07736617269855456,
+      0.12835585455851373
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "hinge/primary": {
+    "mean_difference": 0.0021125473814734472,
+    "percentile95": [
+      -0.005792487041306456,
+      0.01094193943746484
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "gate_entropy/student": {
+    "mean_difference": 0.031242180755840916,
+    "percentile95": [
+      0.013251855488368276,
+      0.04968900572280921
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "gate_entropy/equal": {
+    "mean_difference": 0.010359128732810493,
+    "percentile95": [
+      0.001273439431434334,
+      0.020363352663683863
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "gate_entropy/primary": {
+    "mean_difference": 0.005600225478319805,
+    "percentile95": [
+      -0.002398842688372302,
+      0.015401258319634287
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "teacher1_contribution/student": {
+    "mean_difference": 0.26335514603993354,
+    "percentile95": [
+      0.24640429104465408,
+      0.2780974304181566
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "teacher1_contribution/equal": {
+    "mean_difference": 0.006589705205881202,
+    "percentile95": [
+      -0.003951929319385957,
+      0.016488599048646763
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "teacher1_contribution/primary": {
+    "mean_difference": 7.750238385632417e-05,
+    "percentile95": [
+      -0.007414733348257405,
+      0.007620597888388778
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "augmentation/student": {
+    "mean_difference": -0.24107557147190928,
+    "percentile95": [
+      -0.27295195183893123,
+      -0.20836133552078567
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "augmentation/equal": {
+    "mean_difference": -0.445340122336697,
+    "percentile95": [
+      -0.4729511843359389,
+      -0.41892362449585285
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "augmentation/primary": {
+    "mean_difference": -0.018944928336081635,
+    "percentile95": [
+      -0.03173293992331512,
+      -0.008301761124592456
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "teacher_buffers/student": {
+    "mean_difference": -0.03856476406930224,
+    "percentile95": [
+      -0.05642606794033539,
+      -0.021648762977629264
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "teacher_buffers/equal": {
+    "mean_difference": -0.012361460483664674,
+    "percentile95": [
+      -0.021693781035036754,
+      -0.004133239224837752
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "teacher_buffers/primary": {
+    "mean_difference": -0.0012705792485123713,
+    "percentile95": [
+      -0.008551191665713902,
+      0.005793199010298673
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "complete_vs_ce/student": {
+    "mean_difference": -0.014740196019801663,
+    "percentile95": [
+      -0.030359313658763102,
+      -0.0002200921802079702
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "complete_vs_ce/equal": {
+    "mean_difference": 0.32993355903156046,
+    "percentile95": [
+      0.2871074610990518,
+      0.37865076824665067
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "complete_vs_ce/primary": {
+    "mean_difference": 0.005727158260368033,
+    "percentile95": [
+      -0.0036053476666104266,
+      0.01585897757417995
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "equal_vs_independent_ce": {
+    "mean_difference": 0.003080589261281889,
+    "percentile95": [
+      -0.015151885024777868,
+      0.021452784032119743
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "student_vs_independent_ce": {
+    "mean_difference": -0.6360349207643586,
+    "percentile95": [
+      -0.6601946932642418,
+      -0.6106216241107859
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "equal_vs_teacher": {
+    "mean_difference": 0.00804627979427408,
+    "percentile95": [
+      -0.0025257235721640394,
+      0.021545253720750463
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "equal_vs_gated": {
+    "mean_difference": 0.0028288398397231886,
+    "percentile95": [
+      -0.0037071018000319855,
+      0.009332656569687025
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "imagenet/joint_full": {
+    "mean_difference": -0.014390526244148568,
+    "percentile95": [
+      -0.028328950807933902,
+      -0.001410584008798575
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "imagenet/student_ce": {
+    "mean_difference": 0.0036429173799998513,
+    "percentile95": [
+      -0.013552726649117297,
+      0.02193740067560515
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "retinal/joint_full": {
+    "mean_difference": -0.05226626346951361,
+    "percentile95": [
+      -0.07499996578152064,
+      -0.03172291519264728
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "retinal/student_ce": {
+    "mean_difference": 0.010519178570847313,
+    "percentile95": [
+      -0.003962074367727171,
+      0.02644692215765294
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "fraction_0.1/full_vs_ce": {
+    "mean_difference": -0.04297566026353165,
+    "percentile95": [
+      -0.07348929830892556,
+      -0.013550750796963017
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "fraction_0.25/full_vs_ce": {
+    "mean_difference": -0.17126373929289654,
+    "percentile95": [
+      -0.20938920818944748,
+      -0.13185705827080996
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  },
+  "fraction_0.5/full_vs_ce": {
+    "mean_difference": -0.030062021116873727,
+    "percentile95": [
+      -0.05439226577004212,
+      -0.008007396208818199
+    ],
+    "replicates": 10000,
+    "seed": 20261018,
+    "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+    "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+  }
+}

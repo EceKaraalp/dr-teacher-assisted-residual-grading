@@ -1,0 +1,605 @@
+{
+  "round1_root": "/content/drive/MyDrive/DR_Reviewer_Complete/runs/reviewer_complete_v1",
+  "runs": {
+    "raw_f100_s42/teacher1": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s42/teacher2": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s42/student/joint_ce": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s42/student/joint_single_kd": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s42/student/joint_multi_kd": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s42/student/joint_ordinal": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s42/student/joint_hinge": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s42/student/joint_full_no_entropy": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s42/student/joint_full": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s42/student/student_ce": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s42/student/teacher2_only": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s42/student/augmentation": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s42/student/teacher_eval": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s52/teacher1": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s52/teacher2": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s52/student/joint_ce": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s52/student/joint_single_kd": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s52/student/joint_multi_kd": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s52/student/joint_ordinal": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s52/student/joint_hinge": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s52/student/joint_full_no_entropy": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s52/student/joint_full": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s52/student/student_ce": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s52/student/teacher2_only": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s52/student/augmentation": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s52/student/teacher_eval": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s62/teacher1": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s62/teacher2": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s62/student/joint_ce": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s62/student/joint_single_kd": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s62/student/joint_multi_kd": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s62/student/joint_ordinal": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s62/student/joint_hinge": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s62/student/joint_full_no_entropy": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s62/student/joint_full": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s62/student/student_ce": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s62/student/teacher2_only": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s62/student/augmentation": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f100_s62/student/teacher_eval": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "imagenet_f100_s42/teacher1": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "imagenet_f100_s42/teacher2": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "imagenet_f100_s42/student/joint_full": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "imagenet_f100_s42/student/student_ce": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "imagenet_f100_s52/teacher1": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "imagenet_f100_s52/teacher2": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "imagenet_f100_s52/student/joint_full": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "imagenet_f100_s52/student/student_ce": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "imagenet_f100_s62/teacher1": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "imagenet_f100_s62/teacher2": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "imagenet_f100_s62/student/joint_full": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "imagenet_f100_s62/student/student_ce": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "retinal_f100_s42/teacher1": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "retinal_f100_s42/teacher2": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "retinal_f100_s42/student/joint_full": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "retinal_f100_s42/student/student_ce": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "retinal_f100_s52/teacher1": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "retinal_f100_s52/teacher2": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "retinal_f100_s52/student/joint_full": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "retinal_f100_s52/student/student_ce": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "retinal_f100_s62/teacher1": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "retinal_f100_s62/teacher2": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "retinal_f100_s62/student/joint_full": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "retinal_f100_s62/student/student_ce": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f010_s42/teacher1": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f010_s42/teacher2": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f010_s42/student/joint_full": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f010_s42/student/student_ce": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f010_s52/teacher1": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f010_s52/teacher2": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f010_s52/student/joint_full": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f010_s52/student/student_ce": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f010_s62/teacher1": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f010_s62/teacher2": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f010_s62/student/joint_full": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f010_s62/student/student_ce": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f025_s42/teacher1": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f025_s42/teacher2": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f025_s42/student/joint_full": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f025_s42/student/student_ce": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f025_s52/teacher1": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f025_s52/teacher2": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f025_s52/student/joint_full": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f025_s52/student/student_ce": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f025_s62/teacher1": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f025_s62/teacher2": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f025_s62/student/joint_full": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f025_s62/student/student_ce": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f050_s42/teacher1": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f050_s42/teacher2": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f050_s42/student/joint_full": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f050_s42/student/student_ce": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f050_s52/teacher1": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f050_s52/teacher2": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f050_s52/student/joint_full": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f050_s52/student/student_ce": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f050_s62/teacher1": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f050_s62/teacher2": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f050_s62/student/joint_full": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    },
+    "raw_f050_s62/student/student_ce": {
+      "complete.json": true,
+      "best.pth": true,
+      "val_logits.npz": true,
+      "test_logits.npz": true
+    }
+  },
+  "counts": {
+    "complete.json": 99,
+    "best.pth": 99,
+    "val_logits.npz": 99,
+    "test_logits.npz": 99
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "production_source_extraction": "AST extracts actual model, loss_config and compute_loss; no hand-written loss proxy",
+  "synthetic_boundary_case": {
+    "teacher_confidence": 1.0,
+    "effective_gate": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "joint_full_student_gradient_norm": 0.0,
+    "joint_full_gate_gradient_norm": 0.0,
+    "direct_student_ce_gradient_norm": 0.22876057028770447,
+    "scope": "Existence proof of a blocking pathway, NOT proof this boundary occurred in training."
+  },
+  "saved_checkpoint_gate_reconstruction": {
+    "42/val": {
+      "samples": 367,
+      "confidence_conflicts": 97,
+      "cap_matching_rows": 97,
+      "effective_gate_median": 0.4727074050656824,
+      "cap_median_on_conflicts": 7.983292723596769e-06,
+      "residual_coefficient_median_on_conflicts": 5.588304906517738e-06,
+      "joint_teacher_argmax_agreement": 0.9645776566757494,
+      "reconstruction_max_abs_error": 9.347727534043529e-07
+    },
+    "42/test": {
+      "samples": 367,
+      "confidence_conflicts": 92,
+      "cap_matching_rows": 92,
+      "effective_gate_median": 0.47112953850831424,
+      "cap_median_on_conflicts": 1.092371365957412e-05,
+      "residual_coefficient_median_on_conflicts": 7.646599561701884e-06,
+      "joint_teacher_argmax_agreement": 0.9727520435967303,
+      "reconstruction_max_abs_error": 8.970915111610977e-07
+    },
+    "52/val": {
+      "samples": 367,
+      "confidence_conflicts": 324,
+      "cap_matching_rows": 324,
+      "effective_gate_median": 0.014789978154408462,
+      "cap_median_on_conflicts": 0.014230035415471584,
+      "residual_coefficient_median_on_conflicts": 0.009961024790830109,
+      "joint_teacher_argmax_agreement": 0.989100817438692,
+      "reconstruction_max_abs_error": 4.78566360275184e-07
+    },
+    "52/test": {
+      "samples": 367,
+      "confidence_conflicts": 339,
+      "cap_matching_rows": 339,
+      "effective_gate_median": 0.014723644658342524,
+      "cap_median_on_conflicts": 0.014447614867940571,
+      "residual_coefficient_median_on_conflicts": 0.010113330407558399,
+      "joint_teacher_argmax_agreement": 1.0,
+      "reconstruction_max_abs_error": 5.085782198128259e-07
+    },
+    "62/val": {
+      "samples": 367,
+      "confidence_conflicts": 312,
+      "cap_matching_rows": 312,
+      "effective_gate_median": 0.012682525404388694,
+      "cap_median_on_conflicts": 0.010967499154833847,
+      "residual_coefficient_median_on_conflicts": 0.007677249408383693,
+      "joint_teacher_argmax_agreement": 0.9836512261580381,
+      "reconstruction_max_abs_error": 5.036821608400344e-07
+    },
+    "62/test": {
+      "samples": 367,
+      "confidence_conflicts": 317,
+      "cap_matching_rows": 317,
+      "effective_gate_median": 0.012602247637407431,
+      "cap_median_on_conflicts": 0.011262038657895131,
+      "residual_coefficient_median_on_conflicts": 0.00788342706052659,
+      "joint_teacher_argmax_agreement": 0.9945504087193461,
+      "reconstruction_max_abs_error": 5.130696168065449e-07
+    }
+  },
+  "interpretation_limits": [
+    "Saved outputs are eval-mode best checkpoints; training dropout, BN/SN buffers and gate values may differ.",
+    "No per-epoch student metrics, gradient norms or gates were saved in these reviewer histories.",
+    "At a capped row the direct residual Jacobian is .70*g times the class-centering matrix; uncapped gate dependence adds terms.",
+    "Raw 0..255 differs from ImageNet-pretraining preprocessing but is intentional in this protocol; not proven causal.",
+    "Original archived residual notebook uses the same joint-output CE/KD/ordinal/hinge and post-brake entropy structure."
+  ]
+}

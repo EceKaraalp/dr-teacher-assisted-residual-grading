@@ -1,0 +1,5 @@
+{
+  "training_jobs": 99,
+  "complete": true,
+  "interpretation": "New retraining results, not a replacement for an untouched external validation cohort."
+}

@@ -1,0 +1,9 @@
+,Gate2,EqualWeight
+Accuracy,0.8529,0.8529
+Precision (Macro),0.7394,0.7394
+Recall (Macro),0.6904,0.6904
+F1 (Macro),0.7046,0.7046
+F1 (Weighted),0.8476,0.8476
+Specificity,0.9624,0.9624
+QWK (Cohen κ),0.9174,0.9174
+ROC-AUC,0.9583,0.9453

@@ -1,0 +1,43 @@
+{
+  "status": "local_validation_passed_remote_training_not_started",
+  "training_jobs_planned": 99,
+  "unit_tests_passed": 12,
+  "tested": [
+    "Full experiment matrix and prerequisite ordering",
+    "Nested stratified label budgets",
+    "Raw, ImageNet and retinal CLAHE preprocessing",
+    "Joint-output CE, detached teacher targets and hinge sign",
+    "Compressed student checkpoints preserve teacher buffers",
+    "Interrupted training resumes to bit-identical model weights in a dropout/shuffle test",
+    "Validation-only positive temperature fitting",
+    "Vectorized bootstrap matches scikit-learn QWK",
+    "Synthetic full-matrix analysis output contract",
+    "Real teacher-1, teacher-2 and student forward/backward on CPU",
+    "Exact architecture parameter counts",
+    "Real three-branch Grad-CAM and reliability figure rendering",
+    "Actual APTOS cache/CSV hashes and fixed 2928/367/367 split",
+    "Official IDRiD 103-image test source and class counts",
+    "Notebook schema and generated Python syntax",
+    "Portable ZIP paths, package manifest hashes and original data byte integrity"
+  ],
+  "architecture_parameters": {
+    "teacher1": 4851623,
+    "teacher2": 109320773,
+    "teacher_gate": 3009,
+    "student": 27823973,
+    "total_with_outer_gate": 141999859
+  },
+  "delivery_sha256": {
+    "DR_Reviewer_Complete_Colab.ipynb": "b144515d3e15973537f7b6e37bc147f3c87a50526bcd896007bd0c18635e7f9f",
+    "DR_Reviewer_Complete_Colab.zip": "d1f4c61e1c05745bc27682f5d2c766da281046497e8608409c0a9d698609d979",
+    "DR_Reviewer_Complete_Data.zip": "1e4bf8aedc40e2227f1f98100c17d91f83382f361ff977dee6bb4d4c728da235"
+  },
+  "not_executed_locally": [
+    "CUDA/pretrained Colab smoke",
+    "99 full GPU training jobs",
+    "Matched CUDA timing and memory measurements",
+    "Scientific evaluation of newly trained checkpoints"
+  ],
+  "colab_smoke_fix": "User GPU traceback showed the newly constructed outer gate remained on CPU. smoke.py now moves the entire combined model to the selected device and checks parameter placement. Corrected CPU smoke passed; corrected GPU smoke awaits user rerun.",
+  "limitations": "CPU smoke and synthetic tests are implementation checks, not experimental model results. No remote Colab session was launched by the assistant."
+}

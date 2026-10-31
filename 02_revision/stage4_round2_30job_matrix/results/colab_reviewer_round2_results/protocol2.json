@@ -1,0 +1,676 @@
+{
+  "protocol": {
+    "version": 1,
+    "round1_run_id": "reviewer_complete_v1",
+    "seeds": [
+      42,
+      52,
+      62
+    ],
+    "split": "frozen historical 2928/367/367 (split_manifest.json); test exposed historically",
+    "selection": "validation QWK of the primary training output; no test-based choice",
+    "reference": "round-1 raw_f100 teacher1/teacher2/joint_full/student_ce imported read-only with SHA-256 check; retrained with unchanged round-1 code only if unavailable (recorded in reference_manifest.json)",
+    "t2indep": "Teacher 2 (ResNet50+ViT-B/16, spectral-norm head) trained ALONE with class-weighted CE (teacher-2 epochs/patience/lr); student joint_full on its raw logits (teacher_mode t2)",
+    "nosn": "Teacher 2 without spectral normalization; same gated stage on the matched round-1 Teacher 1; classifier keys and initialization RNG stream differ from the SN model",
+    "aug": "augmentation in ALL stages (teacher1, teacher2, student joint_full, student_ce): H/V flip .5, rotation +/-20 deg, brightness/contrast .9..1.1",
+    "fusion_historical": "Table-1 Fusion CNN-ViT: torchvision ResNet50 (2048) + ViT-B/16 (768) features, MLP 1024-512-5, dropout .3; CLAHE at cached 224 + ImageNet normalization; rotation 15 (nearest, fill 0); weighted random sampler; unweighted CE; AdamW 1e-4 wd 1e-4; CosineAnnealingLR T_max 100; 100 epochs; patience 20; batch 8; clip 1. Historical run used its own split and full-resolution CLAHE.",
+    "fusion_matched": "same Fusion CNN-ViT model with the student_ce protocol (raw 0..255, class-weighted CE, 70 epochs, patience 10, lr 2e-4, batch 16, warm restarts)",
+    "student_teacher_buffers": "historical behavior: teacher parameters frozen, BN/SN buffers update during student training",
+    "optimizer": "AdamW; weight decay 1e-4; clip norm 1; float32",
+    "storage": "last.pth deleted after a job completes (resume only); best.pth kept",
+    "test_policy": "evaluation stage only after all training jobs of the requested families are complete",
+    "jobs": [
+      {
+        "family": "reference",
+        "seed": 42,
+        "stage": "teacher1",
+        "arm": "",
+        "key": "reference/raw_f100_s42/teacher1",
+        "dependency": null,
+        "hyper": {
+          "epochs": 110,
+          "patience": 15,
+          "lr": 0.001,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "reference",
+        "seed": 42,
+        "stage": "teacher2",
+        "arm": "",
+        "key": "reference/raw_f100_s42/teacher2",
+        "dependency": "reference/raw_f100_s42/teacher1",
+        "hyper": {
+          "epochs": 120,
+          "patience": 18,
+          "lr": 0.0001,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "reference",
+        "seed": 42,
+        "stage": "student",
+        "arm": "joint_full",
+        "key": "reference/raw_f100_s42/student/joint_full",
+        "dependency": "reference/raw_f100_s42/teacher2",
+        "hyper": {
+          "epochs": 70,
+          "patience": 10,
+          "lr": 0.0002,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "reference",
+        "seed": 42,
+        "stage": "student",
+        "arm": "student_ce",
+        "key": "reference/raw_f100_s42/student/student_ce",
+        "dependency": null,
+        "hyper": {
+          "epochs": 70,
+          "patience": 10,
+          "lr": 0.0002,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "reference",
+        "seed": 52,
+        "stage": "teacher1",
+        "arm": "",
+        "key": "reference/raw_f100_s52/teacher1",
+        "dependency": null,
+        "hyper": {
+          "epochs": 110,
+          "patience": 15,
+          "lr": 0.001,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "reference",
+        "seed": 52,
+        "stage": "teacher2",
+        "arm": "",
+        "key": "reference/raw_f100_s52/teacher2",
+        "dependency": "reference/raw_f100_s52/teacher1",
+        "hyper": {
+          "epochs": 120,
+          "patience": 18,
+          "lr": 0.0001,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "reference",
+        "seed": 52,
+        "stage": "student",
+        "arm": "joint_full",
+        "key": "reference/raw_f100_s52/student/joint_full",
+        "dependency": "reference/raw_f100_s52/teacher2",
+        "hyper": {
+          "epochs": 70,
+          "patience": 10,
+          "lr": 0.0002,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "reference",
+        "seed": 52,
+        "stage": "student",
+        "arm": "student_ce",
+        "key": "reference/raw_f100_s52/student/student_ce",
+        "dependency": null,
+        "hyper": {
+          "epochs": 70,
+          "patience": 10,
+          "lr": 0.0002,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "reference",
+        "seed": 62,
+        "stage": "teacher1",
+        "arm": "",
+        "key": "reference/raw_f100_s62/teacher1",
+        "dependency": null,
+        "hyper": {
+          "epochs": 110,
+          "patience": 15,
+          "lr": 0.001,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "reference",
+        "seed": 62,
+        "stage": "teacher2",
+        "arm": "",
+        "key": "reference/raw_f100_s62/teacher2",
+        "dependency": "reference/raw_f100_s62/teacher1",
+        "hyper": {
+          "epochs": 120,
+          "patience": 18,
+          "lr": 0.0001,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "reference",
+        "seed": 62,
+        "stage": "student",
+        "arm": "joint_full",
+        "key": "reference/raw_f100_s62/student/joint_full",
+        "dependency": "reference/raw_f100_s62/teacher2",
+        "hyper": {
+          "epochs": 70,
+          "patience": 10,
+          "lr": 0.0002,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "reference",
+        "seed": 62,
+        "stage": "student",
+        "arm": "student_ce",
+        "key": "reference/raw_f100_s62/student/student_ce",
+        "dependency": null,
+        "hyper": {
+          "epochs": 70,
+          "patience": 10,
+          "lr": 0.0002,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "t2indep",
+        "seed": 42,
+        "stage": "teacher2_indep",
+        "arm": "",
+        "key": "t2indep/raw_f100_s42/teacher2_indep",
+        "dependency": null,
+        "hyper": {
+          "epochs": 120,
+          "patience": 18,
+          "lr": 0.0001,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "t2indep",
+        "seed": 42,
+        "stage": "student",
+        "arm": "joint_full",
+        "key": "t2indep/raw_f100_s42/student/joint_full",
+        "dependency": "t2indep/raw_f100_s42/teacher2_indep",
+        "hyper": {
+          "epochs": 70,
+          "patience": 10,
+          "lr": 0.0002,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "t2indep",
+        "seed": 52,
+        "stage": "teacher2_indep",
+        "arm": "",
+        "key": "t2indep/raw_f100_s52/teacher2_indep",
+        "dependency": null,
+        "hyper": {
+          "epochs": 120,
+          "patience": 18,
+          "lr": 0.0001,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "t2indep",
+        "seed": 52,
+        "stage": "student",
+        "arm": "joint_full",
+        "key": "t2indep/raw_f100_s52/student/joint_full",
+        "dependency": "t2indep/raw_f100_s52/teacher2_indep",
+        "hyper": {
+          "epochs": 70,
+          "patience": 10,
+          "lr": 0.0002,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "t2indep",
+        "seed": 62,
+        "stage": "teacher2_indep",
+        "arm": "",
+        "key": "t2indep/raw_f100_s62/teacher2_indep",
+        "dependency": null,
+        "hyper": {
+          "epochs": 120,
+          "patience": 18,
+          "lr": 0.0001,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "t2indep",
+        "seed": 62,
+        "stage": "student",
+        "arm": "joint_full",
+        "key": "t2indep/raw_f100_s62/student/joint_full",
+        "dependency": "t2indep/raw_f100_s62/teacher2_indep",
+        "hyper": {
+          "epochs": 70,
+          "patience": 10,
+          "lr": 0.0002,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "nosn",
+        "seed": 42,
+        "stage": "teacher2",
+        "arm": "",
+        "key": "nosn/raw_f100_s42/teacher2",
+        "dependency": "reference/raw_f100_s42/teacher1",
+        "hyper": {
+          "epochs": 120,
+          "patience": 18,
+          "lr": 0.0001,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "nosn",
+        "seed": 42,
+        "stage": "student",
+        "arm": "joint_full",
+        "key": "nosn/raw_f100_s42/student/joint_full",
+        "dependency": "nosn/raw_f100_s42/teacher2",
+        "hyper": {
+          "epochs": 70,
+          "patience": 10,
+          "lr": 0.0002,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "nosn",
+        "seed": 52,
+        "stage": "teacher2",
+        "arm": "",
+        "key": "nosn/raw_f100_s52/teacher2",
+        "dependency": "reference/raw_f100_s52/teacher1",
+        "hyper": {
+          "epochs": 120,
+          "patience": 18,
+          "lr": 0.0001,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "nosn",
+        "seed": 52,
+        "stage": "student",
+        "arm": "joint_full",
+        "key": "nosn/raw_f100_s52/student/joint_full",
+        "dependency": "nosn/raw_f100_s52/teacher2",
+        "hyper": {
+          "epochs": 70,
+          "patience": 10,
+          "lr": 0.0002,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "nosn",
+        "seed": 62,
+        "stage": "teacher2",
+        "arm": "",
+        "key": "nosn/raw_f100_s62/teacher2",
+        "dependency": "reference/raw_f100_s62/teacher1",
+        "hyper": {
+          "epochs": 120,
+          "patience": 18,
+          "lr": 0.0001,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "nosn",
+        "seed": 62,
+        "stage": "student",
+        "arm": "joint_full",
+        "key": "nosn/raw_f100_s62/student/joint_full",
+        "dependency": "nosn/raw_f100_s62/teacher2",
+        "hyper": {
+          "epochs": 70,
+          "patience": 10,
+          "lr": 0.0002,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "aug",
+        "seed": 42,
+        "stage": "teacher1",
+        "arm": "",
+        "key": "aug/raw_f100_s42/teacher1",
+        "dependency": null,
+        "hyper": {
+          "epochs": 110,
+          "patience": 15,
+          "lr": 0.001,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "aug",
+        "seed": 42,
+        "stage": "teacher2",
+        "arm": "",
+        "key": "aug/raw_f100_s42/teacher2",
+        "dependency": "aug/raw_f100_s42/teacher1",
+        "hyper": {
+          "epochs": 120,
+          "patience": 18,
+          "lr": 0.0001,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "aug",
+        "seed": 42,
+        "stage": "student",
+        "arm": "joint_full",
+        "key": "aug/raw_f100_s42/student/joint_full",
+        "dependency": "aug/raw_f100_s42/teacher2",
+        "hyper": {
+          "epochs": 70,
+          "patience": 10,
+          "lr": 0.0002,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "aug",
+        "seed": 42,
+        "stage": "student",
+        "arm": "student_ce",
+        "key": "aug/raw_f100_s42/student/student_ce",
+        "dependency": null,
+        "hyper": {
+          "epochs": 70,
+          "patience": 10,
+          "lr": 0.0002,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "aug",
+        "seed": 52,
+        "stage": "teacher1",
+        "arm": "",
+        "key": "aug/raw_f100_s52/teacher1",
+        "dependency": null,
+        "hyper": {
+          "epochs": 110,
+          "patience": 15,
+          "lr": 0.001,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "aug",
+        "seed": 52,
+        "stage": "teacher2",
+        "arm": "",
+        "key": "aug/raw_f100_s52/teacher2",
+        "dependency": "aug/raw_f100_s52/teacher1",
+        "hyper": {
+          "epochs": 120,
+          "patience": 18,
+          "lr": 0.0001,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "aug",
+        "seed": 52,
+        "stage": "student",
+        "arm": "joint_full",
+        "key": "aug/raw_f100_s52/student/joint_full",
+        "dependency": "aug/raw_f100_s52/teacher2",
+        "hyper": {
+          "epochs": 70,
+          "patience": 10,
+          "lr": 0.0002,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "aug",
+        "seed": 52,
+        "stage": "student",
+        "arm": "student_ce",
+        "key": "aug/raw_f100_s52/student/student_ce",
+        "dependency": null,
+        "hyper": {
+          "epochs": 70,
+          "patience": 10,
+          "lr": 0.0002,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "aug",
+        "seed": 62,
+        "stage": "teacher1",
+        "arm": "",
+        "key": "aug/raw_f100_s62/teacher1",
+        "dependency": null,
+        "hyper": {
+          "epochs": 110,
+          "patience": 15,
+          "lr": 0.001,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "aug",
+        "seed": 62,
+        "stage": "teacher2",
+        "arm": "",
+        "key": "aug/raw_f100_s62/teacher2",
+        "dependency": "aug/raw_f100_s62/teacher1",
+        "hyper": {
+          "epochs": 120,
+          "patience": 18,
+          "lr": 0.0001,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "aug",
+        "seed": 62,
+        "stage": "student",
+        "arm": "joint_full",
+        "key": "aug/raw_f100_s62/student/joint_full",
+        "dependency": "aug/raw_f100_s62/teacher2",
+        "hyper": {
+          "epochs": 70,
+          "patience": 10,
+          "lr": 0.0002,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "aug",
+        "seed": 62,
+        "stage": "student",
+        "arm": "student_ce",
+        "key": "aug/raw_f100_s62/student/student_ce",
+        "dependency": null,
+        "hyper": {
+          "epochs": 70,
+          "patience": 10,
+          "lr": 0.0002,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "fusion",
+        "seed": 42,
+        "stage": "fusion",
+        "arm": "historical",
+        "key": "fusion/raw_f100_s42/fusion/historical",
+        "dependency": null,
+        "hyper": {
+          "epochs": 100,
+          "patience": 20,
+          "lr": 0.0001,
+          "batch": 8,
+          "scheduler": "cosine_annealing_tmax100"
+        }
+      },
+      {
+        "family": "fusion",
+        "seed": 42,
+        "stage": "fusion",
+        "arm": "matched",
+        "key": "fusion/raw_f100_s42/fusion/matched",
+        "dependency": null,
+        "hyper": {
+          "epochs": 70,
+          "patience": 10,
+          "lr": 0.0002,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "fusion",
+        "seed": 52,
+        "stage": "fusion",
+        "arm": "historical",
+        "key": "fusion/raw_f100_s52/fusion/historical",
+        "dependency": null,
+        "hyper": {
+          "epochs": 100,
+          "patience": 20,
+          "lr": 0.0001,
+          "batch": 8,
+          "scheduler": "cosine_annealing_tmax100"
+        }
+      },
+      {
+        "family": "fusion",
+        "seed": 52,
+        "stage": "fusion",
+        "arm": "matched",
+        "key": "fusion/raw_f100_s52/fusion/matched",
+        "dependency": null,
+        "hyper": {
+          "epochs": 70,
+          "patience": 10,
+          "lr": 0.0002,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      },
+      {
+        "family": "fusion",
+        "seed": 62,
+        "stage": "fusion",
+        "arm": "historical",
+        "key": "fusion/raw_f100_s62/fusion/historical",
+        "dependency": null,
+        "hyper": {
+          "epochs": 100,
+          "patience": 20,
+          "lr": 0.0001,
+          "batch": 8,
+          "scheduler": "cosine_annealing_tmax100"
+        }
+      },
+      {
+        "family": "fusion",
+        "seed": 62,
+        "stage": "fusion",
+        "arm": "matched",
+        "key": "fusion/raw_f100_s62/fusion/matched",
+        "dependency": null,
+        "hyper": {
+          "epochs": 70,
+          "patience": 10,
+          "lr": 0.0002,
+          "batch": 16,
+          "scheduler": "warm_restarts"
+        }
+      }
+    ]
+  },
+  "protocol_sha256": "18178923ffc0acb5a9d4e25b38edcccf626a77a2ea4d2bbf2360d642a6ccca0f",
+  "code_sha256": "f2e5abff1d34b0892a66ce7972ba81df1f814e1c1dd14639dd890ba6ccc2b988",
+  "csv_sha256": "b2a3479695922e62c83c94a1a9ef669b4b6d68cc26a1d7090ebedecdd7dd79a5",
+  "cache_sha256": "03ae18b25fd50af259dd43a709415dde8bf5ab612c5f8a235f00ccb1a4d4f84e",
+  "manifest_sha256": "c185dc432225e2f74ab0621207acca2045cda3332a0c5c2d2d43df550b47a23a",
+  "environment": {
+    "python": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+    "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+    "cuda": "13.0",
+    "packages": {
+      "torch": "2.11.0+cu130",
+      "torchvision": "0.26.0+cu130",
+      "timm": "1.0.30",
+      "numpy": "2.1.3",
+      "pandas": "2.2.3",
+      "scikit-learn": "1.6.1",
+      "Pillow": "11.3.0",
+      "matplotlib": "3.10.0"
+    },
+    "gpu": "NVIDIA A100-SXM4-40GB"
+  }
+}

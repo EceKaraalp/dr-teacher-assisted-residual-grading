@@ -1,0 +1,1834 @@
+[
+  {
+    "paragraph_index": 0,
+    "text_start": "Teacher-assisted hybrid ensemble learning with ordinal-aware loss for diabetic retinopathy grading",
+    "prototype_original_paragraph": 0,
+    "exact_unchanged_text": false,
+    "source_font": "Calibri",
+    "source_size_pt": 14.0
+  },
+  {
+    "paragraph_index": 1,
+    "text_start": "Abstract",
+    "prototype_original_paragraph": 1,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": 11.0
+  },
+  {
+    "paragraph_index": 2,
+    "text_start": "Context—Diabetic retinopathy (DR) is the most prevalent microvascular complication of diabetes mellitus and on",
+    "prototype_original_paragraph": 2,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 3,
+    "text_start": "Objective—To evaluate a teacher-assisted ConvNeXtTiny_Residual system for five-class diabetic retinopathy grad",
+    "prototype_original_paragraph": 3,
+    "exact_unchanged_text": false,
+    "source_font": "Calibri",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 4,
+    "text_start": "Results—Across three seeds, equal teacher–student inference achieved accuracy 84.83 +/- 1.03%, macro-F1 0.7006",
+    "prototype_original_paragraph": 4,
+    "exact_unchanged_text": false,
+    "source_font": "Calibri",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 5,
+    "text_start": "Conclusion—The teacher-assisted system attains high within-APTOS QWK but does not establish superiority to the",
+    "prototype_original_paragraph": 5,
+    "exact_unchanged_text": false,
+    "source_font": "Calibri",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 6,
+    "text_start": "Key Words—Diabetic retinopathy grading, Knowledge distillation, CNN–ViT hybrid, Ordinal CDF loss, Teacher ense",
+    "prototype_original_paragraph": 6,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 8,
+    "text_start": "I. INTRODUCTION",
+    "prototype_original_paragraph": 8,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": null
+  },
+  {
+    "paragraph_index": 9,
+    "text_start": "Diabetic retinopathy (DR) is the most prevalent microvascular complication of diabetes mellitus and one of the",
+    "prototype_original_paragraph": 9,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 10,
+    "text_start": "Conventional screening relies on ophthalmologists who manually examine fundus images and assign a severity gra",
+    "prototype_original_paragraph": 10,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 11,
+    "text_start": "Deep learning (DL) has transformed automated DR grading. Landmark studies by Gulshan et al. [5] and Ting et al",
+    "prototype_original_paragraph": 11,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 12,
+    "text_start": "APTOS 2019 contains 3,662 labeled fundus photographs [23], limiting the available development sample. DR grade",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 13,
+    "text_start": "In parallel, Vision Transformers (ViT) [14] have shown that self-attention can model long-range spatial depend",
+    "prototype_original_paragraph": 13,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 14,
+    "text_start": "The central issue is whether added teacher, fusion and loss complexity yields a measurable benefit relative to",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 15,
+    "text_start": "We evaluate ConvNeXtTiny_Residual as a teacher-assisted residual system. Teacher 1 is a randomly initialized c",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 16,
+    "text_start": "The study is guided by the following research questions:",
+    "prototype_original_paragraph": 16,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 17,
+    "text_start": "(1) RQ1: Does full teacher-assisted inference improve on a matched independent CE student, and what are its in",
+    "prototype_original_paragraph": 17,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 18,
+    "text_start": "(2) RQ2: How do fixed-backbone objective components, Teacher-1 inclusion, preprocessing, augmentation and labe",
+    "prototype_original_paragraph": 91,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 19,
+    "text_start": "(3) RQ3: How do same-checkpoint equal and gated inference differ, and does the joint-trained student remain us",
+    "prototype_original_paragraph": 24,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 20,
+    "text_start": "The principal contributions of this work are:",
+    "prototype_original_paragraph": 20,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 21,
+    "text_start": "(1) An explicit separation of learned teacher-probability fusion, gated joint-output training and equal teache",
+    "prototype_original_paragraph": 64,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 22,
+    "text_start": "(2) A frozen 99-job, three-seed experiment matrix covering fixed-backbone objective variants, Teacher-2-only s",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 23,
+    "text_start": "(3) Ordinal CDF and multi-temperature terms evaluated as combined-score regularizers, without assuming direct ",
+    "prototype_original_paragraph": 21,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 24,
+    "text_start": "(4) Checkpoint reproducibility and gradient diagnostics that expose single-class student behavior and attenuat",
+    "prototype_original_paragraph": 24,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 25,
+    "text_start": "(5) Matched GPU latency/memory measurements, class-wise uncertainty, external IDRiD testing and deterministica",
+    "prototype_original_paragraph": 24,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 26,
+    "text_start": "Section II defines the model and frozen protocol. Section III reports current retraining results, matched comp",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 27,
+    "text_start": "A. Related work",
+    "prototype_original_paragraph": 27,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": 11.0
+  },
+  {
+    "paragraph_index": 28,
+    "text_start": "The following subsections review deep learning for DR grading, CNN–ViT hybrid architectures, knowledge distill",
+    "prototype_original_paragraph": 28,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 29,
+    "text_start": "1. Deep learning for diabetic retinopathy grading",
+    "prototype_original_paragraph": 29,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 30,
+    "text_start": "Deep learning for DR grading has evolved rapidly since Gulshan et al. [5] and Ting et al. [6] established that",
+    "prototype_original_paragraph": 30,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 31,
+    "text_start": "Chilukoti et al. [33] investigated EfficientNet-B3-based transfer learning and checkpoint ensemble strategies,",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 32,
+    "text_start": "Recent work has increasingly focused on enriching feature representations. Tian et al. [21] proposed FA+KC-Net",
+    "prototype_original_paragraph": 31,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 33,
+    "text_start": "A persistent structural challenge is severe class imbalance. The APTOS 2019 dataset [23] provides 3,662 labele",
+    "prototype_original_paragraph": 32,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 34,
+    "text_start": "2. CNN–ViT hybrid architectures for diabetic retinopathy",
+    "prototype_original_paragraph": 33,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 35,
+    "text_start": "The Vision Transformer (ViT), introduced by Dosovitskiy et al. [14], showed that splitting an image into fixed",
+    "prototype_original_paragraph": 34,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 36,
+    "text_start": "Zhang et al. [15] compared CNN, transformer and hybrid architectures on a balanced dataset assembled from EyeP",
+    "prototype_original_paragraph": 35,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 37,
+    "text_start": " In related work, Niranjan et al. [25] introduced a hybrid ViT–GNN architecture on APTOS 2019 with 93.2% accur",
+    "prototype_original_paragraph": 36,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 38,
+    "text_start": "In this work, teacher diversity is assessed quantitatively in Section III.B using prediction disagreement and ",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 39,
+    "text_start": "3. Knowledge distillation for medical image classification",
+    "prototype_original_paragraph": 38,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 40,
+    "text_start": "Knowledge distillation, first systematically formulated by Hinton et al. [16], trains a compact student by com",
+    "prototype_original_paragraph": 39,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 41,
+    "text_start": "For DR grading, Luo et al. [29] proposed a self-KD framework with CAM-attention, achieving AUC = 0.965 and 92.",
+    "prototype_original_paragraph": 40,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 42,
+    "text_start": "Islam et al. [17] used a fused ResNet152V2-Swin teacher to train an Xception-based student with a customized C",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 43,
+    "text_start": "Single- and multi-temperature KD are alternative supervisory choices [16],[28]; neither guarantees superior tr",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 44,
+    "text_start": "The ordinal structure of DR grading further motivates specialized loss formulations. Cao et al. [34] proposed ",
+    "prototype_original_paragraph": 43,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 45,
+    "text_start": "4. Teacher ensemble and multi-teacher distillation",
+    "prototype_original_paragraph": 44,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 46,
+    "text_start": "Ensemble learning can improve predictive accuracy by aggregating diverse model predictions, and in the KD cont",
+    "prototype_original_paragraph": 45,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 47,
+    "text_start": "Teacher-level fusion combines the two teacher probability distributions. Teacher–student fusion combines a log",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 48,
+    "text_start": "II. METHOD",
+    "prototype_original_paragraph": 47,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": null
+  },
+  {
+    "paragraph_index": 49,
+    "text_start": "We describe the hybrid teacher components, sequential teacher training, ConvNeXt Tiny branch, joint-output obj",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 50,
+    "text_start": "A. Overview of the proposed framework",
+    "prototype_original_paragraph": 49,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": 11.0
+  },
+  {
+    "paragraph_index": 51,
+    "text_start": "Figure 1 distinguishes three stages. Teacher 1 is trained first; Teacher 2 and a learned probability gate are ",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 53,
+    "text_start": "Figure 1. Teacher-assisted training and inference paths. Teacher training is sequential, not independent. All ",
+    "prototype_original_paragraph": 52,
+    "exact_unchanged_text": false,
+    "source_font": null,
+    "source_size_pt": null
+  },
+  {
+    "paragraph_index": 54,
+    "text_start": "B. Teacher network 1: baseline CNN–ViT hybrid",
+    "prototype_original_paragraph": 53,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": 11.0
+  },
+  {
+    "paragraph_index": 55,
+    "text_start": "The first teacher is a dual-branch architecture combining CNN and ViT representations through a confidence-gat",
+    "prototype_original_paragraph": 54,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 56,
+    "text_start": "CNN branch. The CNN branch uses a Conv–BatchNorm–ReLU stem followed by three  convolutional stages that progre",
+    "prototype_original_paragraph": 55,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 57,
+    "text_start": "ViT branch. The ViT branch tokenizes the input with a 16 × 16 patch embedding convolution, producing 196 token",
+    "prototype_original_paragraph": 56,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 58,
+    "text_start": "Confidence-gated fusion. Scalar confidence scores are computed as  = σ() and  = σ(), and a two-layer MLP estim",
+    "prototype_original_paragraph": 57,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 60,
+    "text_start": "C. Teacher network 2: advanced CNN–ViT hybrid with spectral normalization",
+    "prototype_original_paragraph": 59,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": 11.0
+  },
+  {
+    "paragraph_index": 61,
+    "text_start": "The second teacher employs larger-scale pretrained backbones to maximize representational capacity. A pretrain",
+    "prototype_original_paragraph": 60,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 62,
+    "text_start": "D. Teacher ensemble via learned teacher fusion",
+    "prototype_original_paragraph": 61,
+    "exact_unchanged_text": false,
+    "source_font": "Calibri",
+    "source_size_pt": 11.0
+  },
+  {
+    "paragraph_index": 63,
+    "text_start": "The composite teacher signal is formed by learned probability-space fusion of the two teacher distributions, a",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 65,
+    "text_start": "The teacher reference is z_t = log(max(p_t, 1e-8)). Teacher parameters are frozen and targets detached during ",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 66,
+    "text_start": "E. Student network: ConvNeXt Tiny",
+    "prototype_original_paragraph": 65,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": 11.0
+  },
+  {
+    "paragraph_index": 67,
+    "text_start": "ConvNeXt Tiny [18] uses ImageNet-pretrained weights with a replaced 768-to-5 linear head and contains 27,823,9",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 68,
+    "text_start": "F. Multi-component training loss",
+    "prototype_original_paragraph": 67,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": 11.0
+  },
+  {
+    "paragraph_index": 69,
+    "text_start": "All four data-dependent loss terms act on u = z_t + 0.70 g (z_s - mean_classes(z_s)). The outer gate g is dist",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 71,
+    "text_start": "1. Weighted cross-entropy loss",
+    "prototype_original_paragraph": 70,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 72,
+    "text_start": "To address class imbalance, the primary classification loss is a class-weighted cross-entropy, defined in Eq. ",
+    "prototype_original_paragraph": 71,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 74,
+    "text_start": "Here p_u = softmax(u), y is the reference grade, and w_c = N_train/(5 n_c), where n_c is the count for grade c",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 75,
+    "text_start": "2. Teacher-referenced margin hinge",
+    "prototype_original_paragraph": 120,
+    "exact_unchanged_text": false,
+    "source_font": "Calibri",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 76,
+    "text_start": "Equation (5) is max(0, CE(u,y) - stopgrad(CE(z_t,y)) + m), averaged over the batch. A positive margin encourag",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 78,
+    "text_start": "Both losses are class-weighted per-example cross-entropies. Teacher loss is computed without gradients. Over t",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 79,
+    "text_start": "3. Multi-temperature distillation loss",
+    "prototype_original_paragraph": 78,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 80,
+    "text_start": "The distillation loss of Eq. (6) is computed as a weighted combination of KL-divergence losses at two temperat",
+    "prototype_original_paragraph": 79,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 83,
+    "text_start": "At each temperature T_k, teacher targets are softmax(z_t/T_k), while the optimized distribution is softmax(u/T",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 84,
+    "text_start": "4. Ordinal CDF loss",
+    "prototype_original_paragraph": 82,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 85,
+    "text_start": "DR severity grades exhibit a natural ordinal structure (0 < 1 < 2 < 3 < 4) that standard cross-entropy and KL-",
+    "prototype_original_paragraph": 83,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 87,
+    "text_start": "For threshold k, the target cumulative probability is 1[y <= k]; the predicted value is the cumulative sum of ",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 88,
+    "text_start": "G. Inference strategy",
+    "prototype_original_paragraph": 86,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": 11.0
+  },
+  {
+    "paragraph_index": 89,
+    "text_start": "The full-system inference configuration used for the main reported results uses no additional teacher–student ",
+    "prototype_original_paragraph": 87,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 91,
+    "text_start": "The isolated joint-trained student branch, full equal system, gated residual system, embedded teacher referenc",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 92,
+    "text_start": "H. Experimental setup",
+    "prototype_original_paragraph": 90,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": 11.0
+  },
+  {
+    "paragraph_index": 93,
+    "text_start": "This subsection describes the dataset and evaluation protocol, the preprocessing and augmentation settings, th",
+    "prototype_original_paragraph": 91,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 94,
+    "text_start": "1. Dataset and evaluation protocol",
+    "prototype_original_paragraph": 92,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 95,
+    "text_start": "Dataset.  Model development uses the APTOS 2019 Blindness Detection dataset [23], which comprises 3,662 fundus",
+    "prototype_original_paragraph": 93,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 96,
+    "text_start": "The frozen image-ID manifest contains 2,928 training, 367 validation and 367 test images, corresponding to the",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 97,
+    "text_start": "QWK is primary; accuracy, macro-F1 and class-frequency-weighted one-versus-rest AUC are secondary. Calibration",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 98,
+    "text_start": "2. Data preprocessing and augmentation protocol",
+    "prototype_original_paragraph": 96,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 99,
+    "text_start": "All inputs use the verified RGB bilinear 224 x 224 cache. Raw preprocessing converts pixels to float32 in [0,2",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 100,
+    "text_start": "Raw input is retained as the historical primary protocol, not asserted to be the correct or universally superi",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 101,
+    "text_start": "The primary protocol has no augmentation. A matched student-stage augmentation arm uses independent horizontal",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 102,
+    "text_start": "3. Optimization protocol",
+    "prototype_original_paragraph": 100,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 103,
+    "text_start": "All runs use AdamW, weight decay 1e-4, batch size 16, FP32, gradient clipping norm 1 and CosineAnnealingWarmRe",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 104,
+    "text_start": "The 99-job matrix consists of 39 raw/full-label jobs (three seeds, two teacher jobs and eleven student arms), ",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 105,
+    "text_start": "4. Loss coefficients of the four-component objective and training-gate regularization",
+    "prototype_original_paragraph": 103,
+    "exact_unchanged_text": false,
+    "source_font": "Calibri",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 106,
+    "text_start": "The final ConvNeXt Tiny configuration uses a KD coefficient of 0.30, an ordinal coefficient of 0.12 and a gate",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 107,
+    "text_start": "III. RESULTS and DISCUSSION",
+    "prototype_original_paragraph": 105,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": null
+  },
+  {
+    "paragraph_index": 108,
+    "text_start": "All principal numbers below refer to the completed reviewer_complete_v1 retraining matrix, not the archived mo",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 109,
+    "text_start": "A. Historical architecture screening and current matched baseline",
+    "prototype_original_paragraph": 107,
+    "exact_unchanged_text": false,
+    "source_font": "Calibri",
+    "source_size_pt": 11.0
+  },
+  {
+    "paragraph_index": 110,
+    "text_start": "The teacher pool and student family originated in historical model-family screening. That screening is not rep",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 111,
+    "text_start": "Table 1 retains the historical single-run architecture results for transparency. The custom Fusion CNN–ViT QWK",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 112,
+    "text_start": "Table 1. Archived exploratory architecture-screening results; not current matched retraining results",
+    "prototype_original_paragraph": 110,
+    "exact_unchanged_text": false,
+    "source_font": null,
+    "source_size_pt": null
+  },
+  {
+    "paragraph_index": 114,
+    "text_start": "B. Teacher ensemble configuration",
+    "prototype_original_paragraph": 112,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": 11.0
+  },
+  {
+    "paragraph_index": 115,
+    "text_start": "Table 2 uses the current raw/full-label teacher-stage checkpoints for all teacher and fusion paths. Teacher 2 ",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 117,
+    "text_start": "Table 2. Current teacher-stage component and same-checkpoint fusion performance",
+    "prototype_original_paragraph": 114,
+    "exact_unchanged_text": false,
+    "source_font": null,
+    "source_size_pt": null
+  },
+  {
+    "paragraph_index": 118,
+    "text_start": "Mean +/- sample SD across seeds 42, 52 and 62 on the same 367 images. Raw-logit, probability and learned-mixtu",
+    "prototype_original_paragraph": 87,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 119,
+    "text_start": "1. Role of Teacher 1 in the ensemble",
+    "prototype_original_paragraph": 116,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 120,
+    "text_start": "Teacher 1 contains 4,851,623 parameters and is the weaker component. Its value cannot be inferred from diversi",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 121,
+    "text_start": "Teacher 1 combines a shallow CNN, compact six-block transformer (16 x 16 patches, 256-dimensional tokens) and ",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 122,
+    "text_start": "At the raw teacher-stage checkpoints, argmax disagreement is 25.34-30.52%, binary error correlation 0.366-0.46",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 123,
+    "text_start": "2. Role of Teacher 2 in the ensemble",
+    "prototype_original_paragraph": 120,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 124,
+    "text_start": "Teacher 2 is the high-capacity advanced hybrid selected in Stage 2 (Section III.A), in which pretrained ResNet",
+    "prototype_original_paragraph": 121,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 125,
+    "text_start": "The advanced teacher and learned mixture are reported separately in Table 2. The raw teacher-stage learned-mix",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 126,
+    "text_start": "The learned teacher reference provides detached targets in joint training. Teacher diversity is descriptive, a",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 127,
+    "text_start": "3. Separating teacher fusion from teacher–student inference",
+    "prototype_original_paragraph": 140,
+    "exact_unchanged_text": false,
+    "source_font": "Calibri",
+    "source_size_pt": 11.0
+  },
+  {
+    "paragraph_index": 128,
+    "text_start": "Teacher-level fusion and teacher–student inference are evaluated separately. Table 2 compares the individual t",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 129,
+    "text_start": "C. Controlled objective comparisons and clinical errors",
+    "prototype_original_paragraph": 67,
+    "exact_unchanged_text": false,
+    "source_font": "Calibri",
+    "source_size_pt": 11.0
+  },
+  {
+    "paragraph_index": 130,
+    "text_start": "Table 3 fixes ConvNeXt Tiny, matched seeds, teacher dependencies, preprocessing, initialization convention and",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 131,
+    "text_start": "Table 3. Fixed-backbone joint-output training arms, evaluated by equal inference",
+    "prototype_original_paragraph": 128,
+    "exact_unchanged_text": false,
+    "source_font": null,
+    "source_size_pt": null
+  },
+  {
+    "paragraph_index": 133,
+    "text_start": "Mean +/- sample SD across three seeds. 'Joint CE' means CE on the gated combined score, not direct student CE.",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 134,
+    "text_start": "Single-temperature versus joint CE, multi- versus single-temperature, ordinal versus multi-KD, hinge versus mu",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 137,
+    "text_start": "Figure 2. Current raw/full-label APTOS test confusion matrices: full equal inference, joint-trained student al",
+    "prototype_original_paragraph": 52,
+    "exact_unchanged_text": false,
+    "source_font": null,
+    "source_size_pt": null
+  },
+  {
+    "paragraph_index": 138,
+    "text_start": "Severe-grade correct counts for full equal inference are 8/19, 7/19 and 9/19 across seeds 42, 52 and 62. The i",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 139,
+    "text_start": "Table 4. Current full equal inference: class-wise and referral performance (% [95% CI])",
+    "prototype_original_paragraph": 142,
+    "exact_unchanged_text": false,
+    "source_font": null,
+    "source_size_pt": null
+  },
+  {
+    "paragraph_index": 140,
+    "text_start": "Panel A. Grade-wise performance.",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 141,
+    "text_start": "Specificity is one-versus-rest. Precision, recall and specificity use Wilson 95% intervals. F1 intervals use 1",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 142,
+    "text_start": "Panel B. Referable-DR performance by seed (% [95% Wilson CI]).",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 143,
+    "text_start": "Referable disease is reference grade >=2; the decision rule is summed probabilities for grades 2-4 >=0.5, pred",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 144,
+    "text_start": "D. Comparison with representative published methods",
+    "prototype_original_paragraph": 134,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": 11.0
+  },
+  {
+    "paragraph_index": 145,
+    "text_start": "Table 5 is a contextual literature comparison, not a matched ranking. Retained primary-source corrections and ",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 146,
+    "text_start": "Table 5. Contextual comparison with selected published APTOS 2019 five-class grading studies",
+    "prototype_original_paragraph": 136,
+    "exact_unchanged_text": false,
+    "source_font": null,
+    "source_size_pt": null
+  },
+  {
+    "paragraph_index": 147,
+    "text_start": "Panel A. Reported performance.",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 149,
+    "text_start": "Panel B. Dataset and evaluation protocol.",
+    "prototype_original_paragraph": 20,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 150,
+    "text_start": "Note: Results were obtained under different data partitions, pretraining, preprocessing and evaluation procedu",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 152,
+    "text_start": "E. Computational efficiency",
+    "prototype_original_paragraph": 138,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": 11.0
+  },
+  {
+    "paragraph_index": 153,
+    "text_start": "Table 6 reports exact active parameters and matched inference measurements on NVIDIA A100-SXM4-40GB, FP32, bat",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 155,
+    "text_start": "Table 6. Matched A100 40 GB inference cost (three-seed mean; per-image latency)",
+    "prototype_original_paragraph": 142,
+    "exact_unchanged_text": false,
+    "source_font": null,
+    "source_size_pt": null
+  },
+  {
+    "paragraph_index": 156,
+    "text_start": "Teacher-reference parameters total 114,175,405. Full equal inference uses 141,999,378 active parameters; gated",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 157,
+    "text_start": "F. RQ1: effectiveness of the hybrid teacher–student framework",
+    "prototype_original_paragraph": 140,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": 11.0
+  },
+  {
+    "paragraph_index": 158,
+    "text_start": "Full equal inference achieves QWK 0.9025 +/- 0.0066 versus 0.8994 +/- 0.0092 for the matched independent CE st",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 159,
+    "text_start": "Recorded paired contrasts use 10,000 shared image-index bootstrap samples (random seed 20261018). Each resampl",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 161,
+    "text_start": "Recent medical-image KD studies provide context but should be read cautiously, as their tasks and teacher desi",
+    "prototype_original_paragraph": 144,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 162,
+    "text_start": "G. RQ2: contribution of ordinal-aware distillation to QWK",
+    "prototype_original_paragraph": 145,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": 11.0
+  },
+  {
+    "paragraph_index": 163,
+    "text_start": "The fixed-backbone comparisons show that adding ordinal or hinge terms to multi-KD improves QWK in those defin",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 164,
+    "text_start": "Ordinal losses in other medical-image tasks [45],[46] motivate distance-sensitive regularization but do not pr",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 165,
+    "text_start": "H. RQ3: equal-weight teacher–student inference",
+    "prototype_original_paragraph": 148,
+    "exact_unchanged_text": false,
+    "source_font": "Calibri",
+    "source_size_pt": 11.0
+  },
+  {
+    "paragraph_index": 166,
+    "text_start": "Equal inference QWK is 0.9025 versus 0.8996 for gated residual inference; the equal-minus-gated difference is ",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 167,
+    "text_start": "Table 7. Same-checkpoint inference performance on APTOS 2019 (mean +/- sample SD across three seeds)",
+    "prototype_original_paragraph": 128,
+    "exact_unchanged_text": false,
+    "source_font": null,
+    "source_size_pt": null
+  },
+  {
+    "paragraph_index": 168,
+    "text_start": "Full equal, embedded teacher, gated residual and isolated student rows share fitted joint components. The inde",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 169,
+    "text_start": "Raw equal logit averaging mixes teacher log-probabilities and raw student logits. We compare it with probabili",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 170,
+    "text_start": "Table 8. Teacher–student fusion and calibration (mean +/- sample SD across three seeds)",
+    "prototype_original_paragraph": 128,
+    "exact_unchanged_text": false,
+    "source_font": null,
+    "source_size_pt": null
+  },
+  {
+    "paragraph_index": 171,
+    "text_start": "Lower NLL/Brier/ECE is better. NLL uses natural logs, Brier sums squared probability errors across five classe",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 172,
+    "text_start": "The joint-trained student alone has accuracy 25.70 +/- 31.40% and QWK 0.2634 +/- 0.4561, distinct from the ind",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 173,
+    "text_start": "I. External evaluation and branch-specific visual explanation",
+    "prototype_original_paragraph": 44,
+    "exact_unchanged_text": false,
+    "source_font": "Calibri",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 174,
+    "text_start": "The three fixed raw/full-label APTOS checkpoints and matched independent CE baselines were evaluated on all 10",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 175,
+    "text_start": "Table 9. Current IDRiD official test results without adaptation (n=103)",
+    "prototype_original_paragraph": 110,
+    "exact_unchanged_text": false,
+    "source_font": null,
+    "source_size_pt": null
+  },
+  {
+    "paragraph_index": 176,
+    "text_start": "For full equal inference, additional 10,000 shared image-bootstrap samples (seed 20261023) give mean-metric 95",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 177,
+    "text_start": "Full-system IDRiD accuracy 29.77 +/- 4.59% and QWK 0.4153 +/- 0.1181 are substantially below APTOS. The indepe",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 178,
+    "text_start": "Grad-CAM [48] targets the predicted-class full equal logit at fixed seed 42, separately for Teacher-1 CNN, Tea",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 179,
+    "text_start": "These independently normalized CNN-branch maps are not a joint whole-system map or ViT attribution and cannot ",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 181,
+    "text_start": "Figure 3. All five predetermined IDRiD Grad-CAM cases, seed 42: IDRiD_029 (0->1), IDRiD_063 (1->1), IDRiD_008 ",
+    "prototype_original_paragraph": 52,
+    "exact_unchanged_text": false,
+    "source_font": null,
+    "source_size_pt": null
+  },
+  {
+    "paragraph_index": 183,
+    "text_start": "Figure 4. All five predetermined APTOS Grad-CAM cases (seed 42, first test image of each true grade). All five",
+    "prototype_original_paragraph": 52,
+    "exact_unchanged_text": false,
+    "source_font": null,
+    "source_size_pt": null
+  },
+  {
+    "paragraph_index": 184,
+    "text_start": "Table 10. Label-budget and preprocessing comparisons: full equal versus independent CE (QWK, mean +/- sample S",
+    "prototype_original_paragraph": 136,
+    "exact_unchanged_text": false,
+    "source_font": null,
+    "source_size_pt": null
+  },
+  {
+    "paragraph_index": 185,
+    "text_start": "The full system underperforms the independent CE student at 10%, 25% and 50% labels. The 25% full-system QWKs ",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 186,
+    "text_start": "IV. CONCLUSION",
+    "prototype_original_paragraph": 152,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": null
+  },
+  {
+    "paragraph_index": 187,
+    "text_start": "The completed three-seed matrix characterizes a teacher-assisted residual system rather than successful standa",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 188,
+    "text_start": "Ordinal and hinge terms improve defined joint-output contrasts, but multiple temperatures, weak-teacher inclus",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 189,
+    "text_start": "A. Practical implications",
+    "prototype_original_paragraph": 155,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": 11.0
+  },
+  {
+    "paragraph_index": 190,
+    "text_start": "Both teachers remain active in full inference. Approximately fourfold batch-1 latency and greater allocated me",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 191,
+    "text_start": "B. Limitations",
+    "prototype_original_paragraph": 157,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": 11.0
+  },
+  {
+    "paragraph_index": 192,
+    "text_start": "Historical APTOS test exposure persists despite the frozen new matrix, and three seeds are insufficient to cha",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 193,
+    "text_start": "The objective supervises a combined score rather than standalone student logits. Student collapse, unstable au",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 194,
+    "text_start": "External evaluation is limited to 103 IDRiD images, including only five Mild cases, with substantially lower p",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 196,
+    "text_start": "C. Future work",
+    "prototype_original_paragraph": 159,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": 11.0
+  },
+  {
+    "paragraph_index": 197,
+    "text_start": "Future work should first test explicit standalone-student supervision as a separately specified method, not si",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 199,
+    "text_start": "AUTHOR STATEMENT",
+    "prototype_original_paragraph": 161,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": null
+  },
+  {
+    "paragraph_index": 200,
+    "text_start": "Plagiarism Check—The original manuscript reported an iThenticate check. A new similarity check of this revised",
+    "prototype_original_paragraph": 162,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 201,
+    "text_start": "Conflict of Interest—This article does not have any conflict of interest with any person or organization.",
+    "prototype_original_paragraph": 163,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 202,
+    "text_start": "Ethics Committee Approval—This study used existing publicly available retinal image datasets, APTOS 2019 and I",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 203,
+    "text_start": "Use of Artificial Intelligence Tools—The original manuscript disclosed Claude (Anthropic) for grammar checking",
+    "prototype_original_paragraph": 12,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 10.0
+  },
+  {
+    "paragraph_index": 204,
+    "text_start": "REFERENCES",
+    "prototype_original_paragraph": 166,
+    "exact_unchanged_text": true,
+    "source_font": "Calibri",
+    "source_size_pt": null
+  },
+  {
+    "paragraph_index": 205,
+    "text_start": "[1]\tYau JW, Rogers SL, Kawasaki R et al. \"Global prevalence and major risk factors of diabetic retinopathy\". D",
+    "prototype_original_paragraph": 167,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 206,
+    "text_start": "[2]\tInternational Diabetes Federation. IDF Diabetes Atlas. 10th ed. Brussels, Belgium, International Diabetes ",
+    "prototype_original_paragraph": 168,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 207,
+    "text_start": "[3]\tWilkinson CP, Ferris FL, Klein RE et al. \"Proposed international clinical diabetic retinopathy and diabeti",
+    "prototype_original_paragraph": 169,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 208,
+    "text_start": "[4]\tKrause J, Gulshan V, Rahimy E et al. \"Grader variability and the importance of reference standards for eva",
+    "prototype_original_paragraph": 170,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 209,
+    "text_start": "[5]\tGulshan V, Peng L, Coram M et al. \"Development and validation of a deep learning algorithm for detection o",
+    "prototype_original_paragraph": 171,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 210,
+    "text_start": "[6]\tTing DSW, Cheung CY, Lim G et al. \"Development and validation of a deep learning system for diabetic retin",
+    "prototype_original_paragraph": 172,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 211,
+    "text_start": "[7]\tHe K, Zhang X, Ren S, Sun J. \"Deep residual learning for image recognition\". IEEE Conference on Computer V",
+    "prototype_original_paragraph": 173,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 212,
+    "text_start": "[8]\tTan M, Le QV. \"EfficientNet: rethinking model scaling for convolutional neural networks\". 36th Internation",
+    "prototype_original_paragraph": 174,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 213,
+    "text_start": "[9]\tHuang G, Liu Z, Van der Maaten L, Weinberger KQ. \"Densely connected convolutional networks\". IEEE Conferen",
+    "prototype_original_paragraph": 175,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 214,
+    "text_start": "[10]\tSerener A, Serte S. \"Geographic variation and ethnicity in diabetic retinopathy detection via deep learni",
+    "prototype_original_paragraph": 176,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 215,
+    "text_start": "[11]\tPatil M, Chickerur S, Kumar VSY et al. \"Deep hyperparameter transfer learning for diabetic retinopathy cl",
+    "prototype_original_paragraph": 177,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 216,
+    "text_start": "[12]\tZhu S, Xiong C, Zhong Q, Yao Y. \"Diabetic retinopathy classification with deep learning via fundus images",
+    "prototype_original_paragraph": 178,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 217,
+    "text_start": "[13]\tBappi MI, Juthy JA, Kim K. \"Deep learning-based diabetic retinopathy recognition and grading: challenges,",
+    "prototype_original_paragraph": 179,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 218,
+    "text_start": "[14]\tDosovitskiy A, Beyer L, Kolesnikov A et al. \"An image is worth 16x16 words: transformers for image recogn",
+    "prototype_original_paragraph": 180,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 219,
+    "text_start": "[15]\tZhang W, Belcheva V, Ermakova T. \"Interpretable deep learning for diabetic retinopathy: a comparative stu",
+    "prototype_original_paragraph": 181,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 220,
+    "text_start": "[16]\tHinton G, Vinyals O, Dean J. \"Distilling the knowledge in a neural network\". arXiv preprint arXiv:1503.02",
+    "prototype_original_paragraph": 182,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 221,
+    "text_start": "[17]\tIslam N, Jony MMH, Hasan E et al. \"Toward lightweight diabetic retinopathy classification: a knowledge di",
+    "prototype_original_paragraph": 183,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 222,
+    "text_start": "[18]\tLiu Z, Mao H, Wu CY, Feichtenhofer C, Darrell T, Xie S. \"A ConvNet for the 2020s\". IEEE/CVF Conference on",
+    "prototype_original_paragraph": 184,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 223,
+    "text_start": "[19]\tFarag MM, Fouad M, Abdel-Hamid AT. \"Automatic severity classification of diabetic retinopathy based on De",
+    "prototype_original_paragraph": 185,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 224,
+    "text_start": "[20]\tShakibania H, Raoufi S, Pourafkham B, Khotanlou H, Mansoorizadeh M. \"Dual branch deep learning network fo",
+    "prototype_original_paragraph": 186,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 225,
+    "text_start": "[21]\tTian M, Wang H, Sun Y, Wu S, Tang Q, Zhang M. \"Fine-grained attention and knowledge-based collaborative n",
+    "prototype_original_paragraph": 187,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 226,
+    "text_start": "[22]\tRomero-Oraá R, Herrero-Tudela M, López MI, Hornero R, García M. \"Attention-based deep learning framework ",
+    "prototype_original_paragraph": 188,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 227,
+    "text_start": "[23]\tAsia Pacific Tele-Ophthalmology Society. APTOS 2019 blindness detection dataset. https://www.kaggle.com/c",
+    "prototype_original_paragraph": 189,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 228,
+    "text_start": "[24]\tIkram A, Imran A. \"ResViT FusionNet model: an explainable AI-driven approach for automated grading of dia",
+    "prototype_original_paragraph": 190,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 229,
+    "text_start": "[25]\tNiranjan KR, Srinivasa Rao N, Rangahanumaiah N, Beena Ullala Mata BN, Anantharamaiah V. \"A hybrid Vision ",
+    "prototype_original_paragraph": 191,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 230,
+    "text_start": "[26]\tNazih W, Aseeri AO, Atallah OY, El-Sappagh S. \"Vision transformer model for predicting the severity of di",
+    "prototype_original_paragraph": 192,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 231,
+    "text_start": "[27]\tGoh JHL, Ang E, Srinivasan S et al. \"Comparative analysis of Vision Transformers and conventional convolu",
+    "prototype_original_paragraph": 193,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 232,
+    "text_start": "[28]\tGou J, Yu B, Maybank SJ, Tao D. \"Knowledge distillation: a survey\". International Journal of Computer Vis",
+    "prototype_original_paragraph": 194,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 233,
+    "text_start": "[29]\tLuo L, Xue D, Feng X. \"Automatic diabetic retinopathy grading via self-knowledge distillation\". Electroni",
+    "prototype_original_paragraph": 195,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 234,
+    "text_start": "[30]\tJu L, Wang X, Zhao X, Lu H, Mahapatra D, Bonnington P, Ge Z. \"Synergic adversarial label learning for gra",
+    "prototype_original_paragraph": 196,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 235,
+    "text_start": "[31]\tMoya-Albor E, Lopez-Figueroa A, Jacome-Herrera S, Renza D, Brieva J. \"Computer-aided diagnosis of diabeti",
+    "prototype_original_paragraph": 197,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 236,
+    "text_start": "[32]\tWang Y, Hou Q, Cao P, Yang J, Zaiane OR. \"Lesion-aware knowledge distillation for diabetic retinopathy le",
+    "prototype_original_paragraph": 198,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 237,
+    "text_start": "[33]\tChilukoti SV, Shan L, Tida VS, Maida AS, Hei X. \"A reliable diabetic retinopathy grading via transfer lea",
+    "prototype_original_paragraph": 199,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 238,
+    "text_start": "[34]\tCao W, Mirjalili V, Raschka S. \"Rank consistent ordinal regression for neural networks with application t",
+    "prototype_original_paragraph": 200,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 239,
+    "text_start": "[35]\tLiu X, Fan F, Kong L, Diao Z, Xie W, Lu J, You J. \"Unimodal regularized neuron stick-breaking for ordinal",
+    "prototype_original_paragraph": 201,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 240,
+    "text_start": "[36]\tYilmaz B, Aiyengar A. \"Cross-architecture knowledge distillation (KD) for retinal fundus image anomaly de",
+    "prototype_original_paragraph": 202,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 241,
+    "text_start": "[37]\tMiyato T, Kataoka T, Koyama M, Yoshida Y. \"Spectral normalization for generative adversarial networks\". I",
+    "prototype_original_paragraph": 203,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 242,
+    "text_start": "[38]\tNabavi S, Anvari Hamedani K, Ebrahimi Moghaddam M, Abin AA, Frangi AF. \"Multiple teachers-meticulous stud",
+    "prototype_original_paragraph": 204,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 243,
+    "text_start": "[39]\tHandoyo AT, Kusuma GP. \"Severity classification of diabetic retinopathy using ensemble stacking method\". ",
+    "prototype_original_paragraph": 205,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 244,
+    "text_start": "[40]\tOh K, Kang HM, Leem D et al. \"Early detection of diabetic retinopathy based on deep learning and ultra-wi",
+    "prototype_original_paragraph": 206,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 245,
+    "text_start": "[41]\tMacsik P, Pavlovicova J, Goga J, Kajan S. \"Local binary CNN for diabetic retinopathy classification on fu",
+    "prototype_original_paragraph": 207,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 246,
+    "text_start": "[42]\tEL-Assiouti OS, Hamed G, Khattab D, Ebied HM. \"HDKD: hybrid data-efficient knowledge distillation network",
+    "prototype_original_paragraph": 208,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 247,
+    "text_start": "[43]\tHossain KF, Kamran SA, Ong J, Tavakkoli A. \"Enhancing efficient deep learning models with multimodal, mul",
+    "prototype_original_paragraph": 209,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 248,
+    "text_start": "[44]\tYang C, Yu X, Yang H, An Z, Yu C, Huang L, Xu Y. \"Multi-teacher knowledge distillation with reinforcement",
+    "prototype_original_paragraph": 210,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 249,
+    "text_start": "[45]\tLitvinov A, Ushakov E, Senotrusova S et al. \"Clinically aware learning: ordinal loss improves medical ima",
+    "prototype_original_paragraph": 211,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 250,
+    "text_start": "[46]\tLiu Y. \"Medical image classification based on transformer model and ordinal loss\". 1st International Conf",
+    "prototype_original_paragraph": 212,
+    "exact_unchanged_text": true,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 251,
+    "text_start": "[47] Porwal P, Pachade S, Kamble R et al. \"Indian Diabetic Retinopathy Image Dataset (IDRiD): A Database for D",
+    "prototype_original_paragraph": 212,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  },
+  {
+    "paragraph_index": 252,
+    "text_start": "[48] Selvaraju RR, Cogswell M, Das A, Vedantam R, Parikh D, Batra D. \"Grad-CAM: Visual Explanations from Deep ",
+    "prototype_original_paragraph": 212,
+    "exact_unchanged_text": false,
+    "source_font": "Cambria",
+    "source_size_pt": 9.0
+  }
+]

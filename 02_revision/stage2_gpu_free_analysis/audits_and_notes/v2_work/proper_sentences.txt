@@ -1,0 +1,102 @@
+
+
+ Thank you all for your insightful and constructive comments. We have made further improvements to the manuscript based on these comments. We would like to note that all our responses below are written in bold italic font.
+We would like to thank you for your valuable and constructive comments. We have benefited from these comments and greatly improved the quality of our submission. In particular, we have made the following major changes to the manuscript in this revision:
+
+ Thank you all for your insightful and constructive comments. We have benefited from these comments and substantially improved the quality of the manuscript. Based on the concerns reflected in the comments, we would like to make some general comments:
+
+
+Dear Prof. Ba Ngu Vo and reviewers
+Thank you for overseeing the review of our manuscript. In accordance with the reviewers’
+comments, we have prepared this revised version. We would like to use this opportunity to
+thank all the reviewers for the comments they have provided to help us improve the paper.
+In the pages that follow, we include detailed responses to the reviewers, for explicit
+clarification of individual comments and how they were addressed. Our responses below
+are written in bold font, and the changes in the manuscripts are highlighted in red.
+Best regards,
+Y. Liu, S. Yang, V. Kilic, Y. Li, Y. Luo, A. Hilton, and W. Wang
+
+
+Thanks for the guidance which has helped us further improve the paper. We have
+addressed each comment the reviewers raised and revised the manuscript accordingly. We
+believe the manuscript has been significantly improved with respect to the aspects
+identified by the reviewers.
+
+The authors appreciate the reviewer’s constructive comments to help us improve the paper
+and time in reviewing the manuscript. After analysing the individual comments very
+carefully, we found that a number of comments are unwarranted, and the issues raised are
+either minor that can be easily fixed (and we have done so) or caused by misunderstanding
+that can be clarified.
+
+We have made every attempt to further improve the organization, by providing more
+motivating and overview materials, or making necessary changes in order to address the
+reviewer’s concern as in the response below.
+
+The authors thank the reviewer for the helpful comment. We have followed your
+suggestion in the revised manuscript. We have also double-checked the following sentences
+and made changes accordingly.
+
+The authors thank the reviewer for the constructive comments that help us improve the
+paper. We have carefully addressed all the issues you raised as follows.
+
+ The authors wish to thank you for your helpful comments.
+ The authors wish to thank you for your constructive comments. 
+
+ Our responses to your comments are:
+Thank you for this summary and the constructive comments. We have made every attempt to address your comments and those by the other two reviewers, which are very helpful for improving the quality of our manuscript.
+We have also gone through the manuscript carefully and made every attempt to eliminate such ambiguous phrases.
+We have gone through the whole manuscript and made every attempt to improve the clarity of the ambiguous sentences.
+we have carefully proofread the manuscript to ensure that each symbol used is clearly defined.
+We have also proofread the manuscript carefully to eliminate any such typos.
+We have further improved our presentation and proofread the English usage carefully.
+We have corrected the use of definite articles and proof-read the whole manuscript very carefully again to eliminate such similar issues.
+We have carefully proofread the paper to avoid the potential typos.
+We have gone through the whole manuscript carefully and made every attempt to eliminate grammatical and spelling errors.
+
+
+
+ Thanks for your comments.
+Thanks for the comments. 
+Thanks for the comment.
+Thanks for this comment.
+Thank you for your constructive comments. 
+Thanks for the constructive comments.
+Thank you for these very constructive comments.
+Thank you very much for the constructive comments.
+Thanks for this helpful comment.
+Thank you for your supportive comments.
+Thank you very much for your supportive comments.
+
+Thanks for your insightful comments. 
+
+Thanks for this suggestion.
+Thanks for your constructive suggestions.
+Thank you for pointing this out.
+Thank you for your nice summary above.
+
+Based upon your suggestion, we have revised the
+Based on this comment, we have made
+
+In response to this comment and comment from Reviewer 2, we
+
+To address this comment, we have
+
+ We have further improved the presentation by
+Thanks for recognizing our effort in improving the manuscript.
+We have rephrased this sentence to remove the potential ambiguities. It now reads as “… ”
+We have rephrased these two paragraphs to further clarify the point
+This sentence has been rephrased.
+We have rephrased this sentence to clarify the fact that
+Corrected.
+This has been clarified in the revised manuscript.
+In the revised MS, we have further clarified/stressed that:
+We have rephrased this sentence to “ ”
+Addressed.
+We have performed further checks and avoided the use of inconsistent notations.
+Revised as suggested.
+We appreciate your comments and will perform a more comprehensive evaluation over larger, more realistic datasets in our future work.
+We have revised the paper as you suggested and tried our best to address your comments. We hope the revised manuscript is now acceptable to you.
+Thanks for the additional references.
+We have added an acknowledgment section to appreciate the reviewers’ inputs that have helped us in improving the manuscript.
+
+We acknowledge your comments and would like to consider the use of identity models in our future work.

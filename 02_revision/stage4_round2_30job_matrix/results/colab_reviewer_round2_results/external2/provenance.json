@@ -1,0 +1,9 @@
+{
+  "preprocessing": "RGB bilinear 224 then each model's own training preprocessing; no TTA, no calibration, no threshold fitting, no target-domain training",
+  "datasets": {
+    "IDRiD": {
+      "evaluated": 103,
+      "zip_sha256": "8a9f4752b35d74cc35ff48b21ad44f295a6f800110ec218fc2d1c264803e4d8c"
+    }
+  }
+}

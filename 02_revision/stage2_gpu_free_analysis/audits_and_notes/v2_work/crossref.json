@@ -1,0 +1,528 @@
+[
+ {
+  "key": "yau2012",
+  "doi": "10.2337/dc11-1909",
+  "status": "found",
+  "cr_title": "Global Prevalence and Major Risk Factors of Diabetic Retinopathy",
+  "cr_year": 2012,
+  "cr_auth": [
+   "Yau",
+   "Rogers",
+   "Kawasaki"
+  ],
+  "cr_container": "Diabetes Care",
+  "local": "J.W. Yau, S.L. Rogers, R. Kawasaki, et al., Global prevalence and major risk factors of diabetic retinopathy, \\textit{Diabetes Care} 35 (2012) 556--564.\\newline\\url{https://doi.org/10.2337/dc11-1909}"
+ },
+ {
+  "key": "wilkinson2003",
+  "doi": "10.1016/S0161-6420(03)00475-5",
+  "status": "found",
+  "cr_title": "Proposed international clinical diabetic retinopathy and diabetic macular edema disease severity scales",
+  "cr_year": 2003,
+  "cr_auth": [
+   "Wilkinson",
+   "Ferris",
+   "Klein"
+  ],
+  "cr_container": "Ophthalmology",
+  "local": "C.P. Wilkinson, F.L. Ferris~III, R.E. Klein, et al., Proposed international clinical diabetic retinopathy and diabetic macular edema disease severity scales, \\textit{Ophthalmology} 110 (2003) 1677--16"
+ },
+ {
+  "key": "krause2018",
+  "doi": "10.1016/j.ophtha.2018.01.034",
+  "status": "found",
+  "cr_title": "Grader Variability and the Importance of Reference Standards for Evaluating Machine Learning Models for Diabetic Retinopathy",
+  "cr_year": 2018,
+  "cr_auth": [
+   "Krause",
+   "Gulshan",
+   "Rahimy"
+  ],
+  "cr_container": "Ophthalmology",
+  "local": "J. Krause, V. Gulshan, E. Rahimy, et al., Grader variability and the importance of reference standards for evaluating machine learning models for diabetic retinopathy, \\textit{Ophthalmology} 125 (2018"
+ },
+ {
+  "key": "gulshan2016",
+  "doi": "10.1001/jama.2016.17216",
+  "status": "found",
+  "cr_title": "Development and Validation of a Deep Learning Algorithm for Detection of Diabetic Retinopathy in Retinal Fundus Photographs",
+  "cr_year": 2016,
+  "cr_auth": [
+   "Gulshan",
+   "Peng",
+   "Coram"
+  ],
+  "cr_container": "JAMA",
+  "local": "V. Gulshan, L. Peng, M. Coram, et al., Development and validation of a deep learning algorithm for detection of diabetic retinopathy in retinal fundus photographs, \\textit{JAMA} 316 (2016) 2402--2410."
+ },
+ {
+  "key": "ting2017",
+  "doi": "10.1001/jama.2017.18152",
+  "status": "found",
+  "cr_title": "Development and Validation of a Deep Learning System for Diabetic Retinopathy and Related Eye Diseases Using Retinal Images From Multiethnic Populations With Diabetes",
+  "cr_year": 2017,
+  "cr_auth": [
+   "Ting",
+   "Cheung",
+   "Lim"
+  ],
+  "cr_container": "JAMA",
+  "local": "D.S.W. Ting, C.Y. Cheung, G. Lim, et al., Development and validation of a deep learning system for diabetic retinopathy and related eye diseases, \\textit{JAMA} 318 (2017) 2211--2223.\\newline\\url{https"
+ },
+ {
+  "key": "he2016",
+  "doi": "10.1109/CVPR.2016.90",
+  "status": "found",
+  "cr_title": "Deep Residual Learning for Image Recognition",
+  "cr_year": 2016,
+  "cr_auth": [
+   "He",
+   "Zhang",
+   "Ren"
+  ],
+  "cr_container": "2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)",
+  "local": "K. He, X. Zhang, S. Ren, J. Sun, Deep residual learning for image recognition, in: \\textit{Proc. IEEE/CVF CVPR}, 2016, pp. 770--778.\\newline\\url{https://doi.org/10.1109/CVPR.2016.90}"
+ },
+ {
+  "key": "huang2017",
+  "doi": "10.1109/CVPR.2017.243",
+  "status": "found",
+  "cr_title": "Densely Connected Convolutional Networks",
+  "cr_year": 2017,
+  "cr_auth": [
+   "Huang",
+   "Liu",
+   "Van Der Maaten"
+  ],
+  "cr_container": "2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)",
+  "local": "G. Huang, Z. Liu, L. van~der~Maaten, K.Q. Weinberger, Densely connected convolutional networks, in: \\textit{Proc. IEEE/CVF CVPR}, 2017, pp. 4700--4708.\\newline\\url{https://doi.org/10.1109/CVPR.2017.24"
+ },
+ {
+  "key": "zhu2024",
+  "doi": "10.1109/access.2024.3361944",
+  "status": "found",
+  "cr_title": "Diabetic Retinopathy Classification With Deep Learning via Fundus Images: A Short Survey",
+  "cr_year": 2024,
+  "cr_auth": [
+   "Zhu",
+   "Xiong",
+   "Zhong"
+  ],
+  "cr_container": "IEEE Access",
+  "local": "S. Zhu, C. Xiong, Q.Q. Zhong, Y. Yao, Diabetic retinopathy classification with deep learning via fundus images: A short survey, \\textit{IEEE Access} (2024).\\newline\\url{https://doi.org/10.1109/access."
+ },
+ {
+  "key": "bappi2025",
+  "doi": "10.1016/j.icte.2025.08.001",
+  "status": "found",
+  "cr_title": "Deep learning-based diabetic retinopathy recognition and grading: Challenges, gaps, and an improved approach — A survey",
+  "cr_year": 2025,
+  "cr_auth": [
+   "Bappi",
+   "Juthy",
+   "Kim"
+  ],
+  "cr_container": "ICT Express",
+  "local": "M.I. Bappi, J.A. Juthy, K. Kim, Deep learning-based diabetic retinopathy recognition and grading: Challenges, gaps, and an improved approach---A survey, \\textit{ICT Express} (2025).\\newline\\url{https:"
+ },
+ {
+  "key": "zhang2025",
+  "doi": "10.3390/computers14050187",
+  "status": "found",
+  "cr_title": "Interpretable Deep Learning for Diabetic Retinopathy: A Comparative Study of CNN, ViT, and Hybrid Architectures",
+  "cr_year": 2025,
+  "cr_auth": [
+   "Zhang",
+   "Belcheva",
+   "Ermakova"
+  ],
+  "cr_container": "Computers",
+  "local": "W. Zhang, V. Belcheva, T. Ermakova, Interpretable deep learning for diabetic retinopathy: A comparative study of CNN, ViT, and hybrid architectures, \\textit{Computers} (2025).\\newline\\url{https://doi."
+ },
+ {
+  "key": "islam2023",
+  "doi": "10.3390/app132212397",
+  "status": "found",
+  "cr_title": "Toward Lightweight Diabetic Retinopathy Classification: A Knowledge Distillation Approach for Resource-Constrained Settings",
+  "cr_year": 2023,
+  "cr_auth": [
+   "Islam",
+   "Jony",
+   "Hasan"
+  ],
+  "cr_container": "Applied Sciences",
+  "local": "N. Islam, M.M.H. Jony, E. Hasan, et al., Toward lightweight diabetic retinopathy classification: A knowledge distillation approach for resource-constrained settings, \\textit{Applied Sciences} (2023).\\"
+ },
+ {
+  "key": "liu2022",
+  "doi": "10.1109/CVPR52688.2022.01167",
+  "status": "found",
+  "cr_title": "A ConvNet for the 2020s",
+  "cr_year": 2022,
+  "cr_auth": [
+   "Liu",
+   "Mao",
+   "Wu"
+  ],
+  "cr_container": "2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+  "local": "Z. Liu, H. Mao, C.Y. Wu, C. Feichtenhofer, T. Darrell, S. Xie, A ConvNet for the 2020s, in: \\textit{Proc. IEEE/CVF CVPR}, 2022, pp. 11976--11986.\\newline\\url{https://doi.org/10.1109/CVPR52688.2022.011"
+ },
+ {
+  "key": "farag2022",
+  "doi": "10.1109/access.2022.3165193",
+  "status": "found",
+  "cr_title": "Automatic Severity Classification of Diabetic Retinopathy Based on DenseNet and Convolutional Block Attention Module",
+  "cr_year": 2022,
+  "cr_auth": [
+   "Farag",
+   "Fouad",
+   "Abdel-Hamid"
+  ],
+  "cr_container": "IEEE Access",
+  "local": "M.M. Farag, M.A. Fouad, A.T. Abdel-Hamid, Automatic severity classification of diabetic retinopathy based on DenseNet and convolutional block attention module, \\textit{IEEE Access} (2022).\\newline\\url"
+ },
+ {
+  "key": "shakibania2024",
+  "doi": "10.1016/j.bspc.2024.106168",
+  "status": "found",
+  "cr_title": "Dual branch deep learning network for detection and stage grading of diabetic retinopathy",
+  "cr_year": 2024,
+  "cr_auth": [
+   "Shakibania",
+   "Raoufi",
+   "Pourafkham"
+  ],
+  "cr_container": "Biomedical Signal Processing and Control",
+  "local": "H. Shakibania, S. Raoufi, B. Pourafkham, et al., Dual branch deep learning network for detection and stage grading of diabetic retinopathy, \\textit{Biomed. Signal Process. Control} (2024).\\newline\\url"
+ },
+ {
+  "key": "tian2023",
+  "doi": "10.1016/j.heliyon.2023.e17217",
+  "status": "found",
+  "cr_title": "Fine-grained attention &amp; knowledge-based collaborative network for diabetic retinopathy grading",
+  "cr_year": 2023,
+  "cr_auth": [
+   "Tian",
+   "Wang",
+   "Sun"
+  ],
+  "cr_container": "Heliyon",
+  "local": "M. Tian, H. Wang, Y. Sun, et al., Fine-grained attention \\& knowledge-based collaborative network for diabetic retinopathy grading, \\textit{Heliyon} (2023).\\newline\\url{https://doi.org/10.1016/j.heliy"
+ },
+ {
+  "key": "romero2024",
+  "doi": "10.1016/j.cmpb.2024.108160",
+  "status": "found",
+  "cr_title": "Attention-based deep learning framework for automatic fundus image processing to aid in diabetic retinopathy grading",
+  "cr_year": 2024,
+  "cr_auth": [
+   "Romero-Oraá",
+   "Herrero-Tudela",
+   "López"
+  ],
+  "cr_container": "Computer Methods and Programs in Biomedicine",
+  "local": "R. Romero-Ora\\'{a}, M. Herrero-Tudela, M.I. L\\'{o}pez, et al., Attention-based deep learning framework for automatic fundus image processing, \\textit{Comput. Methods Programs Biomed.} (2024).\\newline\\"
+ },
+ {
+  "key": "ikram2025",
+  "doi": "10.1016/j.compbiomed.2025.109656",
+  "status": "found",
+  "cr_title": "ResViT FusionNet Model: An explainable AI-driven approach for automated grading of diabetic retinopathy in retinal images",
+  "cr_year": 2025,
+  "cr_auth": [
+   "Ikram",
+   "Imran"
+  ],
+  "cr_container": "Computers in Biology and Medicine",
+  "local": "A. Ikram, A. Imran, ResViT FusionNet model: An explainable AI-driven approach for automated grading of diabetic retinopathy, \\textit{Comput. Biol. Med.} (2025).\\newline\\url{https://doi.org/10.1016/j.c"
+ },
+ {
+  "key": "azzou2025",
+  "doi": "10.5455/jjcit.71-1738691198",
+  "status": "found",
+  "cr_title": "A Hybrid CNN-Transformer Approach for Precise Three-Class Diabetic Retinopathy Classification",
+  "cr_year": 2025,
+  "cr_auth": [
+   "Azzou",
+   "Boukredera",
+   "Baouz"
+  ],
+  "cr_container": "Jordanian Journal of Computers and Information Technology",
+  "local": "S. Azzou, D. Boukredera, S. Baouz, A hybrid CNN-Transformer approach for precise three-class diabetic retinopathy classification, \\textit{Jordanian J. Comput. Inf. Technol.} (2025).\\newline\\url{https:"
+ },
+ {
+  "key": "niranjan2025",
+  "doi": "10.37965/jait.2025.0645",
+  "status": "found",
+  "cr_title": "A Hybrid Vision Transformer and Graph Neural Network Model with Attention Mechanisms for Diabetic Retinopathy Detection",
+  "cr_year": 2025,
+  "cr_auth": [
+   "Niranjan KR",
+   "Srinivasa Rao N",
+   "Nagesh Rangahanumaiah"
+  ],
+  "cr_container": "Journal of Artificial Intelligence and Technology",
+  "local": "K. Niranjan, et al., A hybrid vision transformer and graph neural network model for diabetic retinopathy detection, \\textit{J. Artif. Intell. Technol.} (2025).\\newline\\url{https://doi.org/10.37965/jai"
+ },
+ {
+  "key": "minarno2022",
+  "doi": "10.18280/ria.360608",
+  "status": "found",
+  "cr_title": "Severity Classification of Diabetic Retinopathy Using Ensemble Stacking Method",
+  "cr_year": 2022,
+  "cr_auth": [
+   "Handoyo",
+   "Kusuma"
+  ],
+  "cr_container": "Revue d'Intelligence Artificielle",
+  "local": "A.E. Minarno, et al., Severity classification of diabetic retinopathy using ensemble stacking method, \\textit{Revue d'Intelligence Artificielle} 36 (2022) 927--933.\\newline\\url{https://doi.org/10.1828"
+ },
+ {
+  "key": "oh2022",
+  "doi": "10.3390/diagnostics12081975",
+  "status": "found",
+  "cr_title": "Automated Diabetic Retinopathy Detection Using Horizontal and Vertical Patch Division-Based Pre-Trained DenseNET with Digital Fundus Images",
+  "cr_year": 2022,
+  "cr_auth": [
+   "Kobat",
+   "Baygin",
+   "Yusufoglu"
+  ],
+  "cr_container": "Diagnostics",
+  "local": "K. Oh, H.M. Kang, D. Leem, H. Lee, K.Y. Seo, S. Yoon, Automated diabetic retinopathy detection using horizontal and vertical patch division-based pre-trained DenseNET with digital fundus images, \\text"
+ },
+ {
+  "key": "nazih2023",
+  "doi": "10.1109/access.2023.3326528",
+  "status": "found",
+  "cr_title": "Vision Transformer Model for Predicting the Severity of Diabetic Retinopathy in Fundus Photography-Based Retina Images",
+  "cr_year": 2023,
+  "cr_auth": [
+   "Nazih",
+   "Aseeri",
+   "Atallah"
+  ],
+  "cr_container": "IEEE Access",
+  "local": "W. Nazih, A.O. Aseeri, O. Atallah, S. El-Sappagh, Vision transformer model for predicting the severity of diabetic retinopathy, \\textit{IEEE Access} (2023).\\newline\\url{https://doi.org/10.1109/access."
+ },
+ {
+  "key": "goh2024",
+  "doi": "10.1016/j.xops.2024.100552",
+  "status": "found",
+  "cr_title": "Comparative Analysis of Vision Transformers and Conventional Convolutional Neural Networks in Detecting Referable Diabetic Retinopathy",
+  "cr_year": 2024,
+  "cr_auth": [
+   "Goh",
+   "Ang",
+   "Srinivasan"
+  ],
+  "cr_container": "Ophthalmology Science",
+  "local": "J.H.L. Goh, E. Ang, S. Srinivasan, et al., Comparative analysis of vision transformers and CNNs in detecting referable diabetic retinopathy, \\textit{Ophthalmol. Sci.} (2024).\\newline\\url{https://doi.o"
+ },
+ {
+  "key": "gou2021",
+  "doi": "10.1007/s11263-021-01453-z",
+  "status": "found",
+  "cr_title": "Knowledge Distillation: A Survey",
+  "cr_year": 2021,
+  "cr_auth": [
+   "Gou",
+   "Yu",
+   "Maybank"
+  ],
+  "cr_container": "International Journal of Computer Vision",
+  "local": "J. Gou, B. Yu, S.J. Maybank, D. Tao, Knowledge distillation: A survey, \\textit{Int. J. Comput. Vis.} 129 (2021) 1789--1819.\\newline\\url{https://doi.org/10.1007/s11263-021-01453-z}"
+ },
+ {
+  "key": "luo2020",
+  "doi": "10.3390/electronics9091337",
+  "status": "found",
+  "cr_title": "Automatic Diabetic Retinopathy Grading via Self-Knowledge Distillation",
+  "cr_year": 2020,
+  "cr_auth": [
+   "Luo",
+   "Xue",
+   "Feng"
+  ],
+  "cr_container": "Electronics",
+  "local": "L. Luo, D. Xue, X. Feng, Automatic diabetic retinopathy grading via self-knowledge distillation, \\textit{Electronics} (2020).\\newline\\url{https://doi.org/10.3390/electronics9091337}"
+ },
+ {
+  "key": "ju2021",
+  "doi": "10.1109/jbhi.2021.3052916",
+  "status": "found",
+  "cr_title": "Synergic Adversarial Label Learning for Grading Retinal Diseases via Knowledge Distillation and Multi-Task Learning",
+  "cr_year": 2021,
+  "cr_auth": [
+   "Ju",
+   "Wang",
+   "Zhao"
+  ],
+  "cr_container": "IEEE Journal of Biomedical and Health Informatics",
+  "local": "L. Ju, X. Wang, X. Zhao, et al., Synergic adversarial label learning for grading retinal diseases via knowledge distillation, \\textit{IEEE J. Biomed. Health Inform.} (2021).\\newline\\url{https://doi.or"
+ },
+ {
+  "key": "moya2024",
+  "doi": "10.3390/math12162543",
+  "status": "found",
+  "cr_title": "Computer-Aided Diagnosis of Diabetic Retinopathy Lesions Based on Knowledge Distillation in Fundus Images",
+  "cr_year": 2024,
+  "cr_auth": [
+   "Moya-Albor",
+   "Lopez-Figueroa",
+   "Jacome-Herrera"
+  ],
+  "cr_container": "Mathematics",
+  "local": "E. Moya-Albor, A. Lopez-Figueroa, S. Jacome-Herrera, et al., Computer-aided diagnosis of diabetic retinopathy lesions based on knowledge distillation, \\textit{Mathematics} (2024).\\newline\\url{https://"
+ },
+ {
+  "key": "wang2024",
+  "doi": "10.1007/s10489-024-05274-8",
+  "status": "found",
+  "cr_title": "Lesion-aware knowledge distillation for diabetic retinopathy lesion segmentation",
+  "cr_year": 2024,
+  "cr_auth": [
+   "Wang",
+   "Hou",
+   "Cao"
+  ],
+  "cr_container": "Applied Intelligence",
+  "local": "Y. Wang, Q. Hou, P. Cao, et al., Lesion-aware knowledge distillation for diabetic retinopathy lesion segmentation, \\textit{Appl. Intell.} (2024).\\newline\\url{https://doi.org/10.1007/s10489-024-05274-8"
+ },
+ {
+  "key": "alshafi2024",
+  "doi": "10.1109/ijcnn60899.2024.10650642",
+  "status": "found",
+  "cr_title": "Enhancing Diabetic Retinopathy Detection Through Transformer Based Knowledge Distillation and Explainable AI",
+  "cr_year": 2024,
+  "cr_auth": [
+   "Shafi",
+   "Hossain Shawon",
+   "Shahid"
+  ],
+  "cr_container": "2024 International Joint Conference on Neural Networks (IJCNN)",
+  "local": "A. Al~Shafi, M.H. Shawon, N. Shahid, et al., Enhancing diabetic retinopathy detection through transformer based knowledge distillation, in: \\textit{Proc. IJCNN}, 2024.\\newline\\url{https://doi.org/10.1"
+ },
+ {
+  "key": "cao2020",
+  "doi": "10.1016/j.patrec.2020.11.009",
+  "status": "found",
+  "cr_title": "Speech emotion recognition model based on Bi-GRU and Focal Loss",
+  "cr_year": 2020,
+  "cr_auth": [
+   "Zhu",
+   "Dai",
+   "Hu"
+  ],
+  "cr_container": "Pattern Recognition Letters",
+  "local": "W. Cao, V. Mirjalili, S. Raschka, Rank consistent ordinal regression for neural networks, \\textit{Pattern Recognit. Lett.} 140 (2020) 325--331.\\newline\\url{https://doi.org/10.1016/j.patrec.2020.11.009"
+ },
+ {
+  "key": "liu2020",
+  "doi": "10.1016/j.neucom.2019.10.038",
+  "status": "found",
+  "cr_title": "Neural network based integral sliding mode optimal flight control of near space hypersonic vehicle",
+  "cr_year": 2020,
+  "cr_auth": [
+   "Xia",
+   "Chen",
+   "Wu"
+  ],
+  "cr_container": "Neurocomputing",
+  "local": "X. Liu, F. Fan, L. Kong, et al., Unimodal regularized neuron stick-breaking for ordinal classification, \\textit{Neurocomputing} 388 (2020) 34--44.\\newline\\url{https://doi.org/10.1016/j.neucom.2019.10."
+ },
+ {
+  "key": "nabavi2024",
+  "doi": "10.1002/mp.70350",
+  "status": "found",
+  "cr_title": "Multiple teachers‐meticulous student: A domain adaptive meta‐knowledge distillation model for medical image classification",
+  "cr_year": 2026,
+  "cr_auth": [
+   "Nabavi",
+   "Anvari Hamedani",
+   "Ebrahimi Moghaddam"
+  ],
+  "cr_container": "Medical Physics",
+  "local": "S. Nabavi, K. Anvari, M. Ebrahimi Moghaddam, A.A. Abin, A. Frangi, Multiple teachers–meticulous student: A domain adaptive meta-knowledge distillation model for medical image classification, \\textit{M"
+ },
+ {
+  "key": "li2024",
+  "doi": "10.1016/j.compbiomed.2024.108635",
+  "status": "found",
+  "cr_title": "A review of deep learning-based information fusion techniques for multimodal medical image classification",
+  "cr_year": 2024,
+  "cr_auth": [
+   "Li",
+   "El Habib Daho",
+   "Conze"
+  ],
+  "cr_container": "Computers in Biology and Medicine",
+  "local": "Y.-H. Li, M.E.H. Daho, P.-H. Conze, R. Zeghlache, H. Le Boit\\'e, R. Tadayoni, B. Cochener, M. Lamard, G. Quellec, A review of deep learning-based information fusion techniques for multimodal medical i"
+ },
+ {
+  "key": "litvinov2026",
+  "doi": "10.3390/jcm15010365",
+  "status": "found",
+  "cr_title": "Clinically Aware Learning: Ordinal Loss Improves Medical Image Classifiers",
+  "cr_year": 2026,
+  "cr_auth": [
+   "Litvinov",
+   "Ushakov",
+   "Senotrusova"
+  ],
+  "cr_container": "Journal of Clinical Medicine",
+  "local": "A. Litvinov, E.N. Ushakov, S.A. Senotrusova, K. Lukianov, Y. Markin, L. Mikhailova, E. Karpulevich, Clinically Aware Learning: Ordinal Loss Improves Medical Image Classifiers, \\textit{Journal of Clini"
+ },
+ {
+  "key": "liu_medvit2024",
+  "doi": "10.5220/0012969200004508",
+  "status": "found",
+  "cr_title": "Medical Image Classification Based on Transformer Model and Ordinal Loss",
+  "cr_year": 2024,
+  "cr_auth": [
+   "Liu"
+  ],
+  "cr_container": "Proceedings of the 1st International Conference on Engineering Management, Information Technology and Intelligence",
+  "local": "Y. Liu, Medical Image Classification Based on Transformer Model and Ordinal Loss, Proceedings of the 1st International Conference on Engineering Management, Information Technology and Intelligence (20"
+ },
+ {
+  "key": "elassiouti2024",
+  "doi": "10.48550/arxiv.2407.07516",
+  "status": "ERR HTTP Error 404: Not Found",
+  "local": "O.S. El-Assiouti, G. Hamed, D. Khattab, H.M. Ebied, HDKD: Hybrid Data-Efficient Knowledge Distillation Network for Medical Image Classification, arXiv preprint (2024).\\newline\\url{https://doi.org/10.4"
+ },
+ {
+  "key": "hossain2025",
+  "doi": "10.1038/s41598-025-91430-0",
+  "status": "found",
+  "cr_title": "Enhancing efficient deep learning models with multimodal, multi-teacher insights for medical image segmentation",
+  "cr_year": 2025,
+  "cr_auth": [
+   "Hossain",
+   "Kamran",
+   "Ong"
+  ],
+  "cr_container": "Scientific Reports",
+  "local": "K.F. Hossain, S. Kamran, J. Ong, A. Tavakkoli, Enhancing efficient deep learning models with multimodal, multi-teacher insights for medical image segmentation (Teach-Former), \\textit{Scientific Report"
+ },
+ {
+  "key": "yang2025",
+  "doi": "10.48550/arxiv.2502.18510",
+  "status": "ERR HTTP Error 404: Not Found",
+  "local": "C. Yang, X. Yu, H. Yang, Z. An, C. Yu, L. Huang, Y. Xu, Multi-Teacher Knowledge Distillation with Reinforcement Learning for Visual Recognition, arXiv preprint (2025).\\newline\\url{https://doi.org/10.4"
+ },
+ {
+  "key": "macsik2023",
+  "doi": "10.1049/ipr2.12987",
+  "status": "found",
+  "cr_title": "Image preprocessing‐based ensemble deep learning classification of diabetic retinopathy",
+  "cr_year": 2023,
+  "cr_auth": [
+   "Macsik",
+   "Pavlovicova",
+   "Kajan"
+  ],
+  "cr_container": "IET Image Processing",
+  "local": "P. Macsik, J. Pavlovi\\v{c}ov\\'a, S. Kajan, J. Goga, V. Kurilov\\'a, Image preprocessing-based ensemble deep learning classification of diabetic retinopathy, \\textit{IET Image Processing} (2023).\\newlin"
+ }
+]

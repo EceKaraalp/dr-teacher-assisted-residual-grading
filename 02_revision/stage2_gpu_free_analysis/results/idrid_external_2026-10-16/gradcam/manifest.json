@@ -1,0 +1,217 @@
+{
+  "seed": 42,
+  "target": "Predicted class logit of full residual system",
+  "selection": "First lexicographic ID in each true-grade x correct/incorrect stratum",
+  "method": "Grad-CAM: spatial mean gradients, channel-weighted activations, ReLU, bilinear resize; each branch map independently normalized.",
+  "scope": "Three CNN-branch conditional maps, differentiated through teacher/outer gates and active conflict-brake branch; not a joint map or ViT attribution. Hard argmax/threshold decisions are locally fixed.",
+  "limitations": "Qualitative only, no lesion annotations, no localization accuracy or causal faithfulness claim; normalization prevents comparing branch magnitude.",
+  "records": [
+    {
+      "id": "IDRiD_039",
+      "true_grade": 0,
+      "target_predicted_grade": 0,
+      "forward_max_abs_logit_difference": 0.0,
+      "branches": {
+        "Teacher1_CNN": {
+          "positive_cam_max": 0.0001251689245691523,
+          "gradient_abs_max": 9.730429883347824e-05,
+          "zero_positive_map": false
+        },
+        "Teacher2_ResNet": {
+          "positive_cam_max": 0.059598036110401154,
+          "gradient_abs_max": 0.0004720689030364156,
+          "zero_positive_map": false
+        },
+        "Student_ConvNeXt": {
+          "positive_cam_max": 0.0074645355343818665,
+          "gradient_abs_max": 0.0002644758205860853,
+          "zero_positive_map": false
+        }
+      }
+    },
+    {
+      "id": "IDRiD_029",
+      "true_grade": 0,
+      "target_predicted_grade": 1,
+      "forward_max_abs_logit_difference": 0.0,
+      "branches": {
+        "Teacher1_CNN": {
+          "positive_cam_max": 0.001675110892392695,
+          "gradient_abs_max": 7.678298425162211e-05,
+          "zero_positive_map": false
+        },
+        "Teacher2_ResNet": {
+          "positive_cam_max": 0.05508881062269211,
+          "gradient_abs_max": 0.00016615726053714752,
+          "zero_positive_map": false
+        },
+        "Student_ConvNeXt": {
+          "positive_cam_max": 0.003513358999043703,
+          "gradient_abs_max": 0.00042742525693029165,
+          "zero_positive_map": false
+        }
+      }
+    },
+    {
+      "id": "IDRiD_063",
+      "true_grade": 1,
+      "target_predicted_grade": 1,
+      "forward_max_abs_logit_difference": 0.0,
+      "branches": {
+        "Teacher1_CNN": {
+          "positive_cam_max": 0.001083837472833693,
+          "gradient_abs_max": 0.00011776813335018232,
+          "zero_positive_map": false
+        },
+        "Teacher2_ResNet": {
+          "positive_cam_max": 2.4468909032293595e-05,
+          "gradient_abs_max": 4.388124352772138e-08,
+          "zero_positive_map": false
+        },
+        "Student_ConvNeXt": {
+          "positive_cam_max": 0.00034234675695188344,
+          "gradient_abs_max": 5.00251553603448e-05,
+          "zero_positive_map": false
+        }
+      }
+    },
+    {
+      "id": "IDRiD_074",
+      "true_grade": 1,
+      "target_predicted_grade": 2,
+      "forward_max_abs_logit_difference": 0.0,
+      "branches": {
+        "Teacher1_CNN": {
+          "positive_cam_max": 0.0009415840031579137,
+          "gradient_abs_max": 4.004913353128359e-05,
+          "zero_positive_map": false
+        },
+        "Teacher2_ResNet": {
+          "positive_cam_max": 0.0006040160660631955,
+          "gradient_abs_max": 1.3116635955157108e-06,
+          "zero_positive_map": false
+        },
+        "Student_ConvNeXt": {
+          "positive_cam_max": 0.00029133667703717947,
+          "gradient_abs_max": 3.3698335755616426e-05,
+          "zero_positive_map": false
+        }
+      }
+    },
+    {
+      "id": "IDRiD_008",
+      "true_grade": 2,
+      "target_predicted_grade": 2,
+      "forward_max_abs_logit_difference": 0.0,
+      "branches": {
+        "Teacher1_CNN": {
+          "positive_cam_max": 0.0019394916016608477,
+          "gradient_abs_max": 6.54070099699311e-05,
+          "zero_positive_map": false
+        },
+        "Teacher2_ResNet": {
+          "positive_cam_max": 0.009810226038098335,
+          "gradient_abs_max": 3.1114876037463546e-05,
+          "zero_positive_map": false
+        },
+        "Student_ConvNeXt": {
+          "positive_cam_max": 0.0002911165647674352,
+          "gradient_abs_max": 3.773791831918061e-05,
+          "zero_positive_map": false
+        }
+      }
+    },
+    {
+      "id": "IDRiD_012",
+      "true_grade": 2,
+      "target_predicted_grade": 1,
+      "forward_max_abs_logit_difference": 0.0,
+      "branches": {
+        "Teacher1_CNN": {
+          "positive_cam_max": 0.0012431559152901173,
+          "gradient_abs_max": 7.730290235485882e-05,
+          "zero_positive_map": false
+        },
+        "Teacher2_ResNet": {
+          "positive_cam_max": 7.846367225283757e-05,
+          "gradient_abs_max": 2.2457486181792774e-07,
+          "zero_positive_map": false
+        },
+        "Student_ConvNeXt": {
+          "positive_cam_max": 0.0006440739962272346,
+          "gradient_abs_max": 6.672415474895388e-05,
+          "zero_positive_map": false
+        }
+      }
+    },
+    {
+      "id": "IDRiD_025",
+      "true_grade": 3,
+      "target_predicted_grade": 3,
+      "forward_max_abs_logit_difference": 0.0,
+      "branches": {
+        "Teacher1_CNN": {
+          "positive_cam_max": 0.0007888964610174298,
+          "gradient_abs_max": 5.54837315576151e-05,
+          "zero_positive_map": false
+        },
+        "Teacher2_ResNet": {
+          "positive_cam_max": 0.09021520614624023,
+          "gradient_abs_max": 0.00029854648164473474,
+          "zero_positive_map": false
+        },
+        "Student_ConvNeXt": {
+          "positive_cam_max": 0.0017478502122685313,
+          "gradient_abs_max": 0.00020888033031951636,
+          "zero_positive_map": false
+        }
+      }
+    },
+    {
+      "id": "IDRiD_006",
+      "true_grade": 3,
+      "target_predicted_grade": 2,
+      "forward_max_abs_logit_difference": 0.0,
+      "branches": {
+        "Teacher1_CNN": {
+          "positive_cam_max": 0.0012549145612865686,
+          "gradient_abs_max": 5.7558394473744556e-05,
+          "zero_positive_map": false
+        },
+        "Teacher2_ResNet": {
+          "positive_cam_max": 7.523054955527186e-05,
+          "gradient_abs_max": 1.1814117328867724e-07,
+          "zero_positive_map": false
+        },
+        "Student_ConvNeXt": {
+          "positive_cam_max": 0.0002386279811616987,
+          "gradient_abs_max": 2.806370503094513e-05,
+          "zero_positive_map": false
+        }
+      }
+    },
+    {
+      "id": "IDRiD_001",
+      "true_grade": 4,
+      "target_predicted_grade": 3,
+      "forward_max_abs_logit_difference": 0.0,
+      "branches": {
+        "Teacher1_CNN": {
+          "positive_cam_max": 0.0006182227516546845,
+          "gradient_abs_max": 5.298574615153484e-05,
+          "zero_positive_map": false
+        },
+        "Teacher2_ResNet": {
+          "positive_cam_max": 0.11400637775659561,
+          "gradient_abs_max": 0.0008041583932936192,
+          "zero_positive_map": false
+        },
+        "Student_ConvNeXt": {
+          "positive_cam_max": 0.0010002179769799113,
+          "gradient_abs_max": 0.0001972592726815492,
+          "zero_positive_map": false
+        }
+      }
+    }
+  ]
+}

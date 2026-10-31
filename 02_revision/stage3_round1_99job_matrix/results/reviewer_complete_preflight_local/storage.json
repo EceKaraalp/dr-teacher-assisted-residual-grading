@@ -1,0 +1,8 @@
+{
+  "training_jobs": 99,
+  "recommended_storage_gib": 85,
+  "output_free_gib": 4.560554504394531,
+  "drive_reported_free_gib": null,
+  "warning": "Drive FUSE free space may not reflect account quota. Check Drive account storage manually.",
+  "persistent_files": "best + optimizer/RNG last checkpoint per run; approximately 60-75 GiB total"
+}

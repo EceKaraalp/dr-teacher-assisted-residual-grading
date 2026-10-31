@@ -1,0 +1,44 @@
+{
+  "source_hashes": {
+    "C:\\Users\\user\\Desktop\\Round1\\2020440-SECRETARY-R0-V1-20260828233914.docx": "6261ede63cfb487f69755b7188c43034340ec98554ab4f8b4af1da0cb9c6aefb",
+    "C:\\Users\\user\\Desktop\\Round1\\2020440_manuscript_completed_experiments_clean.docx": "4457083072c3c86008d1f874de099d16e1225cc83d46139697e1593f56995065",
+    "C:\\Users\\user\\Desktop\\Round1\\2020440_Response2reviewers_completed_experiments.docx": "a9f0b595ddd1171bce321e0ad958bcc722e9137f7cebbac3b20294d4d3830a79",
+    "C:\\Users\\user\\Desktop\\Round1\\proper sentences.docx": "a121615dffc0e444baa6c6fcfd135cfa4d5ea57c11316cab9b6aa4b6dcad4b14",
+    "C:\\Users\\user\\Desktop\\Round1\\20250706_Response2reviewers.docx": "e04b1f2bacaaa52fb3705bc595d8195a18414c23adf8cd993fa16da336a5e5bd",
+    "C:\\Users\\user\\Desktop\\Round1\\BSPC-D-25-04358_manuscript_marked.pdf": "6ce110b62bec682c731783051bda1e9abe7abff854cad5c72f8ac0352a6b2292",
+    "C:\\Users\\user\\Desktop\\Round1\\2020440-REVIEWER-V1-20260919093559.pdf": "11499023d155d83deefc4399d36f777958a107ffd2944dc16ccc7e51b18e9381",
+    "C:\\Users\\user\\Desktop\\Round1\\Yeni Metin Belgesi.txt": "e16e321b5b385a0d34ef0e96ccac3a2de66c01096aa3fce0fb093516c0311094",
+    "C:\\Users\\user\\Desktop\\Round1\\2020440_manuscript_table5_revised_marked.docx": "d70a7dcf3056628e8dfc73c8fa44662cbd20c368e3631078a3749aa76e170cc3",
+    "C:\\Users\\user\\Desktop\\Round1\\2020440_Reference_citation_audit.docx": "6a27bc84140a3e2c7a83a961dec219863267c80b2a657108da45504af5491f9e",
+    "C:\\Users\\user\\Desktop\\Round1\\2020440_completed_experiments_evidence.docx": "f133c0a275ab54921dae319b803d8ae15409f19c39e5cee4e83c598fd9f37fac",
+    "C:\\Users\\user\\Desktop\\Round1\\2020440_completed_experiments_author_checks.docx": "da34a2cabc5cc7cea7ef05065af315af455cc421c63982e76f17db600dd6e1c3",
+    "C:\\Users\\user\\Desktop\\reviewer_complete_v1.zip": "b05488ec0d91accf5dc2a7706a006625d5611d758ebd676b113715adf19d559f",
+    "C:\\Users\\user\\Downloads\\protocol.json": "4f846a27990c5ce7eb2ec77c7e7ed88f6965f68a97017506203cd04c4ae138d9",
+    "C:\\Users\\user\\Downloads\\prediction_ids_repair.json": "f1ef96c02e2d1893158ef87bce82dd9a845e8b7f63e605a6419c596dbda0f4a7",
+    "C:\\Users\\user\\Downloads\\student_diagnostic_20261023_175134_909746.zip": "66450eb4392648549267e8ab2203246a9228c7ae36ebe8c27288963ebfe6d87e",
+    "C:\\Users\\user\\Downloads\\student_gradients_20261023_181852_661447.zip": "6c1fc1dc9da512c4ef5c090eda6dfc27aa09287a6c49305cdbe8d8114d00d75e",
+    "<repo_root>\\0_main.tex": "4ff67ac57764c66dfb17fe48877b0793e2a17c02c5e29cf586ff57713401449d",
+    "<repo_root>\\colab_reviewer_complete\\run.py": "511fcc3c6e232a913500a07fbe7b092ef1bcce4147be61305b0ff3cde1d8045e",
+    "C:\\Users\\user\\.copilot\\session-state\\e93359ad-fc8c-4fa7-84e8-98dc29a04925\\files\\received_results_audit.json": "4e3835617d855790f5752363041985cb0178550e222cbeef95d44bab17953e7b",
+    "C:\\Users\\user\\.copilot\\session-state\\e93359ad-fc8c-4fa7-84e8-98dc29a04925\\files\\student_learning_mechanism_audit.json": "ecc5547d92ebb9df8ef3be075403b7872010cbcf386be461bc1a7d49dda871d2",
+    "C:\\Users\\user\\.copilot\\session-state\\e93359ad-fc8c-4fa7-84e8-98dc29a04925\\files\\completed_revision_validation.json": "e5d0c3c5519e248f3412df30faaab0b704f1d30760d4d00456c3f38cb416cdb8"
+  },
+  "block_changes": 47,
+  "block_roles": {
+    "word_diff": 58,
+    "unchanged": 117,
+    "removed": 52,
+    "added": 99
+  },
+  "response_counts": [
+    21,
+    5
+  ],
+  "statuses": {
+    "Addressed": 14,
+    "Partial": 12
+  },
+  "source_phrase_document": "C:\\Users\\user\\Desktop\\Round1\\proper sentences.docx",
+  "original_deleted_table_count": 14,
+  "original_based": true
+}

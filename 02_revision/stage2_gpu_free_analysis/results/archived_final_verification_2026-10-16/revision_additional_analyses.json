@@ -1,0 +1,2138 @@
+{
+  "metrics": {
+    "42": {
+      "archived_residual": {
+        "accuracy": 0.8528610354223434,
+        "f1_macro": 0.7046263774341551,
+        "qwk": 0.917438962528396,
+        "roc_auc": 0.958294525249909,
+        "nll": 0.5529482715056218,
+        "brier_multiclass_sum": 0.24637813831028688,
+        "ece_15_equal_width": 0.06959913293412336,
+        "confusion_matrix": [
+          [
+            177,
+            3,
+            1,
+            0,
+            0
+          ],
+          [
+            3,
+            23,
+            11,
+            0,
+            0
+          ],
+          [
+            0,
+            5,
+            87,
+            1,
+            7
+          ],
+          [
+            0,
+            1,
+            7,
+            6,
+            5
+          ],
+          [
+            0,
+            0,
+            7,
+            3,
+            20
+          ]
+        ]
+      },
+      "student_only": {
+        "accuracy": 0.05449591280653951,
+        "f1_macro": 0.029862642471904143,
+        "qwk": -0.0853146980409285,
+        "roc_auc": 0.214705494031626,
+        "nll": 2.7036961302742797,
+        "brier_multiclass_sum": 1.0723412993525407,
+        "ece_15_equal_width": 0.3671029511362071,
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            86,
+            95
+          ],
+          [
+            0,
+            0,
+            0,
+            33,
+            4
+          ],
+          [
+            0,
+            0,
+            0,
+            97,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            19,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            29,
+            1
+          ]
+        ]
+      },
+      "archived_teacher": {
+        "accuracy": 0.8474114441416893,
+        "f1_macro": 0.6879742627051051,
+        "qwk": 0.9158234603950351,
+        "roc_auc": 0.9594719343463829,
+        "nll": 0.5518108244917294,
+        "brier_multiclass_sum": 0.24726069633572953,
+        "ece_15_equal_width": 0.07278370840997726,
+        "confusion_matrix": [
+          [
+            178,
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            5,
+            22,
+            10,
+            0,
+            0
+          ],
+          [
+            1,
+            5,
+            86,
+            1,
+            7
+          ],
+          [
+            0,
+            1,
+            8,
+            5,
+            5
+          ],
+          [
+            0,
+            0,
+            7,
+            3,
+            20
+          ]
+        ]
+      },
+      "teacher1_embedded": {
+        "accuracy": 0.667574931880109,
+        "f1_macro": 0.4601295842566677,
+        "qwk": 0.6588870457749454,
+        "roc_auc": 0.9062081554585509,
+        "nll": 0.8798928317352791,
+        "brier_multiclass_sum": 0.4151306316860944,
+        "ece_15_equal_width": 0.056091316064631906,
+        "confusion_matrix": [
+          [
+            164,
+            3,
+            9,
+            5,
+            0
+          ],
+          [
+            6,
+            12,
+            2,
+            14,
+            3
+          ],
+          [
+            5,
+            16,
+            55,
+            16,
+            8
+          ],
+          [
+            0,
+            3,
+            5,
+            9,
+            2
+          ],
+          [
+            1,
+            8,
+            12,
+            4,
+            5
+          ]
+        ]
+      },
+      "teacher2_embedded": {
+        "accuracy": 0.8474114441416893,
+        "f1_macro": 0.6879742627051051,
+        "qwk": 0.9158234603950351,
+        "roc_auc": 0.9639513484369703,
+        "nll": 1.261535714406649,
+        "brier_multiclass_sum": 0.2679311573923326,
+        "ece_15_equal_width": 0.12563152412302808,
+        "confusion_matrix": [
+          [
+            178,
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            5,
+            22,
+            10,
+            0,
+            0
+          ],
+          [
+            1,
+            5,
+            86,
+            1,
+            7
+          ],
+          [
+            0,
+            1,
+            8,
+            5,
+            5
+          ],
+          [
+            0,
+            0,
+            7,
+            3,
+            20
+          ]
+        ]
+      },
+      "equal_ts_archived_teacher": {
+        "accuracy": 0.8528610354223434,
+        "f1_macro": 0.7046263774341551,
+        "qwk": 0.917438962528396,
+        "roc_auc": 0.945283173624837,
+        "nll": 0.6986964177530662,
+        "brier_multiclass_sum": 0.3342155104737932,
+        "ece_15_equal_width": 0.21172682579596622,
+        "confusion_matrix": [
+          [
+            177,
+            3,
+            1,
+            0,
+            0
+          ],
+          [
+            3,
+            23,
+            11,
+            0,
+            0
+          ],
+          [
+            0,
+            5,
+            87,
+            1,
+            7
+          ],
+          [
+            0,
+            1,
+            7,
+            6,
+            5
+          ],
+          [
+            0,
+            0,
+            7,
+            3,
+            20
+          ]
+        ]
+      },
+      "manuscript_equal_logits": {
+        "accuracy": 0.8446866485013624,
+        "f1_macro": 0.6938434614975829,
+        "qwk": 0.9121558128401979,
+        "roc_auc": 0.9644535680658574,
+        "nll": 0.4974403335873636,
+        "brier_multiclass_sum": 0.23727884376847447,
+        "ece_15_equal_width": 0.04385129226325968,
+        "confusion_matrix": [
+          [
+            175,
+            4,
+            2,
+            0,
+            0
+          ],
+          [
+            4,
+            23,
+            10,
+            0,
+            0
+          ],
+          [
+            0,
+            5,
+            87,
+            1,
+            7
+          ],
+          [
+            0,
+            1,
+            7,
+            6,
+            5
+          ],
+          [
+            0,
+            0,
+            7,
+            4,
+            19
+          ]
+        ]
+      },
+      "teacher_equal_probability": {
+        "accuracy": 0.8474114441416893,
+        "f1_macro": 0.7014104552450275,
+        "qwk": 0.9110040210221861,
+        "roc_auc": 0.958046074287485,
+        "nll": 0.5399960921265253,
+        "brier_multiclass_sum": 0.2515503285407325,
+        "ece_15_equal_width": 0.06458344696351911,
+        "confusion_matrix": [
+          [
+            177,
+            3,
+            1,
+            0,
+            0
+          ],
+          [
+            6,
+            22,
+            9,
+            0,
+            0
+          ],
+          [
+            2,
+            5,
+            86,
+            0,
+            7
+          ],
+          [
+            0,
+            1,
+            7,
+            6,
+            5
+          ],
+          [
+            0,
+            0,
+            7,
+            3,
+            20
+          ]
+        ]
+      },
+      "teacher_equal_logit": {
+        "accuracy": 0.8528610354223434,
+        "f1_macro": 0.7034403164595526,
+        "qwk": 0.9114669684289938,
+        "roc_auc": 0.9655021812970259,
+        "nll": 0.7333407684929587,
+        "brier_multiclass_sum": 0.25946717317611023,
+        "ece_15_equal_width": 0.10354536152271343,
+        "confusion_matrix": [
+          [
+            177,
+            3,
+            1,
+            0,
+            0
+          ],
+          [
+            6,
+            22,
+            8,
+            0,
+            1
+          ],
+          [
+            0,
+            5,
+            88,
+            0,
+            7
+          ],
+          [
+            0,
+            1,
+            7,
+            6,
+            5
+          ],
+          [
+            0,
+            0,
+            7,
+            3,
+            20
+          ]
+        ]
+      }
+    },
+    "52": {
+      "archived_residual": {
+        "accuracy": 0.8583106267029973,
+        "f1_macro": 0.7121468895894573,
+        "qwk": 0.9190749195807824,
+        "roc_auc": 0.9584302453255239,
+        "nll": 0.5563833250583388,
+        "brier_multiclass_sum": 0.24770503871916377,
+        "ece_15_equal_width": 0.07968371789851694,
+        "confusion_matrix": [
+          [
+            177,
+            3,
+            1,
+            0,
+            0
+          ],
+          [
+            5,
+            22,
+            9,
+            0,
+            1
+          ],
+          [
+            0,
+            4,
+            88,
+            1,
+            7
+          ],
+          [
+            0,
+            1,
+            7,
+            6,
+            5
+          ],
+          [
+            0,
+            0,
+            5,
+            3,
+            22
+          ]
+        ]
+      },
+      "student_only": {
+        "accuracy": 0.051771117166212535,
+        "f1_macro": 0.019689119170984457,
+        "qwk": 0.0,
+        "roc_auc": 0.3846000110009609,
+        "nll": 2.2335117630025687,
+        "brier_multiclass_sum": 0.9947689252987807,
+        "ece_15_equal_width": 0.30318733164659967,
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            181,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            37,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            100,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            19,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            30,
+            0
+          ]
+        ]
+      },
+      "archived_teacher": {
+        "accuracy": 0.8528610354223434,
+        "f1_macro": 0.705571684491525,
+        "qwk": 0.9122421828805954,
+        "roc_auc": 0.9587650612891966,
+        "nll": 0.5556906393407831,
+        "brier_multiclass_sum": 0.24795857407049912,
+        "ece_15_equal_width": 0.07582547213141208,
+        "confusion_matrix": [
+          [
+            177,
+            3,
+            1,
+            0,
+            0
+          ],
+          [
+            5,
+            22,
+            9,
+            0,
+            1
+          ],
+          [
+            1,
+            4,
+            87,
+            1,
+            7
+          ],
+          [
+            0,
+            1,
+            7,
+            6,
+            5
+          ],
+          [
+            0,
+            0,
+            6,
+            3,
+            21
+          ]
+        ]
+      },
+      "teacher1_embedded": {
+        "accuracy": 0.6757493188010899,
+        "f1_macro": 0.46584794844839583,
+        "qwk": 0.6443074499252087,
+        "roc_auc": 0.9072952698422401,
+        "nll": 0.8707298787897261,
+        "brier_multiclass_sum": 0.4117554826116173,
+        "ece_15_equal_width": 0.060762767449061936,
+        "confusion_matrix": [
+          [
+            165,
+            2,
+            7,
+            6,
+            1
+          ],
+          [
+            5,
+            12,
+            2,
+            15,
+            3
+          ],
+          [
+            6,
+            16,
+            57,
+            13,
+            8
+          ],
+          [
+            0,
+            3,
+            5,
+            9,
+            2
+          ],
+          [
+            1,
+            8,
+            12,
+            4,
+            5
+          ]
+        ]
+      },
+      "teacher2_embedded": {
+        "accuracy": 0.8555858310626703,
+        "f1_macro": 0.7069275744559225,
+        "qwk": 0.9154679229211393,
+        "roc_auc": 0.9637486403971145,
+        "nll": 1.2312702291830218,
+        "brier_multiclass_sum": 0.2684790819495685,
+        "ece_15_equal_width": 0.12171141539347598,
+        "confusion_matrix": [
+          [
+            178,
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            5,
+            22,
+            9,
+            0,
+            1
+          ],
+          [
+            1,
+            4,
+            87,
+            1,
+            7
+          ],
+          [
+            0,
+            1,
+            7,
+            6,
+            5
+          ],
+          [
+            0,
+            0,
+            6,
+            3,
+            21
+          ]
+        ]
+      },
+      "equal_ts_archived_teacher": {
+        "accuracy": 0.8583106267029973,
+        "f1_macro": 0.7121468895894573,
+        "qwk": 0.9190749195807824,
+        "roc_auc": 0.9511629958698854,
+        "nll": 0.6338819438483827,
+        "brier_multiclass_sum": 0.29561208565931985,
+        "ece_15_equal_width": 0.17153076368716494,
+        "confusion_matrix": [
+          [
+            177,
+            3,
+            1,
+            0,
+            0
+          ],
+          [
+            5,
+            22,
+            9,
+            0,
+            1
+          ],
+          [
+            0,
+            4,
+            88,
+            1,
+            7
+          ],
+          [
+            0,
+            1,
+            7,
+            6,
+            5
+          ],
+          [
+            0,
+            0,
+            5,
+            3,
+            22
+          ]
+        ]
+      },
+      "manuscript_equal_logits": {
+        "accuracy": 0.8419618528610354,
+        "f1_macro": 0.6911888789505068,
+        "qwk": 0.9050530573174255,
+        "roc_auc": 0.9642801132927384,
+        "nll": 0.5034751582506759,
+        "brier_multiclass_sum": 0.2419537691696721,
+        "ece_15_equal_width": 0.04287720075745022,
+        "confusion_matrix": [
+          [
+            174,
+            3,
+            4,
+            0,
+            0
+          ],
+          [
+            5,
+            19,
+            11,
+            1,
+            1
+          ],
+          [
+            0,
+            4,
+            88,
+            1,
+            7
+          ],
+          [
+            0,
+            1,
+            7,
+            6,
+            5
+          ],
+          [
+            0,
+            0,
+            5,
+            3,
+            22
+          ]
+        ]
+      },
+      "teacher_equal_probability": {
+        "accuracy": 0.8419618528610354,
+        "f1_macro": 0.6893662826244793,
+        "qwk": 0.9046076002010085,
+        "roc_auc": 0.9580478891034999,
+        "nll": 0.5384881483881423,
+        "brier_multiclass_sum": 0.2508463145909824,
+        "ece_15_equal_width": 0.06453962643489623,
+        "confusion_matrix": [
+          [
+            177,
+            3,
+            1,
+            0,
+            0
+          ],
+          [
+            6,
+            20,
+            9,
+            1,
+            1
+          ],
+          [
+            2,
+            5,
+            85,
+            1,
+            7
+          ],
+          [
+            0,
+            1,
+            7,
+            6,
+            5
+          ],
+          [
+            0,
+            0,
+            6,
+            3,
+            21
+          ]
+        ]
+      },
+      "teacher_equal_logit": {
+        "accuracy": 0.8528610354223434,
+        "f1_macro": 0.7044330569345248,
+        "qwk": 0.9145848876437488,
+        "roc_auc": 0.9654791752741226,
+        "nll": 0.7198352690212653,
+        "brier_multiclass_sum": 0.26040339225211173,
+        "ece_15_equal_width": 0.09754582141712845,
+        "confusion_matrix": [
+          [
+            177,
+            3,
+            1,
+            0,
+            0
+          ],
+          [
+            6,
+            22,
+            8,
+            0,
+            1
+          ],
+          [
+            0,
+            5,
+            87,
+            1,
+            7
+          ],
+          [
+            0,
+            1,
+            7,
+            6,
+            5
+          ],
+          [
+            0,
+            0,
+            6,
+            3,
+            21
+          ]
+        ]
+      }
+    },
+    "62": {
+      "archived_residual": {
+        "accuracy": 0.8528610354223434,
+        "f1_macro": 0.6934342821559781,
+        "qwk": 0.9192318208797291,
+        "roc_auc": 0.9603313692251244,
+        "nll": 0.5503783049398275,
+        "brier_multiclass_sum": 0.2482041314413113,
+        "ece_15_equal_width": 0.07155743436202695,
+        "confusion_matrix": [
+          [
+            177,
+            3,
+            1,
+            0,
+            0
+          ],
+          [
+            5,
+            21,
+            11,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            90,
+            0,
+            6
+          ],
+          [
+            0,
+            1,
+            8,
+            5,
+            5
+          ],
+          [
+            0,
+            0,
+            7,
+            3,
+            20
+          ]
+        ]
+      },
+      "student_only": {
+        "accuracy": 0.051771117166212535,
+        "f1_macro": 0.019689119170984457,
+        "qwk": 0.0,
+        "roc_auc": 0.5876004544164044,
+        "nll": 2.5075094375021636,
+        "brier_multiclass_sum": 1.16319261295575,
+        "ece_15_equal_width": 0.526711332050916,
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            181,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            37,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            100,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            19,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            30,
+            0
+          ]
+        ]
+      },
+      "archived_teacher": {
+        "accuracy": 0.8528610354223434,
+        "f1_macro": 0.6987342108090824,
+        "qwk": 0.9141283250622283,
+        "roc_auc": 0.9606796581385835,
+        "nll": 0.5493672882111539,
+        "brier_multiclass_sum": 0.2481349762347827,
+        "ece_15_equal_width": 0.0661534455069404,
+        "confusion_matrix": [
+          [
+            177,
+            3,
+            1,
+            0,
+            0
+          ],
+          [
+            5,
+            22,
+            10,
+            0,
+            0
+          ],
+          [
+            1,
+            4,
+            89,
+            0,
+            6
+          ],
+          [
+            0,
+            1,
+            8,
+            5,
+            5
+          ],
+          [
+            0,
+            0,
+            8,
+            2,
+            20
+          ]
+        ]
+      },
+      "teacher1_embedded": {
+        "accuracy": 0.670299727520436,
+        "f1_macro": 0.46518420184765413,
+        "qwk": 0.6611869539427617,
+        "roc_auc": 0.9060201992624187,
+        "nll": 0.8816266945798789,
+        "brier_multiclass_sum": 0.4160470862231831,
+        "ece_15_equal_width": 0.052245300618439364,
+        "confusion_matrix": [
+          [
+            164,
+            3,
+            9,
+            5,
+            0
+          ],
+          [
+            6,
+            13,
+            2,
+            13,
+            3
+          ],
+          [
+            5,
+            16,
+            55,
+            16,
+            8
+          ],
+          [
+            0,
+            3,
+            5,
+            9,
+            2
+          ],
+          [
+            1,
+            8,
+            12,
+            4,
+            5
+          ]
+        ]
+      },
+      "teacher2_embedded": {
+        "accuracy": 0.8528610354223434,
+        "f1_macro": 0.6987342108090824,
+        "qwk": 0.9141283250622283,
+        "roc_auc": 0.9639124454608264,
+        "nll": 1.2980716935052112,
+        "brier_multiclass_sum": 0.2689386498492583,
+        "ece_15_equal_width": 0.12326042942844877,
+        "confusion_matrix": [
+          [
+            177,
+            3,
+            1,
+            0,
+            0
+          ],
+          [
+            5,
+            22,
+            10,
+            0,
+            0
+          ],
+          [
+            1,
+            4,
+            89,
+            0,
+            6
+          ],
+          [
+            0,
+            1,
+            8,
+            5,
+            5
+          ],
+          [
+            0,
+            0,
+            8,
+            2,
+            20
+          ]
+        ]
+      },
+      "equal_ts_archived_teacher": {
+        "accuracy": 0.8474114441416893,
+        "f1_macro": 0.6942601741647328,
+        "qwk": 0.9157152762749368,
+        "roc_auc": 0.9521343009476905,
+        "nll": 0.6594679978898693,
+        "brier_multiclass_sum": 0.3112086376806587,
+        "ece_15_equal_width": 0.18397219669916323,
+        "confusion_matrix": [
+          [
+            176,
+            3,
+            2,
+            0,
+            0
+          ],
+          [
+            3,
+            20,
+            13,
+            1,
+            0
+          ],
+          [
+            0,
+            4,
+            89,
+            1,
+            6
+          ],
+          [
+            0,
+            0,
+            8,
+            6,
+            5
+          ],
+          [
+            0,
+            0,
+            7,
+            3,
+            20
+          ]
+        ]
+      },
+      "manuscript_equal_logits": {
+        "accuracy": 0.8365122615803815,
+        "f1_macro": 0.6765489593311422,
+        "qwk": 0.907760483266458,
+        "roc_auc": 0.9650366152673734,
+        "nll": 0.49811351281674,
+        "brier_multiclass_sum": 0.2386240073741284,
+        "ece_15_equal_width": 0.043512994164666974,
+        "confusion_matrix": [
+          [
+            175,
+            3,
+            3,
+            0,
+            0
+          ],
+          [
+            5,
+            17,
+            14,
+            1,
+            0
+          ],
+          [
+            0,
+            4,
+            89,
+            1,
+            6
+          ],
+          [
+            0,
+            1,
+            7,
+            6,
+            5
+          ],
+          [
+            0,
+            0,
+            7,
+            3,
+            20
+          ]
+        ]
+      },
+      "teacher_equal_probability": {
+        "accuracy": 0.8446866485013624,
+        "f1_macro": 0.6895031976157678,
+        "qwk": 0.9092973702315826,
+        "roc_auc": 0.9583919313380768,
+        "nll": 0.5398976371593862,
+        "brier_multiclass_sum": 0.25254995930595286,
+        "ece_15_equal_width": 0.06802711035913075,
+        "confusion_matrix": [
+          [
+            177,
+            3,
+            1,
+            0,
+            0
+          ],
+          [
+            6,
+            21,
+            10,
+            0,
+            0
+          ],
+          [
+            2,
+            5,
+            87,
+            0,
+            6
+          ],
+          [
+            0,
+            1,
+            8,
+            5,
+            5
+          ],
+          [
+            0,
+            0,
+            8,
+            2,
+            20
+          ]
+        ]
+      },
+      "teacher_equal_logit": {
+        "accuracy": 0.8528610354223434,
+        "f1_macro": 0.6975692724668975,
+        "qwk": 0.9165310227034548,
+        "roc_auc": 0.9655823473101149,
+        "nll": 0.7494098866712776,
+        "brier_multiclass_sum": 0.26087883619998237,
+        "ece_15_equal_width": 0.10992280978275953,
+        "confusion_matrix": [
+          [
+            177,
+            3,
+            1,
+            0,
+            0
+          ],
+          [
+            6,
+            22,
+            9,
+            0,
+            0
+          ],
+          [
+            0,
+            5,
+            89,
+            0,
+            6
+          ],
+          [
+            0,
+            1,
+            8,
+            5,
+            5
+          ],
+          [
+            0,
+            0,
+            8,
+            2,
+            20
+          ]
+        ]
+      }
+    }
+  },
+  "bootstrap": {
+    "resamples": 10000,
+    "seed": 20261016,
+    "unit": "image; paired across paths and shared across all fixed training seeds",
+    "patient_clustered": false,
+    "training_seed_uncertainty_resampled": false,
+    "full_mean_qwk_image_bootstrap95": [
+      0.8932670529723477,
+      0.941385845094455
+    ],
+    "comparisons": {
+      "archived_teacher": {
+        "mean_qwk_difference_full_minus_comparator": 0.004517244883682843,
+        "paired_image_bootstrap_percentile95": [
+          -0.0013345433382090652,
+          0.012724986753539454
+        ],
+        "different_labels_per_seed": [
+          5,
+          2,
+          3
+        ]
+      },
+      "equal_ts_archived_teacher": {
+        "mean_qwk_difference_full_minus_comparator": 0.0011721815349307791,
+        "paired_image_bootstrap_percentile95": [
+          -0.00253769128507961,
+          0.005162245446044113
+        ],
+        "different_labels_per_seed": [
+          0,
+          0,
+          7
+        ]
+      },
+      "manuscript_equal_logits": {
+        "mean_qwk_difference_full_minus_comparator": 0.01025878318827537,
+        "paired_image_bootstrap_percentile95": [
+          0.0024863668025538743,
+          0.020515669088624938
+        ],
+        "different_labels_per_seed": [
+          5,
+          7,
+          9
+        ]
+      },
+      "teacher_equal_logit": {
+        "mean_qwk_difference_full_minus_comparator": 0.004387608070903363,
+        "paired_image_bootstrap_percentile95": [
+          -0.00030229805853312637,
+          0.010295058432905282
+        ],
+        "different_labels_per_seed": [
+          6,
+          4,
+          5
+        ]
+      },
+      "teacher_equal_probability": {
+        "mean_qwk_difference_full_minus_comparator": 0.010278903844710049,
+        "paired_image_bootstrap_percentile95": [
+          0.0021324044955544214,
+          0.021394226797725128
+        ],
+        "different_labels_per_seed": [
+          7,
+          6,
+          6
+        ]
+      }
+    }
+  },
+  "teacher_diversity": {
+    "42": {
+      "disagreement": 0.30517711171662126,
+      "binary_error_correlation": 0.4404827406657845,
+      "mean_symmetric_kl": 2.6001441230773956,
+      "teacher1_correct_teacher2_wrong": 10,
+      "teacher2_correct_teacher1_wrong": 76
+    },
+    "52": {
+      "disagreement": 0.3024523160762943,
+      "binary_error_correlation": 0.42749525679436295,
+      "mean_symmetric_kl": 2.475281610131979,
+      "teacher1_correct_teacher2_wrong": 10,
+      "teacher2_correct_teacher1_wrong": 76
+    },
+    "62": {
+      "disagreement": 0.3024523160762943,
+      "binary_error_correlation": 0.4286223671088146,
+      "mean_symmetric_kl": 2.7010524376999907,
+      "teacher1_correct_teacher2_wrong": 10,
+      "teacher2_correct_teacher1_wrong": 77
+    }
+  },
+  "duplicate_subset": {
+    "definition": "Exclude test images whose resized RGB pixel hash appears in train OR validation; no retraining.",
+    "remaining": 341,
+    "excluded": 26,
+    "remaining_class_counts": [
+      177,
+      32,
+      89,
+      17,
+      26
+    ],
+    "per_seed": {
+      "42": {
+        "accuracy": 0.8592375366568915,
+        "f1_macro": 0.6962204013059899,
+        "qwk": 0.9198305182151123,
+        "roc_auc": 0.9621018924453265,
+        "nll": 0.5167918133679038,
+        "brier_multiclass_sum": 0.23271183364675005,
+        "ece_15_equal_width": 0.06238034463697857,
+        "confusion_matrix": [
+          [
+            174,
+            2,
+            1,
+            0,
+            0
+          ],
+          [
+            3,
+            19,
+            10,
+            0,
+            0
+          ],
+          [
+            0,
+            4,
+            78,
+            1,
+            6
+          ],
+          [
+            0,
+            1,
+            7,
+            5,
+            4
+          ],
+          [
+            0,
+            0,
+            6,
+            3,
+            17
+          ]
+        ]
+      },
+      "52": {
+        "accuracy": 0.8651026392961877,
+        "f1_macro": 0.7047995155692981,
+        "qwk": 0.9216067925453654,
+        "roc_auc": 0.9622714875549455,
+        "nll": 0.520623639474909,
+        "brier_multiclass_sum": 0.23404420065208545,
+        "ece_15_equal_width": 0.07514167574843356,
+        "confusion_matrix": [
+          [
+            174,
+            2,
+            1,
+            0,
+            0
+          ],
+          [
+            5,
+            18,
+            8,
+            0,
+            1
+          ],
+          [
+            0,
+            3,
+            79,
+            1,
+            6
+          ],
+          [
+            0,
+            1,
+            7,
+            5,
+            4
+          ],
+          [
+            0,
+            0,
+            4,
+            3,
+            19
+          ]
+        ]
+      },
+      "62": {
+        "accuracy": 0.8592375366568915,
+        "f1_macro": 0.6827317252036353,
+        "qwk": 0.9217854854825825,
+        "roc_auc": 0.9643470712743182,
+        "nll": 0.512773781238965,
+        "brier_multiclass_sum": 0.23405685565534404,
+        "ece_15_equal_width": 0.06711274796217422,
+        "confusion_matrix": [
+          [
+            174,
+            2,
+            1,
+            0,
+            0
+          ],
+          [
+            5,
+            17,
+            10,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            81,
+            0,
+            5
+          ],
+          [
+            0,
+            1,
+            8,
+            4,
+            4
+          ],
+          [
+            0,
+            0,
+            6,
+            3,
+            17
+          ]
+        ]
+      }
+    }
+  },
+  "teacher_state_comparison": {
+    "separate_teacher_keys": 633,
+    "per_seed": {
+      "42": {
+        "baseline_changed_keys": [
+          "cnn_backbone.1.running_mean",
+          "cnn_backbone.1.running_var",
+          "cnn_backbone.1.num_batches_tracked",
+          "cnn_backbone.5.running_mean",
+          "cnn_backbone.5.running_var",
+          "cnn_backbone.5.num_batches_tracked",
+          "cnn_backbone.8.running_mean",
+          "cnn_backbone.8.running_var",
+          "cnn_backbone.8.num_batches_tracked",
+          "cnn_backbone.11.running_mean",
+          "cnn_backbone.11.running_var",
+          "cnn_backbone.11.num_batches_tracked",
+          "cnn_backbone.14.running_mean",
+          "cnn_backbone.14.running_var",
+          "cnn_backbone.14.num_batches_tracked",
+          "cnn_backbone.17.running_mean",
+          "cnn_backbone.17.running_var",
+          "cnn_backbone.17.num_batches_tracked",
+          "cnn_backbone.20.running_mean",
+          "cnn_backbone.20.running_var",
+          "cnn_backbone.20.num_batches_tracked"
+        ],
+        "teacher_changed_keys": [
+          "baseline_model.cnn_backbone.1.running_mean",
+          "baseline_model.cnn_backbone.1.running_var",
+          "baseline_model.cnn_backbone.1.num_batches_tracked",
+          "baseline_model.cnn_backbone.5.running_mean",
+          "baseline_model.cnn_backbone.5.running_var",
+          "baseline_model.cnn_backbone.5.num_batches_tracked",
+          "baseline_model.cnn_backbone.8.running_mean",
+          "baseline_model.cnn_backbone.8.running_var",
+          "baseline_model.cnn_backbone.8.num_batches_tracked",
+          "baseline_model.cnn_backbone.11.running_mean",
+          "baseline_model.cnn_backbone.11.running_var",
+          "baseline_model.cnn_backbone.11.num_batches_tracked",
+          "baseline_model.cnn_backbone.14.running_mean",
+          "baseline_model.cnn_backbone.14.running_var",
+          "baseline_model.cnn_backbone.14.num_batches_tracked",
+          "baseline_model.cnn_backbone.17.running_mean",
+          "baseline_model.cnn_backbone.17.running_var",
+          "baseline_model.cnn_backbone.17.num_batches_tracked",
+          "baseline_model.cnn_backbone.20.running_mean",
+          "baseline_model.cnn_backbone.20.running_var",
+          "baseline_model.cnn_backbone.20.num_batches_tracked",
+          "adv_model.cnn_features.1.running_mean",
+          "adv_model.cnn_features.1.running_var",
+          "adv_model.cnn_features.1.num_batches_tracked",
+          "adv_model.cnn_features.4.0.bn1.running_mean",
+          "adv_model.cnn_features.4.0.bn1.running_var",
+          "adv_model.cnn_features.4.0.bn1.num_batches_tracked",
+          "adv_model.cnn_features.4.0.bn2.running_mean",
+          "adv_model.cnn_features.4.0.bn2.running_var",
+          "adv_model.cnn_features.4.0.bn2.num_batches_tracked",
+          "adv_model.cnn_features.4.0.bn3.running_mean",
+          "adv_model.cnn_features.4.0.bn3.running_var",
+          "adv_model.cnn_features.4.0.bn3.num_batches_tracked",
+          "adv_model.cnn_features.4.0.downsample.1.running_mean",
+          "adv_model.cnn_features.4.0.downsample.1.running_var",
+          "adv_model.cnn_features.4.0.downsample.1.num_batches_tracked",
+          "adv_model.cnn_features.4.1.bn1.running_mean",
+          "adv_model.cnn_features.4.1.bn1.running_var",
+          "adv_model.cnn_features.4.1.bn1.num_batches_tracked",
+          "adv_model.cnn_features.4.1.bn2.running_mean",
+          "adv_model.cnn_features.4.1.bn2.running_var",
+          "adv_model.cnn_features.4.1.bn2.num_batches_tracked",
+          "adv_model.cnn_features.4.1.bn3.running_mean",
+          "adv_model.cnn_features.4.1.bn3.running_var",
+          "adv_model.cnn_features.4.1.bn3.num_batches_tracked",
+          "adv_model.cnn_features.4.2.bn1.running_mean",
+          "adv_model.cnn_features.4.2.bn1.running_var",
+          "adv_model.cnn_features.4.2.bn1.num_batches_tracked",
+          "adv_model.cnn_features.4.2.bn2.running_mean",
+          "adv_model.cnn_features.4.2.bn2.running_var",
+          "adv_model.cnn_features.4.2.bn2.num_batches_tracked",
+          "adv_model.cnn_features.4.2.bn3.running_mean",
+          "adv_model.cnn_features.4.2.bn3.running_var",
+          "adv_model.cnn_features.4.2.bn3.num_batches_tracked",
+          "adv_model.cnn_features.5.0.bn1.running_mean",
+          "adv_model.cnn_features.5.0.bn1.running_var",
+          "adv_model.cnn_features.5.0.bn1.num_batches_tracked",
+          "adv_model.cnn_features.5.0.bn2.running_mean",
+          "adv_model.cnn_features.5.0.bn2.running_var",
+          "adv_model.cnn_features.5.0.bn2.num_batches_tracked",
+          "adv_model.cnn_features.5.0.bn3.running_mean",
+          "adv_model.cnn_features.5.0.bn3.running_var",
+          "adv_model.cnn_features.5.0.bn3.num_batches_tracked",
+          "adv_model.cnn_features.5.0.downsample.1.running_mean",
+          "adv_model.cnn_features.5.0.downsample.1.running_var",
+          "adv_model.cnn_features.5.0.downsample.1.num_batches_tracked",
+          "adv_model.cnn_features.5.1.bn1.running_mean",
+          "adv_model.cnn_features.5.1.bn1.running_var",
+          "adv_model.cnn_features.5.1.bn1.num_batches_tracked",
+          "adv_model.cnn_features.5.1.bn2.running_mean",
+          "adv_model.cnn_features.5.1.bn2.running_var",
+          "adv_model.cnn_features.5.1.bn2.num_batches_tracked",
+          "adv_model.cnn_features.5.1.bn3.running_mean",
+          "adv_model.cnn_features.5.1.bn3.running_var",
+          "adv_model.cnn_features.5.1.bn3.num_batches_tracked",
+          "adv_model.cnn_features.5.2.bn1.running_mean",
+          "adv_model.cnn_features.5.2.bn1.running_var",
+          "adv_model.cnn_features.5.2.bn1.num_batches_tracked",
+          "adv_model.cnn_features.5.2.bn2.running_mean",
+          "adv_model.cnn_features.5.2.bn2.running_var",
+          "adv_model.cnn_features.5.2.bn2.num_batches_tracked",
+          "adv_model.cnn_features.5.2.bn3.running_mean",
+          "adv_model.cnn_features.5.2.bn3.running_var",
+          "adv_model.cnn_features.5.2.bn3.num_batches_tracked",
+          "adv_model.cnn_features.5.3.bn1.running_mean",
+          "adv_model.cnn_features.5.3.bn1.running_var",
+          "adv_model.cnn_features.5.3.bn1.num_batches_tracked",
+          "adv_model.cnn_features.5.3.bn2.running_mean",
+          "adv_model.cnn_features.5.3.bn2.running_var",
+          "adv_model.cnn_features.5.3.bn2.num_batches_tracked",
+          "adv_model.cnn_features.5.3.bn3.running_mean",
+          "adv_model.cnn_features.5.3.bn3.running_var",
+          "adv_model.cnn_features.5.3.bn3.num_batches_tracked",
+          "adv_model.cnn_features.6.0.bn1.running_mean",
+          "adv_model.cnn_features.6.0.bn1.running_var",
+          "adv_model.cnn_features.6.0.bn1.num_batches_tracked",
+          "adv_model.cnn_features.6.0.bn2.running_mean",
+          "adv_model.cnn_features.6.0.bn2.running_var",
+          "adv_model.cnn_features.6.0.bn2.num_batches_tracked",
+          "adv_model.cnn_features.6.0.bn3.running_mean",
+          "adv_model.cnn_features.6.0.bn3.running_var",
+          "adv_model.cnn_features.6.0.bn3.num_batches_tracked",
+          "adv_model.cnn_features.6.0.downsample.1.running_mean",
+          "adv_model.cnn_features.6.0.downsample.1.running_var",
+          "adv_model.cnn_features.6.0.downsample.1.num_batches_tracked",
+          "adv_model.cnn_features.6.1.bn1.running_mean",
+          "adv_model.cnn_features.6.1.bn1.running_var",
+          "adv_model.cnn_features.6.1.bn1.num_batches_tracked",
+          "adv_model.cnn_features.6.1.bn2.running_mean",
+          "adv_model.cnn_features.6.1.bn2.running_var",
+          "adv_model.cnn_features.6.1.bn2.num_batches_tracked",
+          "adv_model.cnn_features.6.1.bn3.running_mean",
+          "adv_model.cnn_features.6.1.bn3.running_var",
+          "adv_model.cnn_features.6.1.bn3.num_batches_tracked",
+          "adv_model.cnn_features.6.2.bn1.running_mean",
+          "adv_model.cnn_features.6.2.bn1.running_var",
+          "adv_model.cnn_features.6.2.bn1.num_batches_tracked",
+          "adv_model.cnn_features.6.2.bn2.running_mean",
+          "adv_model.cnn_features.6.2.bn2.running_var",
+          "adv_model.cnn_features.6.2.bn2.num_batches_tracked",
+          "adv_model.cnn_features.6.2.bn3.running_mean",
+          "adv_model.cnn_features.6.2.bn3.running_var",
+          "adv_model.cnn_features.6.2.bn3.num_batches_tracked",
+          "adv_model.cnn_features.6.3.bn1.running_mean",
+          "adv_model.cnn_features.6.3.bn1.running_var",
+          "adv_model.cnn_features.6.3.bn1.num_batches_tracked",
+          "adv_model.cnn_features.6.3.bn2.running_mean",
+          "adv_model.cnn_features.6.3.bn2.running_var",
+          "adv_model.cnn_features.6.3.bn2.num_batches_tracked",
+          "adv_model.cnn_features.6.3.bn3.running_mean",
+          "adv_model.cnn_features.6.3.bn3.running_var",
+          "adv_model.cnn_features.6.3.bn3.num_batches_tracked",
+          "adv_model.cnn_features.6.4.bn1.running_mean",
+          "adv_model.cnn_features.6.4.bn1.running_var",
+          "adv_model.cnn_features.6.4.bn1.num_batches_tracked",
+          "adv_model.cnn_features.6.4.bn2.running_mean",
+          "adv_model.cnn_features.6.4.bn2.running_var",
+          "adv_model.cnn_features.6.4.bn2.num_batches_tracked",
+          "adv_model.cnn_features.6.4.bn3.running_mean",
+          "adv_model.cnn_features.6.4.bn3.running_var",
+          "adv_model.cnn_features.6.4.bn3.num_batches_tracked",
+          "adv_model.cnn_features.6.5.bn1.running_mean",
+          "adv_model.cnn_features.6.5.bn1.running_var",
+          "adv_model.cnn_features.6.5.bn1.num_batches_tracked",
+          "adv_model.cnn_features.6.5.bn2.running_mean",
+          "adv_model.cnn_features.6.5.bn2.running_var",
+          "adv_model.cnn_features.6.5.bn2.num_batches_tracked",
+          "adv_model.cnn_features.6.5.bn3.running_mean",
+          "adv_model.cnn_features.6.5.bn3.running_var",
+          "adv_model.cnn_features.6.5.bn3.num_batches_tracked",
+          "adv_model.cnn_features.7.0.bn1.running_mean",
+          "adv_model.cnn_features.7.0.bn1.running_var",
+          "adv_model.cnn_features.7.0.bn1.num_batches_tracked",
+          "adv_model.cnn_features.7.0.bn2.running_mean",
+          "adv_model.cnn_features.7.0.bn2.running_var",
+          "adv_model.cnn_features.7.0.bn2.num_batches_tracked",
+          "adv_model.cnn_features.7.0.bn3.running_mean",
+          "adv_model.cnn_features.7.0.bn3.running_var",
+          "adv_model.cnn_features.7.0.bn3.num_batches_tracked",
+          "adv_model.cnn_features.7.0.downsample.1.running_mean",
+          "adv_model.cnn_features.7.0.downsample.1.running_var",
+          "adv_model.cnn_features.7.0.downsample.1.num_batches_tracked",
+          "adv_model.cnn_features.7.1.bn1.running_mean",
+          "adv_model.cnn_features.7.1.bn1.running_var",
+          "adv_model.cnn_features.7.1.bn1.num_batches_tracked",
+          "adv_model.cnn_features.7.1.bn2.running_mean",
+          "adv_model.cnn_features.7.1.bn2.running_var",
+          "adv_model.cnn_features.7.1.bn2.num_batches_tracked",
+          "adv_model.cnn_features.7.1.bn3.running_mean",
+          "adv_model.cnn_features.7.1.bn3.running_var",
+          "adv_model.cnn_features.7.1.bn3.num_batches_tracked",
+          "adv_model.cnn_features.7.2.bn1.running_mean",
+          "adv_model.cnn_features.7.2.bn1.running_var",
+          "adv_model.cnn_features.7.2.bn1.num_batches_tracked",
+          "adv_model.cnn_features.7.2.bn2.running_mean",
+          "adv_model.cnn_features.7.2.bn2.running_var",
+          "adv_model.cnn_features.7.2.bn2.num_batches_tracked",
+          "adv_model.cnn_features.7.2.bn3.running_mean",
+          "adv_model.cnn_features.7.2.bn3.running_var",
+          "adv_model.cnn_features.7.2.bn3.num_batches_tracked",
+          "adv_model.classifier.weight_u",
+          "adv_model.classifier.weight_v"
+        ],
+        "all_differences_are_bn_buffers": false,
+        "all_differences_are_bn_or_spectral_buffers": true
+      },
+      "52": {
+        "baseline_changed_keys": [
+          "cnn_backbone.1.running_mean",
+          "cnn_backbone.1.running_var",
+          "cnn_backbone.1.num_batches_tracked",
+          "cnn_backbone.5.running_mean",
+          "cnn_backbone.5.running_var",
+          "cnn_backbone.5.num_batches_tracked",
+          "cnn_backbone.8.running_mean",
+          "cnn_backbone.8.running_var",
+          "cnn_backbone.8.num_batches_tracked",
+          "cnn_backbone.11.running_mean",
+          "cnn_backbone.11.running_var",
+          "cnn_backbone.11.num_batches_tracked",
+          "cnn_backbone.14.running_mean",
+          "cnn_backbone.14.running_var",
+          "cnn_backbone.14.num_batches_tracked",
+          "cnn_backbone.17.running_mean",
+          "cnn_backbone.17.running_var",
+          "cnn_backbone.17.num_batches_tracked",
+          "cnn_backbone.20.running_mean",
+          "cnn_backbone.20.running_var",
+          "cnn_backbone.20.num_batches_tracked"
+        ],
+        "teacher_changed_keys": [
+          "baseline_model.cnn_backbone.1.running_mean",
+          "baseline_model.cnn_backbone.1.running_var",
+          "baseline_model.cnn_backbone.1.num_batches_tracked",
+          "baseline_model.cnn_backbone.5.running_mean",
+          "baseline_model.cnn_backbone.5.running_var",
+          "baseline_model.cnn_backbone.5.num_batches_tracked",
+          "baseline_model.cnn_backbone.8.running_mean",
+          "baseline_model.cnn_backbone.8.running_var",
+          "baseline_model.cnn_backbone.8.num_batches_tracked",
+          "baseline_model.cnn_backbone.11.running_mean",
+          "baseline_model.cnn_backbone.11.running_var",
+          "baseline_model.cnn_backbone.11.num_batches_tracked",
+          "baseline_model.cnn_backbone.14.running_mean",
+          "baseline_model.cnn_backbone.14.running_var",
+          "baseline_model.cnn_backbone.14.num_batches_tracked",
+          "baseline_model.cnn_backbone.17.running_mean",
+          "baseline_model.cnn_backbone.17.running_var",
+          "baseline_model.cnn_backbone.17.num_batches_tracked",
+          "baseline_model.cnn_backbone.20.running_mean",
+          "baseline_model.cnn_backbone.20.running_var",
+          "baseline_model.cnn_backbone.20.num_batches_tracked",
+          "adv_model.cnn_features.1.running_mean",
+          "adv_model.cnn_features.1.running_var",
+          "adv_model.cnn_features.1.num_batches_tracked",
+          "adv_model.cnn_features.4.0.bn1.running_mean",
+          "adv_model.cnn_features.4.0.bn1.running_var",
+          "adv_model.cnn_features.4.0.bn1.num_batches_tracked",
+          "adv_model.cnn_features.4.0.bn2.running_mean",
+          "adv_model.cnn_features.4.0.bn2.running_var",
+          "adv_model.cnn_features.4.0.bn2.num_batches_tracked",
+          "adv_model.cnn_features.4.0.bn3.running_mean",
+          "adv_model.cnn_features.4.0.bn3.running_var",
+          "adv_model.cnn_features.4.0.bn3.num_batches_tracked",
+          "adv_model.cnn_features.4.0.downsample.1.running_mean",
+          "adv_model.cnn_features.4.0.downsample.1.running_var",
+          "adv_model.cnn_features.4.0.downsample.1.num_batches_tracked",
+          "adv_model.cnn_features.4.1.bn1.running_mean",
+          "adv_model.cnn_features.4.1.bn1.running_var",
+          "adv_model.cnn_features.4.1.bn1.num_batches_tracked",
+          "adv_model.cnn_features.4.1.bn2.running_mean",
+          "adv_model.cnn_features.4.1.bn2.running_var",
+          "adv_model.cnn_features.4.1.bn2.num_batches_tracked",
+          "adv_model.cnn_features.4.1.bn3.running_mean",
+          "adv_model.cnn_features.4.1.bn3.running_var",
+          "adv_model.cnn_features.4.1.bn3.num_batches_tracked",
+          "adv_model.cnn_features.4.2.bn1.running_mean",
+          "adv_model.cnn_features.4.2.bn1.running_var",
+          "adv_model.cnn_features.4.2.bn1.num_batches_tracked",
+          "adv_model.cnn_features.4.2.bn2.running_mean",
+          "adv_model.cnn_features.4.2.bn2.running_var",
+          "adv_model.cnn_features.4.2.bn2.num_batches_tracked",
+          "adv_model.cnn_features.4.2.bn3.running_mean",
+          "adv_model.cnn_features.4.2.bn3.running_var",
+          "adv_model.cnn_features.4.2.bn3.num_batches_tracked",
+          "adv_model.cnn_features.5.0.bn1.running_mean",
+          "adv_model.cnn_features.5.0.bn1.running_var",
+          "adv_model.cnn_features.5.0.bn1.num_batches_tracked",
+          "adv_model.cnn_features.5.0.bn2.running_mean",
+          "adv_model.cnn_features.5.0.bn2.running_var",
+          "adv_model.cnn_features.5.0.bn2.num_batches_tracked",
+          "adv_model.cnn_features.5.0.bn3.running_mean",
+          "adv_model.cnn_features.5.0.bn3.running_var",
+          "adv_model.cnn_features.5.0.bn3.num_batches_tracked",
+          "adv_model.cnn_features.5.0.downsample.1.running_mean",
+          "adv_model.cnn_features.5.0.downsample.1.running_var",
+          "adv_model.cnn_features.5.0.downsample.1.num_batches_tracked",
+          "adv_model.cnn_features.5.1.bn1.running_mean",
+          "adv_model.cnn_features.5.1.bn1.running_var",
+          "adv_model.cnn_features.5.1.bn1.num_batches_tracked",
+          "adv_model.cnn_features.5.1.bn2.running_mean",
+          "adv_model.cnn_features.5.1.bn2.running_var",
+          "adv_model.cnn_features.5.1.bn2.num_batches_tracked",
+          "adv_model.cnn_features.5.1.bn3.running_mean",
+          "adv_model.cnn_features.5.1.bn3.running_var",
+          "adv_model.cnn_features.5.1.bn3.num_batches_tracked",
+          "adv_model.cnn_features.5.2.bn1.running_mean",
+          "adv_model.cnn_features.5.2.bn1.running_var",
+          "adv_model.cnn_features.5.2.bn1.num_batches_tracked",
+          "adv_model.cnn_features.5.2.bn2.running_mean",
+          "adv_model.cnn_features.5.2.bn2.running_var",
+          "adv_model.cnn_features.5.2.bn2.num_batches_tracked",
+          "adv_model.cnn_features.5.2.bn3.running_mean",
+          "adv_model.cnn_features.5.2.bn3.running_var",
+          "adv_model.cnn_features.5.2.bn3.num_batches_tracked",
+          "adv_model.cnn_features.5.3.bn1.running_mean",
+          "adv_model.cnn_features.5.3.bn1.running_var",
+          "adv_model.cnn_features.5.3.bn1.num_batches_tracked",
+          "adv_model.cnn_features.5.3.bn2.running_mean",
+          "adv_model.cnn_features.5.3.bn2.running_var",
+          "adv_model.cnn_features.5.3.bn2.num_batches_tracked",
+          "adv_model.cnn_features.5.3.bn3.running_mean",
+          "adv_model.cnn_features.5.3.bn3.running_var",
+          "adv_model.cnn_features.5.3.bn3.num_batches_tracked",
+          "adv_model.cnn_features.6.0.bn1.running_mean",
+          "adv_model.cnn_features.6.0.bn1.running_var",
+          "adv_model.cnn_features.6.0.bn1.num_batches_tracked",
+          "adv_model.cnn_features.6.0.bn2.running_mean",
+          "adv_model.cnn_features.6.0.bn2.running_var",
+          "adv_model.cnn_features.6.0.bn2.num_batches_tracked",
+          "adv_model.cnn_features.6.0.bn3.running_mean",
+          "adv_model.cnn_features.6.0.bn3.running_var",
+          "adv_model.cnn_features.6.0.bn3.num_batches_tracked",
+          "adv_model.cnn_features.6.0.downsample.1.running_mean",
+          "adv_model.cnn_features.6.0.downsample.1.running_var",
+          "adv_model.cnn_features.6.0.downsample.1.num_batches_tracked",
+          "adv_model.cnn_features.6.1.bn1.running_mean",
+          "adv_model.cnn_features.6.1.bn1.running_var",
+          "adv_model.cnn_features.6.1.bn1.num_batches_tracked",
+          "adv_model.cnn_features.6.1.bn2.running_mean",
+          "adv_model.cnn_features.6.1.bn2.running_var",
+          "adv_model.cnn_features.6.1.bn2.num_batches_tracked",
+          "adv_model.cnn_features.6.1.bn3.running_mean",
+          "adv_model.cnn_features.6.1.bn3.running_var",
+          "adv_model.cnn_features.6.1.bn3.num_batches_tracked",
+          "adv_model.cnn_features.6.2.bn1.running_mean",
+          "adv_model.cnn_features.6.2.bn1.running_var",
+          "adv_model.cnn_features.6.2.bn1.num_batches_tracked",
+          "adv_model.cnn_features.6.2.bn2.running_mean",
+          "adv_model.cnn_features.6.2.bn2.running_var",
+          "adv_model.cnn_features.6.2.bn2.num_batches_tracked",
+          "adv_model.cnn_features.6.2.bn3.running_mean",
+          "adv_model.cnn_features.6.2.bn3.running_var",
+          "adv_model.cnn_features.6.2.bn3.num_batches_tracked",
+          "adv_model.cnn_features.6.3.bn1.running_mean",
+          "adv_model.cnn_features.6.3.bn1.running_var",
+          "adv_model.cnn_features.6.3.bn1.num_batches_tracked",
+          "adv_model.cnn_features.6.3.bn2.running_mean",
+          "adv_model.cnn_features.6.3.bn2.running_var",
+          "adv_model.cnn_features.6.3.bn2.num_batches_tracked",
+          "adv_model.cnn_features.6.3.bn3.running_mean",
+          "adv_model.cnn_features.6.3.bn3.running_var",
+          "adv_model.cnn_features.6.3.bn3.num_batches_tracked",
+          "adv_model.cnn_features.6.4.bn1.running_mean",
+          "adv_model.cnn_features.6.4.bn1.running_var",
+          "adv_model.cnn_features.6.4.bn1.num_batches_tracked",
+          "adv_model.cnn_features.6.4.bn2.running_mean",
+          "adv_model.cnn_features.6.4.bn2.running_var",
+          "adv_model.cnn_features.6.4.bn2.num_batches_tracked",
+          "adv_model.cnn_features.6.4.bn3.running_mean",
+          "adv_model.cnn_features.6.4.bn3.running_var",
+          "adv_model.cnn_features.6.4.bn3.num_batches_tracked",
+          "adv_model.cnn_features.6.5.bn1.running_mean",
+          "adv_model.cnn_features.6.5.bn1.running_var",
+          "adv_model.cnn_features.6.5.bn1.num_batches_tracked",
+          "adv_model.cnn_features.6.5.bn2.running_mean",
+          "adv_model.cnn_features.6.5.bn2.running_var",
+          "adv_model.cnn_features.6.5.bn2.num_batches_tracked",
+          "adv_model.cnn_features.6.5.bn3.running_mean",
+          "adv_model.cnn_features.6.5.bn3.running_var",
+          "adv_model.cnn_features.6.5.bn3.num_batches_tracked",
+          "adv_model.cnn_features.7.0.bn1.running_mean",
+          "adv_model.cnn_features.7.0.bn1.running_var",
+          "adv_model.cnn_features.7.0.bn1.num_batches_tracked",
+          "adv_model.cnn_features.7.0.bn2.running_mean",
+          "adv_model.cnn_features.7.0.bn2.running_var",
+          "adv_model.cnn_features.7.0.bn2.num_batches_tracked",
+          "adv_model.cnn_features.7.0.bn3.running_mean",
+          "adv_model.cnn_features.7.0.bn3.running_var",
+          "adv_model.cnn_features.7.0.bn3.num_batches_tracked",
+          "adv_model.cnn_features.7.0.downsample.1.running_mean",
+          "adv_model.cnn_features.7.0.downsample.1.running_var",
+          "adv_model.cnn_features.7.0.downsample.1.num_batches_tracked",
+          "adv_model.cnn_features.7.1.bn1.running_mean",
+          "adv_model.cnn_features.7.1.bn1.running_var",
+          "adv_model.cnn_features.7.1.bn1.num_batches_tracked",
+          "adv_model.cnn_features.7.1.bn2.running_mean",
+          "adv_model.cnn_features.7.1.bn2.running_var",
+          "adv_model.cnn_features.7.1.bn2.num_batches_tracked",
+          "adv_model.cnn_features.7.1.bn3.running_mean",
+          "adv_model.cnn_features.7.1.bn3.running_var",
+          "adv_model.cnn_features.7.1.bn3.num_batches_tracked",
+          "adv_model.cnn_features.7.2.bn1.running_mean",
+          "adv_model.cnn_features.7.2.bn1.running_var",
+          "adv_model.cnn_features.7.2.bn1.num_batches_tracked",
+          "adv_model.cnn_features.7.2.bn2.running_mean",
+          "adv_model.cnn_features.7.2.bn2.running_var",
+          "adv_model.cnn_features.7.2.bn2.num_batches_tracked",
+          "adv_model.cnn_features.7.2.bn3.running_mean",
+          "adv_model.cnn_features.7.2.bn3.running_var",
+          "adv_model.cnn_features.7.2.bn3.num_batches_tracked",
+          "adv_model.classifier.weight_u",
+          "adv_model.classifier.weight_v"
+        ],
+        "all_differences_are_bn_buffers": false,
+        "all_differences_are_bn_or_spectral_buffers": true
+      },
+      "62": {
+        "baseline_changed_keys": [
+          "cnn_backbone.1.running_mean",
+          "cnn_backbone.1.running_var",
+          "cnn_backbone.1.num_batches_tracked",
+          "cnn_backbone.5.running_mean",
+          "cnn_backbone.5.running_var",
+          "cnn_backbone.5.num_batches_tracked",
+          "cnn_backbone.8.running_mean",
+          "cnn_backbone.8.running_var",
+          "cnn_backbone.8.num_batches_tracked",
+          "cnn_backbone.11.running_mean",
+          "cnn_backbone.11.running_var",
+          "cnn_backbone.11.num_batches_tracked",
+          "cnn_backbone.14.running_mean",
+          "cnn_backbone.14.running_var",
+          "cnn_backbone.14.num_batches_tracked",
+          "cnn_backbone.17.running_mean",
+          "cnn_backbone.17.running_var",
+          "cnn_backbone.17.num_batches_tracked",
+          "cnn_backbone.20.running_mean",
+          "cnn_backbone.20.running_var",
+          "cnn_backbone.20.num_batches_tracked"
+        ],
+        "teacher_changed_keys": [
+          "baseline_model.cnn_backbone.1.running_mean",
+          "baseline_model.cnn_backbone.1.running_var",
+          "baseline_model.cnn_backbone.1.num_batches_tracked",
+          "baseline_model.cnn_backbone.5.running_mean",
+          "baseline_model.cnn_backbone.5.running_var",
+          "baseline_model.cnn_backbone.5.num_batches_tracked",
+          "baseline_model.cnn_backbone.8.running_mean",
+          "baseline_model.cnn_backbone.8.running_var",
+          "baseline_model.cnn_backbone.8.num_batches_tracked",
+          "baseline_model.cnn_backbone.11.running_mean",
+          "baseline_model.cnn_backbone.11.running_var",
+          "baseline_model.cnn_backbone.11.num_batches_tracked",
+          "baseline_model.cnn_backbone.14.running_mean",
+          "baseline_model.cnn_backbone.14.running_var",
+          "baseline_model.cnn_backbone.14.num_batches_tracked",
+          "baseline_model.cnn_backbone.17.running_mean",
+          "baseline_model.cnn_backbone.17.running_var",
+          "baseline_model.cnn_backbone.17.num_batches_tracked",
+          "baseline_model.cnn_backbone.20.running_mean",
+          "baseline_model.cnn_backbone.20.running_var",
+          "baseline_model.cnn_backbone.20.num_batches_tracked",
+          "adv_model.cnn_features.1.running_mean",
+          "adv_model.cnn_features.1.running_var",
+          "adv_model.cnn_features.1.num_batches_tracked",
+          "adv_model.cnn_features.4.0.bn1.running_mean",
+          "adv_model.cnn_features.4.0.bn1.running_var",
+          "adv_model.cnn_features.4.0.bn1.num_batches_tracked",
+          "adv_model.cnn_features.4.0.bn2.running_mean",
+          "adv_model.cnn_features.4.0.bn2.running_var",
+          "adv_model.cnn_features.4.0.bn2.num_batches_tracked",
+          "adv_model.cnn_features.4.0.bn3.running_mean",
+          "adv_model.cnn_features.4.0.bn3.running_var",
+          "adv_model.cnn_features.4.0.bn3.num_batches_tracked",
+          "adv_model.cnn_features.4.0.downsample.1.running_mean",
+          "adv_model.cnn_features.4.0.downsample.1.running_var",
+          "adv_model.cnn_features.4.0.downsample.1.num_batches_tracked",
+          "adv_model.cnn_features.4.1.bn1.running_mean",
+          "adv_model.cnn_features.4.1.bn1.running_var",
+          "adv_model.cnn_features.4.1.bn1.num_batches_tracked",
+          "adv_model.cnn_features.4.1.bn2.running_mean",
+          "adv_model.cnn_features.4.1.bn2.running_var",
+          "adv_model.cnn_features.4.1.bn2.num_batches_tracked",
+          "adv_model.cnn_features.4.1.bn3.running_mean",
+          "adv_model.cnn_features.4.1.bn3.running_var",
+          "adv_model.cnn_features.4.1.bn3.num_batches_tracked",
+          "adv_model.cnn_features.4.2.bn1.running_mean",
+          "adv_model.cnn_features.4.2.bn1.running_var",
+          "adv_model.cnn_features.4.2.bn1.num_batches_tracked",
+          "adv_model.cnn_features.4.2.bn2.running_mean",
+          "adv_model.cnn_features.4.2.bn2.running_var",
+          "adv_model.cnn_features.4.2.bn2.num_batches_tracked",
+          "adv_model.cnn_features.4.2.bn3.running_mean",
+          "adv_model.cnn_features.4.2.bn3.running_var",
+          "adv_model.cnn_features.4.2.bn3.num_batches_tracked",
+          "adv_model.cnn_features.5.0.bn1.running_mean",
+          "adv_model.cnn_features.5.0.bn1.running_var",
+          "adv_model.cnn_features.5.0.bn1.num_batches_tracked",
+          "adv_model.cnn_features.5.0.bn2.running_mean",
+          "adv_model.cnn_features.5.0.bn2.running_var",
+          "adv_model.cnn_features.5.0.bn2.num_batches_tracked",
+          "adv_model.cnn_features.5.0.bn3.running_mean",
+          "adv_model.cnn_features.5.0.bn3.running_var",
+          "adv_model.cnn_features.5.0.bn3.num_batches_tracked",
+          "adv_model.cnn_features.5.0.downsample.1.running_mean",
+          "adv_model.cnn_features.5.0.downsample.1.running_var",
+          "adv_model.cnn_features.5.0.downsample.1.num_batches_tracked",
+          "adv_model.cnn_features.5.1.bn1.running_mean",
+          "adv_model.cnn_features.5.1.bn1.running_var",
+          "adv_model.cnn_features.5.1.bn1.num_batches_tracked",
+          "adv_model.cnn_features.5.1.bn2.running_mean",
+          "adv_model.cnn_features.5.1.bn2.running_var",
+          "adv_model.cnn_features.5.1.bn2.num_batches_tracked",
+          "adv_model.cnn_features.5.1.bn3.running_mean",
+          "adv_model.cnn_features.5.1.bn3.running_var",
+          "adv_model.cnn_features.5.1.bn3.num_batches_tracked",
+          "adv_model.cnn_features.5.2.bn1.running_mean",
+          "adv_model.cnn_features.5.2.bn1.running_var",
+          "adv_model.cnn_features.5.2.bn1.num_batches_tracked",
+          "adv_model.cnn_features.5.2.bn2.running_mean",
+          "adv_model.cnn_features.5.2.bn2.running_var",
+          "adv_model.cnn_features.5.2.bn2.num_batches_tracked",
+          "adv_model.cnn_features.5.2.bn3.running_mean",
+          "adv_model.cnn_features.5.2.bn3.running_var",
+          "adv_model.cnn_features.5.2.bn3.num_batches_tracked",
+          "adv_model.cnn_features.5.3.bn1.running_mean",
+          "adv_model.cnn_features.5.3.bn1.running_var",
+          "adv_model.cnn_features.5.3.bn1.num_batches_tracked",
+          "adv_model.cnn_features.5.3.bn2.running_mean",
+          "adv_model.cnn_features.5.3.bn2.running_var",
+          "adv_model.cnn_features.5.3.bn2.num_batches_tracked",
+          "adv_model.cnn_features.5.3.bn3.running_mean",
+          "adv_model.cnn_features.5.3.bn3.running_var",
+          "adv_model.cnn_features.5.3.bn3.num_batches_tracked",
+          "adv_model.cnn_features.6.0.bn1.running_mean",
+          "adv_model.cnn_features.6.0.bn1.running_var",
+          "adv_model.cnn_features.6.0.bn1.num_batches_tracked",
+          "adv_model.cnn_features.6.0.bn2.running_mean",
+          "adv_model.cnn_features.6.0.bn2.running_var",
+          "adv_model.cnn_features.6.0.bn2.num_batches_tracked",
+          "adv_model.cnn_features.6.0.bn3.running_mean",
+          "adv_model.cnn_features.6.0.bn3.running_var",
+          "adv_model.cnn_features.6.0.bn3.num_batches_tracked",
+          "adv_model.cnn_features.6.0.downsample.1.running_mean",
+          "adv_model.cnn_features.6.0.downsample.1.running_var",
+          "adv_model.cnn_features.6.0.downsample.1.num_batches_tracked",
+          "adv_model.cnn_features.6.1.bn1.running_mean",
+          "adv_model.cnn_features.6.1.bn1.running_var",
+          "adv_model.cnn_features.6.1.bn1.num_batches_tracked",
+          "adv_model.cnn_features.6.1.bn2.running_mean",
+          "adv_model.cnn_features.6.1.bn2.running_var",
+          "adv_model.cnn_features.6.1.bn2.num_batches_tracked",
+          "adv_model.cnn_features.6.1.bn3.running_mean",
+          "adv_model.cnn_features.6.1.bn3.running_var",
+          "adv_model.cnn_features.6.1.bn3.num_batches_tracked",
+          "adv_model.cnn_features.6.2.bn1.running_mean",
+          "adv_model.cnn_features.6.2.bn1.running_var",
+          "adv_model.cnn_features.6.2.bn1.num_batches_tracked",
+          "adv_model.cnn_features.6.2.bn2.running_mean",
+          "adv_model.cnn_features.6.2.bn2.running_var",
+          "adv_model.cnn_features.6.2.bn2.num_batches_tracked",
+          "adv_model.cnn_features.6.2.bn3.running_mean",
+          "adv_model.cnn_features.6.2.bn3.running_var",
+          "adv_model.cnn_features.6.2.bn3.num_batches_tracked",
+          "adv_model.cnn_features.6.3.bn1.running_mean",
+          "adv_model.cnn_features.6.3.bn1.running_var",
+          "adv_model.cnn_features.6.3.bn1.num_batches_tracked",
+          "adv_model.cnn_features.6.3.bn2.running_mean",
+          "adv_model.cnn_features.6.3.bn2.running_var",
+          "adv_model.cnn_features.6.3.bn2.num_batches_tracked",
+          "adv_model.cnn_features.6.3.bn3.running_mean",
+          "adv_model.cnn_features.6.3.bn3.running_var",
+          "adv_model.cnn_features.6.3.bn3.num_batches_tracked",
+          "adv_model.cnn_features.6.4.bn1.running_mean",
+          "adv_model.cnn_features.6.4.bn1.running_var",
+          "adv_model.cnn_features.6.4.bn1.num_batches_tracked",
+          "adv_model.cnn_features.6.4.bn2.running_mean",
+          "adv_model.cnn_features.6.4.bn2.running_var",
+          "adv_model.cnn_features.6.4.bn2.num_batches_tracked",
+          "adv_model.cnn_features.6.4.bn3.running_mean",
+          "adv_model.cnn_features.6.4.bn3.running_var",
+          "adv_model.cnn_features.6.4.bn3.num_batches_tracked",
+          "adv_model.cnn_features.6.5.bn1.running_mean",
+          "adv_model.cnn_features.6.5.bn1.running_var",
+          "adv_model.cnn_features.6.5.bn1.num_batches_tracked",
+          "adv_model.cnn_features.6.5.bn2.running_mean",
+          "adv_model.cnn_features.6.5.bn2.running_var",
+          "adv_model.cnn_features.6.5.bn2.num_batches_tracked",
+          "adv_model.cnn_features.6.5.bn3.running_mean",
+          "adv_model.cnn_features.6.5.bn3.running_var",
+          "adv_model.cnn_features.6.5.bn3.num_batches_tracked",
+          "adv_model.cnn_features.7.0.bn1.running_mean",
+          "adv_model.cnn_features.7.0.bn1.running_var",
+          "adv_model.cnn_features.7.0.bn1.num_batches_tracked",
+          "adv_model.cnn_features.7.0.bn2.running_mean",
+          "adv_model.cnn_features.7.0.bn2.running_var",
+          "adv_model.cnn_features.7.0.bn2.num_batches_tracked",
+          "adv_model.cnn_features.7.0.bn3.running_mean",
+          "adv_model.cnn_features.7.0.bn3.running_var",
+          "adv_model.cnn_features.7.0.bn3.num_batches_tracked",
+          "adv_model.cnn_features.7.0.downsample.1.running_mean",
+          "adv_model.cnn_features.7.0.downsample.1.running_var",
+          "adv_model.cnn_features.7.0.downsample.1.num_batches_tracked",
+          "adv_model.cnn_features.7.1.bn1.running_mean",
+          "adv_model.cnn_features.7.1.bn1.running_var",
+          "adv_model.cnn_features.7.1.bn1.num_batches_tracked",
+          "adv_model.cnn_features.7.1.bn2.running_mean",
+          "adv_model.cnn_features.7.1.bn2.running_var",
+          "adv_model.cnn_features.7.1.bn2.num_batches_tracked",
+          "adv_model.cnn_features.7.1.bn3.running_mean",
+          "adv_model.cnn_features.7.1.bn3.running_var",
+          "adv_model.cnn_features.7.1.bn3.num_batches_tracked",
+          "adv_model.cnn_features.7.2.bn1.running_mean",
+          "adv_model.cnn_features.7.2.bn1.running_var",
+          "adv_model.cnn_features.7.2.bn1.num_batches_tracked",
+          "adv_model.cnn_features.7.2.bn2.running_mean",
+          "adv_model.cnn_features.7.2.bn2.running_var",
+          "adv_model.cnn_features.7.2.bn2.num_batches_tracked",
+          "adv_model.cnn_features.7.2.bn3.running_mean",
+          "adv_model.cnn_features.7.2.bn3.running_var",
+          "adv_model.cnn_features.7.2.bn3.num_batches_tracked",
+          "adv_model.classifier.weight_u",
+          "adv_model.classifier.weight_v"
+        ],
+        "all_differences_are_bn_buffers": false,
+        "all_differences_are_bn_or_spectral_buffers": true
+      }
+    }
+  }
+}

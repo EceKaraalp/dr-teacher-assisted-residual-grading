@@ -1,0 +1,13 @@
+CHECKPOINT VERIFICATION: ALL THREE ARCHIVED CONFUSION MATRICES REPRODUCED
+
+Archived path accuracy: 0.85467757 +/- 0.00314632
+Archived path f1_macro: 0.70340252 +/- 0.00941615
+Archived path qwk: 0.91858190 +/- 0.00099292
+Archived path roc_auc: 0.95901871 +/- 0.00113882
+Seed 42 AUC delta: -0.0000204105
+Seed 52 AUC delta: -0.0000019483
+Seed 62 AUC delta: -0.0000103767
+archived_residual: {'accuracy': 0.854677565849228, 'f1_macro': 0.7034025163931968, 'qwk': 0.9185819009963024}; differing labels seeds 42/52/62 = [0, 0, 0]
+equal_ts_archived_teacher: {'accuracy': 0.8528610354223434, 'f1_macro': 0.7036778137294484, 'qwk': 0.9174097194613717}; differing labels seeds 42/52/62 = [0, 0, 7]
+manuscript_equal_logits: {'accuracy': 0.8410535876475931, 'f1_macro': 0.6871937665930773, 'qwk': 0.9083231178080271}; differing labels seeds 42/52/62 = [5, 7, 9]
+student_only: {'accuracy': 0.05267938237965486, 'f1_macro': 0.023080293604624352, 'qwk': -0.0284382326803095}; differing labels seeds 42/52/62 = [356, 357, 359]

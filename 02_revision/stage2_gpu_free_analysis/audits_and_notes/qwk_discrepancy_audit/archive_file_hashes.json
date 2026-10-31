@@ -1,0 +1,118 @@
+{
+ "D:\\m1\\Documents\\best_model.pth": {
+  "bytes": 457175114,
+  "sha256": "deec7b9825da26625aee9ad2df27d8c5cdc1e6720054a798c4a9851f967a2dd8"
+ },
+ "D:\\m1\\Documents\\resultsimproved_unique_anchored_hybridBaseline_HybridCNNViT_Gate_Improved\\best_model.pth": {
+  "bytes": 19470252,
+  "sha256": "b986387d96727c25703121febb4c7a01377311b28f66d1d83845bd5133ea37fa"
+ },
+ "D:\\m1\\Documents\\resultsimproved_unique_anchored_hybridBaseline_HybridCNNViT_Gate_Improved\\checkpoint_current.pth": {
+  "bytes": 58123504,
+  "sha256": "b795f61e94d9b823e027e6d081f98c4b63accd90edd5c59eed410034eeae76c6"
+ },
+ "D:\\m1\\Documents\\seed 42\\best_model.pth": {
+  "bytes": 568566788,
+  "sha256": "d3327f355a51ac810431094f2e79505f1d43e31f13988ea1abd78caa65bd4eee"
+ },
+ "D:\\m1\\Documents\\seed 42\\checkpoint_current.pth": {
+  "bytes": 791335203,
+  "sha256": "b9cd1bffe515601129b6a1a4be062d031044658557915cc8b975e926c82b301d"
+ },
+ "D:\\m1\\Documents\\seed 52\\best_model.pth": {
+  "bytes": 568566788,
+  "sha256": "c3a056f1d1557121d83fed26c5527eae86feab10fd4415b79d3eb03252aada43"
+ },
+ "D:\\m1\\Documents\\seed 52\\checkpoint_current.pth": {
+  "bytes": 791334627,
+  "sha256": "8c91252388a2b6bb76ef5642d88b3c8b50913cb355c1278e64350ff3c3797a31"
+ },
+ "D:\\m1\\Documents\\seed 62\\best_model.pth": {
+  "bytes": 568566788,
+  "sha256": "8027a8aa6a39e298f9189ed4c2f9c591f95b24abb46524adfd2476e5ced8e2b7"
+ },
+ "D:\\m1\\Documents\\seed 62\\checkpoint_current.pth": {
+  "bytes": 791335267,
+  "sha256": "6c84f72e86403fe2cdab4b09374235276192397608e1253d5460942805672dd7"
+ },
+ "D:\\m1\\Documents\\compare_teachers_student_equal_weight.ipynb": {
+  "bytes": 126706,
+  "sha256": "2bfbdac4c3c2c4ff4bf2664381cae0d61c3cf2a0381087311bf2fc4c31d1ceaa"
+ },
+ "D:\\m1\\Documents\\inference_only_teacher_student_comparison.ipynb": {
+  "bytes": 787932,
+  "sha256": "e93e15bbc1804cc8e4c3f93763f3dc3905524cc2571d48f556e0682d4476b8e2"
+ },
+ "D:\\m1\\Documents\\train_lowdata_hybrid_distill.ipynb": {
+  "bytes": 561328,
+  "sha256": "3c12497859853585e7238e9441e06a9dbfe60039c3a83a53c182364d7b38a4a3"
+ },
+ "D:\\m1\\Documents\\train_teachers_student_FULL_comparison.ipynb": {
+  "bytes": 46970,
+  "sha256": "d14548b50972ce83d47c5bbd599c291f123cbd9d99ec2b5be79287b56dc34ae2"
+ },
+ "D:\\m1\\Documents\\train_teachers_student_equal_comparison.ipynb": {
+  "bytes": 35863,
+  "sha256": "22eed6440774818d34022a370a109c98919199d7528750de2beb878caf50bc75"
+ },
+ "D:\\m1\\Documents\\resultsimproved_unique_anchored_hybridBaseline_HybridCNNViT_Gate_Improved\\test_metrics.json": {
+  "bytes": 2011,
+  "sha256": "982ca94a30613ba8ec7c3055fb3bb841e29bc1e10f799d03716d5d19764d3761"
+ },
+ "D:\\m1\\Documents\\resultsimproved_unique_anchored_hybridBaseline_HybridCNNViT_Gate_Improved\\training_history.json": {
+  "bytes": 6441,
+  "sha256": "39cec3942508173f9796fbdadea6a20e26f84486f70282f0ae56d4a04c335c26"
+ },
+ "D:\\m1\\Documents\\resultsimproved_unique_anchored_hybridImproved_Anchored_SpectralNorm\\test_metrics.json": {
+  "bytes": 1990,
+  "sha256": "ba38fbc01a41a82bc6f4165930540d4598223e619366af0f3d8c68b95d6f7663"
+ },
+ "D:\\m1\\Documents\\resultsimproved_unique_anchored_hybridImproved_Anchored_SpectralNorm\\training_history.json": {
+  "bytes": 6136,
+  "sha256": "8eb28ee99de596e17a3a5ebe338fc20f5dde3200e7bde43c0395c3f76e3802d5"
+ },
+ "D:\\m1\\Documents\\seed 42\\test_metrics.json": {
+  "bytes": 2148,
+  "sha256": "798f319d632e98eac87db93f402a488e8cb0732336910857f4a2f4f19cf739af"
+ },
+ "D:\\m1\\Documents\\seed 42\\training_history.json": {
+  "bytes": 5403,
+  "sha256": "fca1ef20a79ce65c41e4520da6f14e40f4578338057204a392745fe1e586f790"
+ },
+ "D:\\m1\\Documents\\seed 52\\test_metrics.json": {
+  "bytes": 2157,
+  "sha256": "31cb79ef009652ef2d0738fe23539abaead7cad678b0abaa6c97a18657c21876"
+ },
+ "D:\\m1\\Documents\\seed 52\\training_history.json": {
+  "bytes": 3847,
+  "sha256": "635b61ac5bcca98c73738d5c7d69f20c3bd65e26494bba0e334e06155008e7a0"
+ },
+ "D:\\m1\\Documents\\seed 62\\test_metrics.json": {
+  "bytes": 2173,
+  "sha256": "147cd613217f0bc37e437637150df4ae63fdea39b054a4468fade08297a93a3a"
+ },
+ "D:\\m1\\Documents\\seed 62\\training_history.json": {
+  "bytes": 5657,
+  "sha256": "c8907a98553bc9895bfa45037d256f6384389fdd15b78bce5e4611289b5325d5"
+ },
+ "D:\\m1\\Documents\\test_metrics.json": {
+  "bytes": 1990,
+  "sha256": "ba38fbc01a41a82bc6f4165930540d4598223e619366af0f3d8c68b95d6f7663"
+ },
+ "D:\\m1\\Documents\\training_history.json": {
+  "bytes": 6136,
+  "sha256": "8eb28ee99de596e17a3a5ebe338fc20f5dde3200e7bde43c0395c3f76e3802d5"
+ },
+ "D:\\m1\\Documents\\lowdata_seed_results.csv": {
+  "bytes": 3037,
+  "sha256": "fcbcac714bc567640c5f923a8383e311233b7e5802b990450b3df784b508a19f"
+ },
+ "D:\\m1\\Documents\\teacher_student_inference_comparison.csv": {
+  "bytes": 1013,
+  "sha256": "1a4809b62b9eb13871e6b0ab8db1da9f7719e5dab685a9ae3c391c8a850d662f"
+ },
+ "D:\\m1\\Documents\\teacher_student_unified_comparison.csv": {
+  "bytes": 242,
+  "sha256": "158125fac86515bebc0987d56e6df87c4ca77f6ea5ab3753556eda3cf8c56e2c"
+ }
+}

@@ -1,0 +1,13 @@
+{
+  "idrid_zip_sha256": "8a9f4752b35d74cc35ff48b21ad44f295a6f800110ec218fc2d1c264803e4d8c",
+  "official_test_count": 103,
+  "training_images_used": 0,
+  "target_adaptation": false,
+  "preprocessing": "RGB bilinear 224; float32 0..255; no TTA/calibration",
+  "limitations": "Previously examined external dataset; not prospective/fresh multi-hospital validation. Both datasets from India.",
+  "checkpoints": {
+    "42": "67252f6bf3b52a6b18f4d1c2f216df48be0f2463d95d4a1c7ff098f95fad75d0",
+    "52": "1d7db802299314a49ca884f4bf9a71171adab942bcf212c8d4446ffb8ed76e0e",
+    "62": "16789cbbbb7f6ed941aa9f327cff47a3c69a9bbe172051357c3d0b22feca3f22"
+  }
+}

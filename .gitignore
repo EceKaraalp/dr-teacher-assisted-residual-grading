@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+.DS_Store
+Thumbs.db
+# weights and raw data are distributed separately (see CHECKPOINTS.md)
+*.pth
+*.pt
+*.ckpt
+*.h5
+*.safetensors
+APTOS2019/
+IDRiD/
+cache_224.npz

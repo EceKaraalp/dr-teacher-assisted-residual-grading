@@ -1,0 +1,80 @@
+[
+  {
+    "arm": "joint_full",
+    "seed": 42,
+    "metrics": {
+      "Accuracy": 0.8555858310626703,
+      "Macro precision": 0.7725356351443308,
+      "Macro recall": 0.7026253389184474,
+      "Macro F1": 0.7263674739899203,
+      "Weighted F1": 0.8517761755853892,
+      "Macro specificity": 0.962583866292434,
+      "QWK": 0.9099390712751562
+    }
+  },
+  {
+    "arm": "joint_full",
+    "seed": 52,
+    "metrics": {
+      "Accuracy": 0.8365122615803815,
+      "Macro precision": 0.6888076522213455,
+      "Macro recall": 0.6546215456514962,
+      "Macro F1": 0.667543563965804,
+      "Weighted F1": 0.8313013267409718,
+      "Macro specificity": 0.9582598502318376,
+      "QWK": 0.9000728410087898
+    }
+  },
+  {
+    "arm": "joint_full",
+    "seed": 62,
+    "metrics": {
+      "Accuracy": 0.8528610354223434,
+      "Macro precision": 0.74005148005148,
+      "Macro recall": 0.6861966997529662,
+      "Macro F1": 0.7078982964753349,
+      "Weighted F1": 0.8461879964300673,
+      "Macro specificity": 0.961099652558676,
+      "QWK": 0.897400055912776
+    }
+  },
+  {
+    "arm": "student_ce",
+    "seed": 42,
+    "metrics": {
+      "Accuracy": 0.8365122615803815,
+      "Macro precision": 0.6849401168811365,
+      "Macro recall": 0.6802750432898732,
+      "Macro F1": 0.6809107783717406,
+      "Weighted F1": 0.8359937485093856,
+      "Macro specificity": 0.9600539433066511,
+      "QWK": 0.8908553902594617
+    }
+  },
+  {
+    "arm": "student_ce",
+    "seed": 52,
+    "metrics": {
+      "Accuracy": 0.8446866485013624,
+      "Macro precision": 0.7341644900611902,
+      "Macro recall": 0.6559548789848295,
+      "Macro F1": 0.6807468543201537,
+      "Weighted F1": 0.8366441027986955,
+      "Macro specificity": 0.9600354708668437,
+      "QWK": 0.8982190442887632
+    }
+  },
+  {
+    "arm": "student_ce",
+    "seed": 62,
+    "metrics": {
+      "Accuracy": 0.8365122615803815,
+      "Macro precision": 0.7508262373962642,
+      "Macro recall": 0.6911349831948843,
+      "Macro F1": 0.6726783200597664,
+      "Weighted F1": 0.8298082574380133,
+      "Macro specificity": 0.9595077604825919,
+      "QWK": 0.9090957658646515
+    }
+  }
+]

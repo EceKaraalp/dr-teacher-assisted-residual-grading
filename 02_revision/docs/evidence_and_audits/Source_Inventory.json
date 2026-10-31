@@ -1,0 +1,156 @@
+[
+  {
+    "file": "C:\\Users\\user\\Desktop\\Round1\\2020440-SECRETARY-R0-V1-20260828233914.docx",
+    "purpose": "Original submitted manuscript; sole deletion/redline baseline",
+    "revision_use": "Preserve original wording, structure, font/size prototypes and archived objects.",
+    "caution": "Original contains superseded scientific claims; not current evidence.",
+    "sha256": "6261ede63cfb487f69755b7188c43034340ec98554ab4f8b4af1da0cb9c6aefb"
+  },
+  {
+    "file": "C:\\Users\\user\\Desktop\\Round1\\2020440_manuscript_completed_experiments_clean.docx",
+    "purpose": "Audited completed-experiments manuscript",
+    "revision_use": "Use accepted scientific text and current result tables/figures without training.",
+    "caution": "Prior typography defects are repaired; original-submission comparison is newly generated.",
+    "sha256": "4457083072c3c86008d1f874de099d16e1225cc83d46139697e1593f56995065"
+  },
+  {
+    "file": "C:\\Users\\user\\Desktop\\Round1\\2020440_Response2reviewers_completed_experiments.docx",
+    "purpose": "Current 26-response scientific draft",
+    "revision_use": "Reuse audited factual responses, add source-based phrasing and explicit change/location fields.",
+    "caution": "Prior English R2 translations are replaced by supplied original Turkish comments.",
+    "sha256": "a9f0b595ddd1171bce321e0ad958bcc722e9137f7cebbac3b20294d4d3830a79"
+  },
+  {
+    "file": "C:\\Users\\user\\Desktop\\Round1\\proper sentences.docx",
+    "purpose": "Response phrase source",
+    "revision_use": "Adapt actual polite phrases; not author names/editor names from examples.",
+    "caution": "A language template, not evidence; unsupported acceptance/completion phrases are not reused.",
+    "sha256": "a121615dffc0e444baa6c6fcfd135cfa4d5ea57c11316cab9b6aa4b6dcad4b14"
+  },
+  {
+    "file": "C:\\Users\\user\\Desktop\\Round1\\20250706_Response2reviewers.docx",
+    "purpose": "Example response letter",
+    "revision_use": "Review separation of comments, responses and revision explanations.",
+    "caution": "Different study/authors; no scientific content or names imported.",
+    "sha256": "e04b1f2bacaaa52fb3705bc595d8195a18414c23adf8cd993fa16da336a5e5bd"
+  },
+  {
+    "file": "C:\\Users\\user\\Desktop\\Round1\\BSPC-D-25-04358_manuscript_marked.pdf",
+    "purpose": "Example marked manuscript",
+    "revision_use": "Examine revision presentation; apply user's yellow/strike convention instead.",
+    "caution": "Different study; fixed PDF layout is not the current journal template.",
+    "sha256": "6ce110b62bec682c731783051bda1e9abe7abff854cad5c72f8ac0352a6b2292"
+  },
+  {
+    "file": "C:\\Users\\user\\Desktop\\Round1\\2020440-REVIEWER-V1-20260919093559.pdf",
+    "purpose": "Original Reviewer 1 comments",
+    "revision_use": "Extract all 21 numbered comments directly from PDF.",
+    "caution": "PDF extraction normalizes whitespace.",
+    "sha256": "11499023d155d83deefc4399d36f777958a107ffd2944dc16ccc7e51b18e9381"
+  },
+  {
+    "file": "C:\\Users\\user\\Desktop\\Round1\\Yeni Metin Belgesi.txt",
+    "purpose": "Original supplied Reviewer 2 comments",
+    "revision_use": "Preserve five Turkish demands individually.",
+    "caution": "Text file supplied by user, not fetched from journal.",
+    "sha256": "e16e321b5b385a0d34ef0e96ccac3a2de66c01096aa3fce0fb093516c0311094"
+  },
+  {
+    "file": "C:\\Users\\user\\Desktop\\Round1\\2020440_manuscript_table5_revised_marked.docx",
+    "purpose": "Pre-99-experiment revision",
+    "revision_use": "Trace prior editorial and source-audit changes; not redline baseline.",
+    "caution": "Contains obsolete results and earlier partial statements.",
+    "sha256": "d70a7dcf3056628e8dfc73c8fa44662cbd20c368e3631078a3749aa76e170cc3"
+  },
+  {
+    "file": "C:\\Users\\user\\Desktop\\Round1\\2020440_Reference_citation_audit.docx",
+    "purpose": "Previous reference/citation audit",
+    "revision_use": "Provide provenance of earlier corrections; retain outstanding verification.",
+    "caution": "Does not certify all 48 references freshly verified.",
+    "sha256": "6a27bc84140a3e2c7a83a961dec219863267c80b2a657108da45504af5491f9e"
+  },
+  {
+    "file": "C:\\Users\\user\\Desktop\\Round1\\2020440_completed_experiments_evidence.docx",
+    "purpose": "Detailed current evidence document",
+    "revision_use": "Copy as supporting numerical/diagnostic evidence.",
+    "caution": "Conditional intervals do not restore patient independence or holdout freshness.",
+    "sha256": "f133c0a275ab54921dae319b803d8ae15409f19c39e5cee4e83c598fd9f37fac"
+  },
+  {
+    "file": "C:\\Users\\user\\Desktop\\Round1\\2020440_completed_experiments_author_checks.docx",
+    "purpose": "Author check list",
+    "revision_use": "Carry forward journal/ethics/AI/format limitations.",
+    "caution": "Author confirmation is still needed.",
+    "sha256": "da34a2cabc5cc7cea7ef05065af315af455cc421c63982e76f17db600dd6e1c3"
+  },
+  {
+    "file": "C:\\Users\\user\\Desktop\\reviewer_complete_v1.zip",
+    "purpose": "Completed 99-job experiment archive",
+    "revision_use": "Check CRC and rederive summaries from recorded predictions/confusion matrices.",
+    "caution": "Historical exposed split; no weights changed.",
+    "sha256": "b05488ec0d91accf5dc2a7706a006625d5611d758ebd676b113715adf19d559f"
+  },
+  {
+    "file": "C:\\Users\\user\\Downloads\\protocol.json",
+    "purpose": "Frozen run protocol",
+    "revision_use": "Verify training/software/code/data provenance.",
+    "caution": "User-supplied run record.",
+    "sha256": "4f846a27990c5ce7eb2ec77c7e7ed88f6965f68a97017506203cd04c4ae138d9"
+  },
+  {
+    "file": "C:\\Users\\user\\Downloads\\prediction_ids_repair.json",
+    "purpose": "Prediction-ID serialization repair",
+    "revision_use": "Document nonnumeric ID-only repair.",
+    "caution": "Not a new evaluation/training experiment.",
+    "sha256": "f1ef96c02e2d1893158ef87bce82dd9a845e8b7f63e605a6419c596dbda0f4a7"
+  },
+  {
+    "file": "C:\\Users\\user\\Downloads\\student_diagnostic_20261023_175134_909746.zip",
+    "purpose": "Strict checkpoint/output diagnostic",
+    "revision_use": "Support exact logit reproduction and single-class finding.",
+    "caution": "Diagnosis only; no historical cause identified by loading test.",
+    "sha256": "66450eb4392648549267e8ab2203246a9228c7ae36ebe8c27288963ebfe6d87e"
+  },
+  {
+    "file": "C:\\Users\\user\\Downloads\\student_gradients_20261023_181852_661447.zip",
+    "purpose": "Read-only gradient diagnosis",
+    "revision_use": "Support attenuated gradients at saved checkpoints.",
+    "caution": "Not temporal or unique causal proof; no weights updated.",
+    "sha256": "6c1fc1dc9da512c4ef5c090eda6dfc27aa09287a6c49305cdbe8d8114d00d75e"
+  },
+  {
+    "file": "<repo_root>\\0_main.tex",
+    "purpose": "Existing LaTeX manuscript",
+    "revision_use": "Inventory and preserve; Word is deliverable.",
+    "caution": "Not rewritten or rebuilt; existing worktree already contains user changes.",
+    "sha256": "4ff67ac57764c66dfb17fe48877b0793e2a17c02c5e29cf586ff57713401449d"
+  },
+  {
+    "file": "<repo_root>\\colab_reviewer_complete\\run.py",
+    "purpose": "Actual training/inference implementation",
+    "revision_use": "Method/loss/fusion trace previously audited; copy hash reference.",
+    "caution": "No execution of training.",
+    "sha256": "511fcc3c6e232a913500a07fbe7b092ef1bcce4147be61305b0ff3cde1d8045e"
+  },
+  {
+    "file": "C:\\Users\\user\\.copilot\\session-state\\e93359ad-fc8c-4fa7-84e8-98dc29a04925\\files\\received_results_audit.json",
+    "purpose": "Numerical audit",
+    "revision_use": "Copy existing result recomputation report.",
+    "caution": "Interpret with source archive/protocol.",
+    "sha256": "4e3835617d855790f5752363041985cb0178550e222cbeef95d44bab17953e7b"
+  },
+  {
+    "file": "C:\\Users\\user\\.copilot\\session-state\\e93359ad-fc8c-4fa7-84e8-98dc29a04925\\files\\student_learning_mechanism_audit.json",
+    "purpose": "Mechanism audit",
+    "revision_use": "Copy actual-code gradient boundary evidence.",
+    "caution": "Existence of a mechanism is not proof of historical sole cause.",
+    "sha256": "ecc5547d92ebb9df8ef3be075403b7872010cbcf386be461bc1a7d49dda871d2"
+  },
+  {
+    "file": "C:\\Users\\user\\.copilot\\session-state\\e93359ad-fc8c-4fa7-84e8-98dc29a04925\\files\\completed_revision_validation.json",
+    "purpose": "Previous Word/numeric validation",
+    "revision_use": "Preserve earlier quantitative checks in addition to new package checks.",
+    "caution": "Earlier clean/highlighted comparison did not cover original-based deletions.",
+    "sha256": "e5d0c3c5519e248f3412df30faaab0b704f1d30760d4d00456c3f38cb416cdb8"
+  }
+]

@@ -1,0 +1,182 @@
+{
+  "reference/raw_f100_s42/teacher1": {
+    "round1_key": "raw_f100_s42/teacher1",
+    "source": "/content/drive/MyDrive/DR_Reviewer_Complete/runs/reviewer_complete_v1/raw_f100_s42/teacher1",
+    "mode": "imported",
+    "best_sha256": "c259ed726eb7bf4a42240823d898b8c946c7b9c5b6d3b77264378d065c267551",
+    "files": [
+      "best.pth",
+      "complete.json",
+      "config.json",
+      "history.json",
+      "metrics.json",
+      "test_logits.npz",
+      "val_logits.npz"
+    ]
+  },
+  "reference/raw_f100_s42/teacher2": {
+    "round1_key": "raw_f100_s42/teacher2",
+    "source": "/content/drive/MyDrive/DR_Reviewer_Complete/runs/reviewer_complete_v1/raw_f100_s42/teacher2",
+    "mode": "imported",
+    "best_sha256": "64573c3c924293e39710c7da807a68d71ab435dc9929db7559397aad0d1cce9a",
+    "files": [
+      "best.pth",
+      "complete.json",
+      "config.json",
+      "history.json",
+      "metrics.json",
+      "test_logits.npz",
+      "val_logits.npz"
+    ]
+  },
+  "reference/raw_f100_s42/student/joint_full": {
+    "round1_key": "raw_f100_s42/student/joint_full",
+    "source": "/content/drive/MyDrive/DR_Reviewer_Complete/runs/reviewer_complete_v1/raw_f100_s42/student/joint_full",
+    "mode": "imported",
+    "best_sha256": "67252f6bf3b52a6b18f4d1c2f216df48be0f2463d95d4a1c7ff098f95fad75d0",
+    "files": [
+      "best.pth",
+      "complete.json",
+      "config.json",
+      "history.json",
+      "metrics.json",
+      "test_logits.npz",
+      "val_logits.npz"
+    ]
+  },
+  "reference/raw_f100_s42/student/student_ce": {
+    "round1_key": "raw_f100_s42/student/student_ce",
+    "source": "/content/drive/MyDrive/DR_Reviewer_Complete/runs/reviewer_complete_v1/raw_f100_s42/student/student_ce",
+    "mode": "imported",
+    "best_sha256": "292f2a4f35ae07957c8e9af24fa3afce7fae57057c7ee84af02f6eea5362578f",
+    "files": [
+      "best.pth",
+      "complete.json",
+      "config.json",
+      "history.json",
+      "metrics.json",
+      "test_logits.npz",
+      "val_logits.npz"
+    ]
+  },
+  "reference/raw_f100_s52/teacher1": {
+    "round1_key": "raw_f100_s52/teacher1",
+    "source": "/content/drive/MyDrive/DR_Reviewer_Complete/runs/reviewer_complete_v1/raw_f100_s52/teacher1",
+    "mode": "imported",
+    "best_sha256": "65dee5605fa0f5a0284e843ccde54529068c972f3d476e0f9a9c8aa40f5f1b92",
+    "files": [
+      "best.pth",
+      "complete.json",
+      "config.json",
+      "history.json",
+      "metrics.json",
+      "test_logits.npz",
+      "val_logits.npz"
+    ]
+  },
+  "reference/raw_f100_s52/teacher2": {
+    "round1_key": "raw_f100_s52/teacher2",
+    "source": "/content/drive/MyDrive/DR_Reviewer_Complete/runs/reviewer_complete_v1/raw_f100_s52/teacher2",
+    "mode": "imported",
+    "best_sha256": "de3fbeaa2daec7782466cbe6ed60970c04310cd1ce797dbd6cc0cba473d5f62a",
+    "files": [
+      "best.pth",
+      "complete.json",
+      "config.json",
+      "history.json",
+      "metrics.json",
+      "test_logits.npz",
+      "val_logits.npz"
+    ]
+  },
+  "reference/raw_f100_s52/student/joint_full": {
+    "round1_key": "raw_f100_s52/student/joint_full",
+    "source": "/content/drive/MyDrive/DR_Reviewer_Complete/runs/reviewer_complete_v1/raw_f100_s52/student/joint_full",
+    "mode": "imported",
+    "best_sha256": "1d7db802299314a49ca884f4bf9a71171adab942bcf212c8d4446ffb8ed76e0e",
+    "files": [
+      "best.pth",
+      "complete.json",
+      "config.json",
+      "history.json",
+      "metrics.json",
+      "test_logits.npz",
+      "val_logits.npz"
+    ]
+  },
+  "reference/raw_f100_s52/student/student_ce": {
+    "round1_key": "raw_f100_s52/student/student_ce",
+    "source": "/content/drive/MyDrive/DR_Reviewer_Complete/runs/reviewer_complete_v1/raw_f100_s52/student/student_ce",
+    "mode": "imported",
+    "best_sha256": "e17566c8f228d9d6bafb1433302771d7a4d85012b24b8905bc84e1826ab0a18d",
+    "files": [
+      "best.pth",
+      "complete.json",
+      "config.json",
+      "history.json",
+      "metrics.json",
+      "test_logits.npz",
+      "val_logits.npz"
+    ]
+  },
+  "reference/raw_f100_s62/teacher1": {
+    "round1_key": "raw_f100_s62/teacher1",
+    "source": "/content/drive/MyDrive/DR_Reviewer_Complete/runs/reviewer_complete_v1/raw_f100_s62/teacher1",
+    "mode": "imported",
+    "best_sha256": "fbb3935ab86caa36365441ec8235880b6093ec8d6875cfefd50403aab1de78a3",
+    "files": [
+      "best.pth",
+      "complete.json",
+      "config.json",
+      "history.json",
+      "metrics.json",
+      "test_logits.npz",
+      "val_logits.npz"
+    ]
+  },
+  "reference/raw_f100_s62/teacher2": {
+    "round1_key": "raw_f100_s62/teacher2",
+    "source": "/content/drive/MyDrive/DR_Reviewer_Complete/runs/reviewer_complete_v1/raw_f100_s62/teacher2",
+    "mode": "imported",
+    "best_sha256": "4dc9be556722baf89b9fdb1496e1673c01a14ea7743794fdd798f11d4c2d864c",
+    "files": [
+      "best.pth",
+      "complete.json",
+      "config.json",
+      "history.json",
+      "metrics.json",
+      "test_logits.npz",
+      "val_logits.npz"
+    ]
+  },
+  "reference/raw_f100_s62/student/joint_full": {
+    "round1_key": "raw_f100_s62/student/joint_full",
+    "source": "/content/drive/MyDrive/DR_Reviewer_Complete/runs/reviewer_complete_v1/raw_f100_s62/student/joint_full",
+    "mode": "imported",
+    "best_sha256": "16789cbbbb7f6ed941aa9f327cff47a3c69a9bbe172051357c3d0b22feca3f22",
+    "files": [
+      "best.pth",
+      "complete.json",
+      "config.json",
+      "history.json",
+      "metrics.json",
+      "test_logits.npz",
+      "val_logits.npz"
+    ]
+  },
+  "reference/raw_f100_s62/student/student_ce": {
+    "round1_key": "raw_f100_s62/student/student_ce",
+    "source": "/content/drive/MyDrive/DR_Reviewer_Complete/runs/reviewer_complete_v1/raw_f100_s62/student/student_ce",
+    "mode": "imported",
+    "best_sha256": "76af8bb918c3c2ca6a9ae96f2fdcfe15a9650a5451fe79ad4fac144695625237",
+    "files": [
+      "best.pth",
+      "complete.json",
+      "config.json",
+      "history.json",
+      "metrics.json",
+      "test_logits.npz",
+      "val_logits.npz"
+    ]
+  }
+}

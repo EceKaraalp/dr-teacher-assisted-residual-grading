@@ -1,0 +1,128 @@
+{
+  "raw_f100_s42/teacher2": {
+    "disagreement": 0.25340599455040874,
+    "error_correlation": 0.45026440136231777,
+    "error_correlation_defined": true,
+    "symmetric_kl_nats": 2.073837200980986,
+    "scope": "Descriptive diversity is not proof of a beneficial teacher contribution."
+  },
+  "raw_f100_s52/teacher2": {
+    "disagreement": 0.30517711171662126,
+    "error_correlation": 0.36604205340079476,
+    "error_correlation_defined": true,
+    "symmetric_kl_nats": 3.006168141525669,
+    "scope": "Descriptive diversity is not proof of a beneficial teacher contribution."
+  },
+  "raw_f100_s62/teacher2": {
+    "disagreement": 0.27520435967302453,
+    "error_correlation": 0.45964815377927604,
+    "error_correlation_defined": true,
+    "symmetric_kl_nats": 2.292728825456804,
+    "scope": "Descriptive diversity is not proof of a beneficial teacher contribution."
+  },
+  "imagenet_f100_s42/teacher2": {
+    "disagreement": 0.29155313351498635,
+    "error_correlation": 0.38632526023331815,
+    "error_correlation_defined": true,
+    "symmetric_kl_nats": 2.6697890123734864,
+    "scope": "Descriptive diversity is not proof of a beneficial teacher contribution."
+  },
+  "imagenet_f100_s52/teacher2": {
+    "disagreement": 0.3024523160762943,
+    "error_correlation": 0.3998228918917323,
+    "error_correlation_defined": true,
+    "symmetric_kl_nats": 1.9475577135087576,
+    "scope": "Descriptive diversity is not proof of a beneficial teacher contribution."
+  },
+  "imagenet_f100_s62/teacher2": {
+    "disagreement": 0.28065395095367845,
+    "error_correlation": 0.35491594605596394,
+    "error_correlation_defined": true,
+    "symmetric_kl_nats": 2.2446477327132883,
+    "scope": "Descriptive diversity is not proof of a beneficial teacher contribution."
+  },
+  "retinal_f100_s42/teacher2": {
+    "disagreement": 0.1880108991825613,
+    "error_correlation": 0.4667891045437156,
+    "error_correlation_defined": true,
+    "symmetric_kl_nats": 1.3765802908266276,
+    "scope": "Descriptive diversity is not proof of a beneficial teacher contribution."
+  },
+  "retinal_f100_s52/teacher2": {
+    "disagreement": 0.2098092643051771,
+    "error_correlation": 0.5139710964322775,
+    "error_correlation_defined": true,
+    "symmetric_kl_nats": 1.3116580032061502,
+    "scope": "Descriptive diversity is not proof of a beneficial teacher contribution."
+  },
+  "retinal_f100_s62/teacher2": {
+    "disagreement": 0.7547683923705722,
+    "error_correlation": -0.15201458332823164,
+    "error_correlation_defined": true,
+    "symmetric_kl_nats": 9.766792693373771,
+    "scope": "Descriptive diversity is not proof of a beneficial teacher contribution."
+  },
+  "raw_f010_s42/teacher2": {
+    "disagreement": 0.3923705722070845,
+    "error_correlation": 0.515109252389371,
+    "error_correlation_defined": true,
+    "symmetric_kl_nats": 0.7421936757125547,
+    "scope": "Descriptive diversity is not proof of a beneficial teacher contribution."
+  },
+  "raw_f010_s52/teacher2": {
+    "disagreement": 0.4550408719346049,
+    "error_correlation": 0.42782514191189963,
+    "error_correlation_defined": true,
+    "symmetric_kl_nats": 2.3670773319722214,
+    "scope": "Descriptive diversity is not proof of a beneficial teacher contribution."
+  },
+  "raw_f010_s62/teacher2": {
+    "disagreement": 0.34877384196185285,
+    "error_correlation": 0.4407581451226249,
+    "error_correlation_defined": true,
+    "symmetric_kl_nats": 1.7058894446272108,
+    "scope": "Descriptive diversity is not proof of a beneficial teacher contribution."
+  },
+  "raw_f025_s42/teacher2": {
+    "disagreement": 0.3242506811989101,
+    "error_correlation": 0.5554036749498428,
+    "error_correlation_defined": true,
+    "symmetric_kl_nats": 2.1172912656627427,
+    "scope": "Descriptive diversity is not proof of a beneficial teacher contribution."
+  },
+  "raw_f025_s52/teacher2": {
+    "disagreement": 0.2506811989100817,
+    "error_correlation": 0.5238082147385889,
+    "error_correlation_defined": true,
+    "symmetric_kl_nats": 1.9191948275436823,
+    "scope": "Descriptive diversity is not proof of a beneficial teacher contribution."
+  },
+  "raw_f025_s62/teacher2": {
+    "disagreement": 0.25885558583106266,
+    "error_correlation": 0.42888475619662686,
+    "error_correlation_defined": true,
+    "symmetric_kl_nats": 2.0471031196178733,
+    "scope": "Descriptive diversity is not proof of a beneficial teacher contribution."
+  },
+  "raw_f050_s42/teacher2": {
+    "disagreement": 0.24250681198910082,
+    "error_correlation": 0.4993198648524482,
+    "error_correlation_defined": true,
+    "symmetric_kl_nats": 2.895782186388544,
+    "scope": "Descriptive diversity is not proof of a beneficial teacher contribution."
+  },
+  "raw_f050_s52/teacher2": {
+    "disagreement": 0.5667574931880109,
+    "error_correlation": 0.2286788336287584,
+    "error_correlation_defined": true,
+    "symmetric_kl_nats": 3.178448090957382,
+    "scope": "Descriptive diversity is not proof of a beneficial teacher contribution."
+  },
+  "raw_f050_s62/teacher2": {
+    "disagreement": 0.2670299727520436,
+    "error_correlation": 0.4119199058219279,
+    "error_correlation_defined": true,
+    "symmetric_kl_nats": 1.829390460427451,
+    "scope": "Descriptive diversity is not proof of a beneficial teacher contribution."
+  }
+}

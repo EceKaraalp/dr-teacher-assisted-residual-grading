@@ -1,0 +1,176 @@
+{
+ "42": {
+  "gated": {
+   "accuracy": 0.8528610354223434,
+   "macro_f1": 0.7046263774341551,
+   "qwk": 0.917438962528396,
+   "roc_auc_ovr_macro": 0.9275738541997143,
+   "predicted_classes": 5
+  },
+  "equal": {
+   "accuracy": 0.8528610354223434,
+   "macro_f1": 0.7046263774341551,
+   "qwk": 0.917438962528396,
+   "roc_auc_ovr_macro": 0.9057332227488135,
+   "predicted_classes": 5
+  },
+  "paper_eq": {
+   "accuracy": 0.8446866485013624,
+   "macro_f1": 0.6938434614975829,
+   "qwk": 0.9121558128401979,
+   "roc_auc_ovr_macro": 0.9386073552813625,
+   "predicted_classes": 5
+  },
+  "teacher_gate": {
+   "accuracy": 0.8474114441416893,
+   "macro_f1": 0.6879742627051051,
+   "qwk": 0.9158234603950351,
+   "roc_auc_ovr_macro": 0.9312853970672972,
+   "predicted_classes": 5
+  },
+  "teacher1": {
+   "accuracy": 0.667574931880109,
+   "macro_f1": 0.4601295842566677,
+   "qwk": 0.6588870457749454,
+   "roc_auc_ovr_macro": 0.8574508623392113,
+   "predicted_classes": 5
+  },
+  "teacher2": {
+   "accuracy": 0.8474114441416893,
+   "macro_f1": 0.6879742627051051,
+   "qwk": 0.9158234603950351,
+   "roc_auc_ovr_macro": 0.9380369070599862,
+   "predicted_classes": 5
+  },
+  "student_only": {
+   "accuracy": 0.05449591280653951,
+   "macro_f1": 0.029862642471904143,
+   "qwk": -0.0853146980409285,
+   "roc_auc_ovr_macro": 0.3223671547519875,
+   "predicted_classes": 2
+  },
+  "recorded_test_metrics_json": {
+   "accuracy": 0.8528610354223434,
+   "qwk": 0.917438962528396
+  },
+  "same_labels_gated_vs_equal": 1.0,
+  "mean_gate2": 0.0902661606669426,
+  "conflict_rate": 0.8855586051940918
+ },
+ "52": {
+  "gated": {
+   "accuracy": 0.8583106267029973,
+   "macro_f1": 0.7121468895894573,
+   "qwk": 0.9190749195807824,
+   "roc_auc_ovr_macro": 0.9285065053336975,
+   "predicted_classes": 5
+  },
+  "equal": {
+   "accuracy": 0.8583106267029973,
+   "macro_f1": 0.7121468895894573,
+   "qwk": 0.9190749195807824,
+   "roc_auc_ovr_macro": 0.917337085178118,
+   "predicted_classes": 5
+  },
+  "paper_eq": {
+   "accuracy": 0.8419618528610354,
+   "macro_f1": 0.6911888789505068,
+   "qwk": 0.9050530573174255,
+   "roc_auc_ovr_macro": 0.9403975879142337,
+   "predicted_classes": 5
+  },
+  "teacher_gate": {
+   "accuracy": 0.8528610354223434,
+   "macro_f1": 0.705571684491525,
+   "qwk": 0.9122421828805954,
+   "roc_auc_ovr_macro": 0.9298133071831028,
+   "predicted_classes": 5
+  },
+  "teacher1": {
+   "accuracy": 0.6757493188010899,
+   "macro_f1": 0.46584794844839583,
+   "qwk": 0.6443074499252087,
+   "roc_auc_ovr_macro": 0.8584302212322579,
+   "predicted_classes": 5
+  },
+  "teacher2": {
+   "accuracy": 0.8555858310626703,
+   "macro_f1": 0.7069275744559225,
+   "qwk": 0.9154679229211393,
+   "roc_auc_ovr_macro": 0.9374226492438111,
+   "predicted_classes": 5
+  },
+  "student_only": {
+   "accuracy": 0.051771117166212535,
+   "macro_f1": 0.019689119170984457,
+   "qwk": 0.0,
+   "roc_auc_ovr_macro": 0.40775089121633323,
+   "predicted_classes": 1
+  },
+  "recorded_test_metrics_json": {
+   "accuracy": 0.8583106267029973,
+   "qwk": 0.9190749195807824
+  },
+  "same_labels_gated_vs_equal": 1.0,
+  "mean_gate2": 0.08547815680503845,
+  "conflict_rate": 0.888283371925354
+ },
+ "62": {
+  "gated": {
+   "accuracy": 0.8528610354223434,
+   "macro_f1": 0.6934342821559781,
+   "qwk": 0.9192318208797291,
+   "roc_auc_ovr_macro": 0.9314918112836958,
+   "predicted_classes": 5
+  },
+  "equal": {
+   "accuracy": 0.8474114441416893,
+   "macro_f1": 0.6942601741647328,
+   "qwk": 0.9157152762749368,
+   "roc_auc_ovr_macro": 0.9162632383274076,
+   "predicted_classes": 5
+  },
+  "paper_eq": {
+   "accuracy": 0.8365122615803815,
+   "macro_f1": 0.6765489593311422,
+   "qwk": 0.907760483266458,
+   "roc_auc_ovr_macro": 0.940020316543164,
+   "predicted_classes": 5
+  },
+  "teacher_gate": {
+   "accuracy": 0.8528610354223434,
+   "macro_f1": 0.6987342108090824,
+   "qwk": 0.9141283250622283,
+   "roc_auc_ovr_macro": 0.9329372157576774,
+   "predicted_classes": 5
+  },
+  "teacher1": {
+   "accuracy": 0.670299727520436,
+   "macro_f1": 0.46518420184765413,
+   "qwk": 0.6611869539427617,
+   "roc_auc_ovr_macro": 0.8579783585209846,
+   "predicted_classes": 5
+  },
+  "teacher2": {
+   "accuracy": 0.8528610354223434,
+   "macro_f1": 0.6987342108090824,
+   "qwk": 0.9141283250622283,
+   "roc_auc_ovr_macro": 0.9377309363204059,
+   "predicted_classes": 5
+  },
+  "student_only": {
+   "accuracy": 0.051771117166212535,
+   "macro_f1": 0.019689119170984457,
+   "qwk": 0.0,
+   "roc_auc_ovr_macro": 0.47230752153288147,
+   "predicted_classes": 1
+  },
+  "recorded_test_metrics_json": {
+   "accuracy": 0.8528610354223434,
+   "qwk": 0.9192318208797291
+  },
+  "same_labels_gated_vs_equal": 0.9809264305177112,
+  "mean_gate2": 0.07668671011924744,
+  "conflict_rate": 0.8801090121269226
+ }
+}

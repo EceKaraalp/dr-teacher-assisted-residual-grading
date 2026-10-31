@@ -1,0 +1,37 @@
+IDRiD external evaluation and branch Grad-CAM
+Evidence report | 16 October 2026 | No retraining or test-set adaptation
+1. Locked evaluation protocol
+All 103 official IDRiD disease-grading test images were evaluated using the same three APTOS-trained final checkpoints (seeds 42, 52 and 62). Checkpoint SHA-256 hashes match the earlier APTOS verification. The 413 IDRiD training images were not used. Targets were Retinopathy grade 0..4, not macular-edema labels. Test supports were 34, 5, 32, 19 and 13. Images were converted to RGB, resized with PIL bilinear interpolation to 224 x 224, and supplied as float32 pixels 0..255 without normalization, matching the archived model's APTOS protocol. Inference used CPU, model.eval(), weights_only=True and strict=True loading. There was no external-data training, threshold fitting, model selection or TTA.
+2. Results
+accuracy: image-bootstrap 95% CI [0.1715, 0.3333].
+f1_macro: image-bootstrap 95% CI [0.1206, 0.2387].
+qwk: image-bootstrap 95% CI [0.1853, 0.4949].
+Intervals use 10,000 shared image resamples and average the metric over three fixed checkpoints, rather than pooling predictions as independent observations. They do not include model-training uncertainty or patient-level clustering. Macro-F1 always uses all five classes. Mild-DR support is only five images.
+
+3. Interpretation and manuscript-ready text
+Without retraining or target-domain calibration, evaluation on the official IDRiD test set (n=103) yielded mean accuracy 24.92%, macro-F1 0.1798 and QWK 0.3473 across the three archived checkpoints. The image-bootstrap 95% interval for mean QWK was 0.1853-0.4949. Performance was substantially lower than on APTOS, indicating limited cross-dataset generalization under the unchanged inference protocol. Domain differences are a plausible explanation, but this experiment does not isolate their causes. These results do not support clinical deployment or a claim of robust external performance.
+Both datasets were collected in India, so this is cross-dataset evaluation, not evidence of geographic generalization. Cross-source patient identity and near-duplicate overlap were not established by this evaluation. Historical APTOS checkpoint-selection limitations remain applicable.
+4. Branch-specific Grad-CAM
+Nine cases were selected deterministically using fixed seed 42: the first lexicographic ID in each available true-grade/correctness stratum. No seed-42 grade-4 prediction was correct. Grad-CAM targets the predicted-class logit of the full residual system, not a standalone student's logit. The last CNN feature tensors of Teacher 1, Teacher 2 (ResNet50), and ConvNeXt are shown separately. Teacher-path gradient detachment was disabled only during the attribution forward; model.eval() and original forward formulas were retained. All nine gradient-enabled forwards matched ordinary forward logits exactly (maximum observed absolute difference 0). Frozen checkpoint weights were not updated.
+These are branch-conditional CNN maps, not a joint whole-system heatmap or ViT-token attribution. Gates and the active conflict-brake branch are differentiated, while hard decisions are locally fixed. Each map is independently normalized; color intensity cannot compare branch importance. All 27 maps were finite with nonzero positive CAMs. No lesion annotations were used, so these maps do not prove lesion localization, causal faithfulness or clinical reasoning. Background/edge responses visible in some examples should not be described as confirmed lesion attention.
+IDRiD_039: true grade 0; predicted grade 0.
+
+IDRiD_029: true grade 0; predicted grade 1.
+
+IDRiD_063: true grade 1; predicted grade 1.
+
+IDRiD_074: true grade 1; predicted grade 2.
+
+IDRiD_008: true grade 2; predicted grade 2.
+
+IDRiD_012: true grade 2; predicted grade 1.
+
+IDRiD_025: true grade 3; predicted grade 3.
+
+IDRiD_006: true grade 3; predicted grade 2.
+
+IDRiD_001: true grade 4; predicted grade 3.
+
+5. Data citation and evidence files
+Porwal et al. Indian Diabetic Retinopathy Image Dataset (IDRiD): A Database for Diabetic Retinopathy Screening Research. Data 2018, 3(3), 25. https://doi.org/10.3390/data3030025. Dataset license: CC BY 4.0.
+Predictions, probabilities, confusion matrices, per-class results, bootstrap intervals, original image hashes and checkpoint hashes are retained in results/idrid_external_2026-10-16. This standalone report does not modify the existing marked/clean manuscripts or response letter.

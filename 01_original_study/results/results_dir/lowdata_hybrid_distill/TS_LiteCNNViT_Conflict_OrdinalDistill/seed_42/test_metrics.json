@@ -1,0 +1,101 @@
+{
+  "model_name": "TS_LiteCNNViT_Conflict_OrdinalDistill",
+  "seed": 42,
+  "accuracy": 0.8446866485013624,
+  "precision_macro": 0.7234984984984985,
+  "recall_macro": 0.6681635086671434,
+  "f1_macro": 0.6834026583025791,
+  "precision_weighted": 0.8360609928729821,
+  "recall_weighted": 0.8446866485013624,
+  "f1_weighted": 0.8362556276092814,
+  "specificity": 0.9588714687689439,
+  "qwk": 0.9151003879803212,
+  "roc_auc": 0.9588369114259995,
+  "best_val_qwk": 0.889791531665376,
+  "param_total": 114699539,
+  "param_trainable": 524134,
+  "param_frozen": 114175405,
+  "ms_per_image": 5.419660329169084,
+  "confusion_matrix": [
+    [
+      178,
+      3,
+      0,
+      0,
+      0
+    ],
+    [
+      6,
+      21,
+      10,
+      0,
+      0
+    ],
+    [
+      1,
+      5,
+      86,
+      1,
+      7
+    ],
+    [
+      0,
+      1,
+      8,
+      5,
+      5
+    ],
+    [
+      0,
+      0,
+      7,
+      3,
+      20
+    ]
+  ],
+  "classification_report": {
+    "No DR": {
+      "precision": 0.9621621621621622,
+      "recall": 0.9834254143646409,
+      "f1-score": 0.9726775956284153,
+      "support": 181.0
+    },
+    "Mild": {
+      "precision": 0.7,
+      "recall": 0.5675675675675675,
+      "f1-score": 0.6268656716417911,
+      "support": 37.0
+    },
+    "Moderate": {
+      "precision": 0.7747747747747747,
+      "recall": 0.86,
+      "f1-score": 0.8151658767772512,
+      "support": 100.0
+    },
+    "Severe": {
+      "precision": 0.5555555555555556,
+      "recall": 0.2631578947368421,
+      "f1-score": 0.35714285714285715,
+      "support": 19.0
+    },
+    "Proliferative": {
+      "precision": 0.625,
+      "recall": 0.6666666666666666,
+      "f1-score": 0.6451612903225806,
+      "support": 30.0
+    },
+    "accuracy": 0.8446866485013624,
+    "macro avg": {
+      "precision": 0.7234984984984985,
+      "recall": 0.6681635086671434,
+      "f1-score": 0.6834026583025791,
+      "support": 367.0
+    },
+    "weighted avg": {
+      "precision": 0.8360609928729821,
+      "recall": 0.8446866485013624,
+      "f1-score": 0.8362556276092814,
+      "support": 367.0
+    }
+  }
+}

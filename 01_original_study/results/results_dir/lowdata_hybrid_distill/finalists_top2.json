@@ -1,0 +1,6 @@
+{
+  "finalists": [
+    "TS_ConvNeXtTiny_Residual",
+    "TS_LiteCNNViT_Conflict_OrdinalDistill"
+  ]
+}

@@ -1,0 +1,309 @@
+{
+  "seeds": {
+    "42": {
+      "accuracy": 0.23300970873786409,
+      "f1_macro": 0.1514886659234485,
+      "qwk": 0.32378507243719046,
+      "roc_auc": 0.6060203637417448,
+      "nll": 3.409559894582242,
+      "brier_multiclass_sum": 1.216119939405518,
+      "ece_15_equal_width": 0.5813541418140374,
+      "confusion_matrix": [
+        [
+          2,
+          24,
+          8,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          11,
+          18,
+          2,
+          1
+        ],
+        [
+          1,
+          2,
+          14,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          7,
+          3,
+          0
+        ]
+      ],
+      "per_class": [
+        {
+          "grade": 0,
+          "precision": 0.4,
+          "recall": 0.058823529411764705,
+          "f1": 0.10256410256410256,
+          "support": 34
+        },
+        {
+          "grade": 1,
+          "precision": 0.07317073170731707,
+          "recall": 0.6,
+          "f1": 0.13043478260869565,
+          "support": 5
+        },
+        {
+          "grade": 2,
+          "precision": 0.3673469387755102,
+          "recall": 0.5625,
+          "f1": 0.4444444444444444,
+          "support": 32
+        },
+        {
+          "grade": 3,
+          "precision": 0.16666666666666666,
+          "recall": 0.05263157894736842,
+          "f1": 0.08,
+          "support": 19
+        },
+        {
+          "grade": 4,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 13
+        }
+      ],
+      "referable_argmax_grade_ge_2": {
+        "tp": 47,
+        "fn": 17,
+        "tn": 29,
+        "fp": 10
+      }
+    },
+    "52": {
+      "accuracy": 0.2621359223300971,
+      "f1_macro": 0.21535191378669644,
+      "qwk": 0.38207857960259384,
+      "roc_auc": 0.6118682870504905,
+      "nll": 3.379580968249447,
+      "brier_multiclass_sum": 1.2051121410215242,
+      "ece_15_equal_width": 0.5471458012617908,
+      "confusion_matrix": [
+        [
+          2,
+          24,
+          8,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          11,
+          18,
+          2,
+          1
+        ],
+        [
+          1,
+          2,
+          12,
+          2,
+          2
+        ],
+        [
+          2,
+          1,
+          6,
+          2,
+          2
+        ]
+      ],
+      "per_class": [
+        {
+          "grade": 0,
+          "precision": 0.4,
+          "recall": 0.058823529411764705,
+          "f1": 0.10256410256410256,
+          "support": 34
+        },
+        {
+          "grade": 1,
+          "precision": 0.07317073170731707,
+          "recall": 0.6,
+          "f1": 0.13043478260869565,
+          "support": 5
+        },
+        {
+          "grade": 2,
+          "precision": 0.391304347826087,
+          "recall": 0.5625,
+          "f1": 0.46153846153846156,
+          "support": 32
+        },
+        {
+          "grade": 3,
+          "precision": 0.3333333333333333,
+          "recall": 0.10526315789473684,
+          "f1": 0.16,
+          "support": 19
+        },
+        {
+          "grade": 4,
+          "precision": 0.4,
+          "recall": 0.15384615384615385,
+          "f1": 0.2222222222222222,
+          "support": 13
+        }
+      ],
+      "referable_argmax_grade_ge_2": {
+        "tp": 47,
+        "fn": 17,
+        "tn": 29,
+        "fp": 10
+      }
+    },
+    "62": {
+      "accuracy": 0.2524271844660194,
+      "f1_macro": 0.1726532215819801,
+      "qwk": 0.33591957163151565,
+      "roc_auc": 0.6077250042025185,
+      "nll": 3.4124755763197294,
+      "brier_multiclass_sum": 1.2244880048286044,
+      "ece_15_equal_width": 0.5835051750673831,
+      "confusion_matrix": [
+        [
+          3,
+          24,
+          7,
+          0,
+          0
+        ],
+        [
+          0,
+          3,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          11,
+          19,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          15,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          8,
+          1,
+          1
+        ]
+      ],
+      "per_class": [
+        {
+          "grade": 0,
+          "precision": 0.5,
+          "recall": 0.08823529411764706,
+          "f1": 0.15,
+          "support": 34
+        },
+        {
+          "grade": 1,
+          "precision": 0.07317073170731707,
+          "recall": 0.6,
+          "f1": 0.13043478260869565,
+          "support": 5
+        },
+        {
+          "grade": 2,
+          "precision": 0.37254901960784315,
+          "recall": 0.59375,
+          "f1": 0.4578313253012048,
+          "support": 32
+        },
+        {
+          "grade": 3,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 19
+        },
+        {
+          "grade": 4,
+          "precision": 0.3333333333333333,
+          "recall": 0.07692307692307693,
+          "f1": 0.125,
+          "support": 13
+        }
+      ],
+      "referable_argmax_grade_ge_2": {
+        "tp": 47,
+        "fn": 17,
+        "tn": 30,
+        "fp": 9
+      }
+    }
+  },
+  "mean_sd": {
+    "accuracy": {
+      "mean": 0.24919093851132687,
+      "sample_sd": 0.014830342054873262
+    },
+    "f1_macro": {
+      "mean": 0.17983126709737504,
+      "sample_sd": 0.03253109066687545
+    },
+    "qwk": {
+      "mean": 0.3472610745570999,
+      "sample_sd": 0.03075720258523217
+    },
+    "roc_auc": {
+      "mean": 0.6085378849982512,
+      "sample_sd": 0.003007512784228175
+    }
+  },
+  "bootstrap": {
+    "replicates": 10000,
+    "rng_seed": 20261016,
+    "method": "Percentile image bootstrap; shared sampled IDs across three fixed seeds; mean seed metric, not pooled repeated images; fixed five classes for macro-F1.",
+    "limitations": "No patient-level grouping or model-training uncertainty; small class counts.",
+    "mean_metric_95ci": {
+      "accuracy": [
+        0.1715210355987055,
+        0.3333333333333333
+      ],
+      "f1_macro": [
+        0.12057720821898435,
+        0.2386981946360698
+      ],
+      "qwk": [
+        0.1852794269757488,
+        0.4948612424141624
+      ]
+    }
+  }
+}

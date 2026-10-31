@@ -1,0 +1,208 @@
+{
+  "model": "reference/raw_f100_s42/student/joint_full",
+  "target": "predicted class of the gated primary output model(x)[0]",
+  "selection": "First test image of each true grade in fixed dataset order (same cases as round 1); seed 42 predefined.",
+  "scope": "CNN-branch attribution only; qualitative; not validated lesion localization or ViT attribution.",
+  "cases": [
+    {
+      "id": "IDRiD_IDRiD_029",
+      "label": 0,
+      "gated_prediction": 1,
+      "branches": {
+        "Teacher1_CNN": {
+          "positive_maximum": 0.0011084639700129628,
+          "no_positive_map": false
+        },
+        "Teacher2_ResNet": {
+          "positive_maximum": 0.0012167291715741158,
+          "no_positive_map": false
+        },
+        "Student_ConvNeXt": {
+          "positive_maximum": 0.010356779210269451,
+          "no_positive_map": false
+        }
+      },
+      "forward_max_abs_difference": 0.0
+    },
+    {
+      "id": "IDRiD_IDRiD_063",
+      "label": 1,
+      "gated_prediction": 1,
+      "branches": {
+        "Teacher1_CNN": {
+          "positive_maximum": 0.0007749676005914807,
+          "no_positive_map": false
+        },
+        "Teacher2_ResNet": {
+          "positive_maximum": 0.11440307646989822,
+          "no_positive_map": false
+        },
+        "Student_ConvNeXt": {
+          "positive_maximum": 0.03492215648293495,
+          "no_positive_map": false
+        }
+      },
+      "forward_max_abs_difference": 0.0
+    },
+    {
+      "id": "IDRiD_IDRiD_008",
+      "label": 2,
+      "gated_prediction": 2,
+      "branches": {
+        "Teacher1_CNN": {
+          "positive_maximum": 0.0005428477888926864,
+          "no_positive_map": false
+        },
+        "Teacher2_ResNet": {
+          "positive_maximum": 0.012506521306931973,
+          "no_positive_map": false
+        },
+        "Student_ConvNeXt": {
+          "positive_maximum": 0.06400863826274872,
+          "no_positive_map": false
+        }
+      },
+      "forward_max_abs_difference": 0.0
+    },
+    {
+      "id": "IDRiD_IDRiD_006",
+      "label": 3,
+      "gated_prediction": 2,
+      "branches": {
+        "Teacher1_CNN": {
+          "positive_maximum": 0.00018816161900758743,
+          "no_positive_map": false
+        },
+        "Teacher2_ResNet": {
+          "positive_maximum": 0.0021416139788925648,
+          "no_positive_map": false
+        },
+        "Student_ConvNeXt": {
+          "positive_maximum": 0.027103984728455544,
+          "no_positive_map": false
+        }
+      },
+      "forward_max_abs_difference": 0.0
+    },
+    {
+      "id": "IDRiD_IDRiD_001",
+      "label": 4,
+      "gated_prediction": 4,
+      "branches": {
+        "Teacher1_CNN": {
+          "positive_maximum": 4.393839481053874e-05,
+          "no_positive_map": false
+        },
+        "Teacher2_ResNet": {
+          "positive_maximum": 0.0031822402961552143,
+          "no_positive_map": false
+        },
+        "Student_ConvNeXt": {
+          "positive_maximum": 0.04316131770610809,
+          "no_positive_map": false
+        }
+      },
+      "forward_max_abs_difference": 0.0
+    },
+    {
+      "id": "APTOS_0231642cf1c2",
+      "label": 0,
+      "gated_prediction": 0,
+      "branches": {
+        "Teacher1_CNN": {
+          "positive_maximum": 0.00014793626905884594,
+          "no_positive_map": false
+        },
+        "Teacher2_ResNet": {
+          "positive_maximum": 0.0005679624737240374,
+          "no_positive_map": false
+        },
+        "Student_ConvNeXt": {
+          "positive_maximum": 0.02352011762559414,
+          "no_positive_map": false
+        }
+      },
+      "forward_max_abs_difference": 0.0
+    },
+    {
+      "id": "APTOS_086d41d17da8",
+      "label": 1,
+      "gated_prediction": 1,
+      "branches": {
+        "Teacher1_CNN": {
+          "positive_maximum": 0.00028118371847085655,
+          "no_positive_map": false
+        },
+        "Teacher2_ResNet": {
+          "positive_maximum": 2.3598944608238526e-05,
+          "no_positive_map": false
+        },
+        "Student_ConvNeXt": {
+          "positive_maximum": 0.016665838658809662,
+          "no_positive_map": false
+        }
+      },
+      "forward_max_abs_difference": 0.0
+    },
+    {
+      "id": "APTOS_f920ccd926db",
+      "label": 2,
+      "gated_prediction": 2,
+      "branches": {
+        "Teacher1_CNN": {
+          "positive_maximum": 0.00025377387646585703,
+          "no_positive_map": false
+        },
+        "Teacher2_ResNet": {
+          "positive_maximum": 1.5573674318147823e-05,
+          "no_positive_map": false
+        },
+        "Student_ConvNeXt": {
+          "positive_maximum": 0.03085233084857464,
+          "no_positive_map": false
+        }
+      },
+      "forward_max_abs_difference": 0.0
+    },
+    {
+      "id": "APTOS_bb7e0a2544cd",
+      "label": 3,
+      "gated_prediction": 3,
+      "branches": {
+        "Teacher1_CNN": {
+          "positive_maximum": 3.254688999732025e-05,
+          "no_positive_map": false
+        },
+        "Teacher2_ResNet": {
+          "positive_maximum": 7.776458005537279e-06,
+          "no_positive_map": false
+        },
+        "Student_ConvNeXt": {
+          "positive_maximum": 0.06383828073740005,
+          "no_positive_map": false
+        }
+      },
+      "forward_max_abs_difference": 0.0
+    },
+    {
+      "id": "APTOS_1c4f3aa4df06",
+      "label": 4,
+      "gated_prediction": 2,
+      "branches": {
+        "Teacher1_CNN": {
+          "positive_maximum": 0.0009138082969002426,
+          "no_positive_map": false
+        },
+        "Teacher2_ResNet": {
+          "positive_maximum": 0.00010704256419558078,
+          "no_positive_map": false
+        },
+        "Student_ConvNeXt": {
+          "positive_maximum": 0.01300746574997902,
+          "no_positive_map": false
+        }
+      },
+      "forward_max_abs_difference": 0.0
+    }
+  ]
+}

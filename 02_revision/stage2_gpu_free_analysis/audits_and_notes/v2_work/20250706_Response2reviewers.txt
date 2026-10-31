@@ -1,0 +1,2196 @@
+
+Authors' Response to Reviewers for Manuscript BSPC-D-25-04358
+
+General Comments to Associate Editor and Reviewers
+
+Thanks for the guidance which has helped us further improve the paper. We have addressed each comment the reviewers raised and revised the manuscript accordingly. We believe the manuscript has been significantly improved with respect to the aspects identified by the reviewers. Based on the concerns reflected in the comments, we would like to make some general comments:
+(1) We have added a new external dataset (D1NAMO) to evaluate generalizability and model robustness, as suggested by the reviewers.
+(2) We have included statistical validation using paired t-tests, confidence intervals, and effect sizes to support claims of superiority.
+(3) We have enhanced the interpretability section by adding feature importance visualizations.
+(4) We have added SEG evaluations for all 12 patients to support clinical relevance claims.
+(5) We have revised the ablation study to include parameter counts and analyze complexity–performance trade-offs.
+(6) We have further clarified the preprocessing steps, listed the patient IDs used, and detailed the UKS-based smoothing and normalization strategy.
+(7) We have added a sensitivity analysis on trend-weight boundaries to justify temporal resolution selection.
+Note that, reviewer's comments are in italic, our responses are in bold, and texts copied from the revised manuscript to address the reviewers' comments, appear in shaded boxes similar to this box.
+
+Note that, reviewer's comments are in italic, our responses are in bold, and texts copied from the revised manuscript to address the reviewers' comments, appear in shaded boxes similar to this box.
+
+
+
+
+
+
+
+
+Response to Reviewer 2
+The authors wish to thank you for your helpful comments.
+
+Our responses to your comments are:
+Comments:
+The authors report on the study of "Trend-Weighted Multi-Resolution Transformer for MultiParametric Glucose Prediction." The overall organization and comprehensive writing are good; however, the authors are advised to fix some grammatical errors. In my opinion, the presented manuscript needs slight improvement to meet the quality standards for consideration in Biomedical Signal Processing and Control.
+Thank you for your constructive comments. We have reviewed the manuscript carefully and corrected the grammatical errors to improve its clarity and readability. We believe that these revisions have improved the quality of the paper while maintaining its technical depth. We hope the revised manuscript is now acceptable to you.
+
+
+In the abstract, the authors should add the key results.
+
+Thank you for this constructive comment. We have revised the abstract to include key quantitative results that demonstrate the superior performance of the proposed TW-MRT model.
+
+The proposed model was evaluated on both the OhioT1DM and D1NAMO datasets, demonstrating superior performance compared to existing state-of-the-art models across a range of prediction horizons (PH) achieving root mean square error value of 11.37 mg/dL on OhioT1DM, and achieved an average RMSE of 11.30 mg/dL on D1NAMO for 30 PH. These results demonstrate the superior performance of the proposed TW-MRT model compared to existing state-of-the-art models. Furthermore, an ablation study confirms the contribution of each component within the model, demonstrating the importance of trend-weighting mechanism and multi-resolution fusion in improving predictive performance. Key contributions include: (1) trend-weighting and multi-resolution fusion enabling capture of short-, mid-, and long-term glucose dynamics, (2) cross-dataset validation demonstrating robust generalizability across diverse populations and sensor technologies, and (3) comprehensive clinical validation through surveillance error grid analysis, which confirms clinically reliable predictions across all patient scenarios. Our research presents a robust and innovative solution for real-time glucose prediction, offering a new direction for advancing diabetes management.
+The proposed model was evaluated on both the OhioT1DM and D1NAMO datasets, demonstrating superior performance compared to existing state-of-the-art models across a range of prediction horizons (PH) achieving root mean square error value of 11.37 mg/dL on OhioT1DM, and achieved an average RMSE of 11.30 mg/dL on D1NAMO for 30 PH. These results demonstrate the superior performance of the proposed TW-MRT model compared to existing state-of-the-art models. Furthermore, an ablation study confirms the contribution of each component within the model, demonstrating the importance of trend-weighting mechanism and multi-resolution fusion in improving predictive performance. Key contributions include: (1) trend-weighting and multi-resolution fusion enabling capture of short-, mid-, and long-term glucose dynamics, (2) cross-dataset validation demonstrating robust generalizability across diverse populations and sensor technologies, and (3) comprehensive clinical validation through surveillance error grid analysis, which confirms clinically reliable predictions across all patient scenarios. Our research presents a robust and innovative solution for real-time glucose prediction, offering a new direction for advancing diabetes management.
+
+Please see page 1 in the revised manuscript.
+
+The previous work result is not mentioned in the related work section. Add a table that includes the previous work result, method, and dataset.
+
+Thank you for this helpful comment. As suggested, we have revised the Related Work section to include a new table summarizing previous glucose prediction studies. The table presents method, dataset, and reported RMSE values of each study. This addition provides a clearer comparison between previous works and our proposed model.
+
+
+162962443796Ref
+Model
+Dataset
+RMSE (mg/dL)
+[19]
+Bayesian Ridge
+D1NAMO
+1.59 (mmol/L)
+[14]
+Random Forest
+METABO
+8.15
+[13]
+SVR + Differential Evolution
+CGM data, 12 T1D patients
+10.78
+[36]
+Attention-based multilayer GRU
+OhioT1DM dataset
+13.11
+[3]
+Feature Transformation Bi-LSTM
+OhioT1DM dataset
+16.81
+[12]
+ARMAX
+University of Illinois at Chicago
+17.47
+[18]
+BAGGING MetaR
+D1NAMO
+17.66
+[32]
+Neural Physiological Encoder
+OhioT1DM dataset
+17.8
+[31]
+Deep RL with LSTM
+OhioT1DM dataset
+18.32
+[30]
+GAN with GRU
+OhioT1DM dataset
+18.37
+[8]
+Stacked LSTM + Kalman
+OhioT1DM dataset
+18.57
+[37]
+Evidential DL with meta-learning
+OhioT1DM dataset
+18.64
+[34]
+Dilated RNN (DRNN)
+OhioT1DM dataset
+18.7
+[29]
+Autonomous-channel DL
+OhioT1DM dataset
+18.93
+[35]
+Edge-LSTM
+OhioT1DM dataset
+19.1
+[28]
+GluNet
+OhioT1DM dataset
+19.28
+[27]
+Ensemble Neural Networks
+OhioT1DM dataset
+19.57
+[22]
+Deep Ensemble Learning
+OhioT1DM dataset
+19.62
+[38]
+Multi-head Attention
+OhioT1DM dataset
+20.57
+[21]
+LSTM / BiLSTM
+GoCARB
+21.75
+[26]
+Weighted Decision-Level Fusion
+OhioT1DM dataset
+21.9
+[11]
+ARIMA
+CGM data provided by Dexcom
+22.15
+[17]
+XGBoost
+DirecNet
+23.22
+[33]
+GLIMMER
+OhioT1DM dataset
+23.97
+[16]
+Gaussian Process
+Tidepool
+28.01
+
+00Ref
+Model
+Dataset
+RMSE (mg/dL)
+[19]
+Bayesian Ridge
+D1NAMO
+1.59 (mmol/L)
+[14]
+Random Forest
+METABO
+8.15
+[13]
+SVR + Differential Evolution
+CGM data, 12 T1D patients
+10.78
+[36]
+Attention-based multilayer GRU
+OhioT1DM dataset
+13.11
+[3]
+Feature Transformation Bi-LSTM
+OhioT1DM dataset
+16.81
+[12]
+ARMAX
+University of Illinois at Chicago
+17.47
+[18]
+BAGGING MetaR
+D1NAMO
+17.66
+[32]
+Neural Physiological Encoder
+OhioT1DM dataset
+17.8
+[31]
+Deep RL with LSTM
+OhioT1DM dataset
+18.32
+[30]
+GAN with GRU
+OhioT1DM dataset
+18.37
+[8]
+Stacked LSTM + Kalman
+OhioT1DM dataset
+18.57
+[37]
+Evidential DL with meta-learning
+OhioT1DM dataset
+18.64
+[34]
+Dilated RNN (DRNN)
+OhioT1DM dataset
+18.7
+[29]
+Autonomous-channel DL
+OhioT1DM dataset
+18.93
+[35]
+Edge-LSTM
+OhioT1DM dataset
+19.1
+[28]
+GluNet
+OhioT1DM dataset
+19.28
+[27]
+Ensemble Neural Networks
+OhioT1DM dataset
+19.57
+[22]
+Deep Ensemble Learning
+OhioT1DM dataset
+19.62
+[38]
+Multi-head Attention
+OhioT1DM dataset
+20.57
+[21]
+LSTM / BiLSTM
+GoCARB
+21.75
+[26]
+Weighted Decision-Level Fusion
+OhioT1DM dataset
+21.9
+[11]
+ARIMA
+CGM data provided by Dexcom
+22.15
+[17]
+XGBoost
+DirecNet
+23.22
+[33]
+GLIMMER
+OhioT1DM dataset
+23.97
+[16]
+Gaussian Process
+Tidepool
+28.01
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Please see Table 1 in the revised manuscript.
+
+In addition, time series models including autoregressive integrated moving average (ARIMA) and autoregressive moving average with exogenous inputs (ARMAX) models were used for short-term glucose prediction. Prendin et al. developed ARIMA models for glucose prediction using CGM data provided by Dexcom, demonstrating the applicability of statistical time series techniques to glucose prediction [11]. Turksoy et al. introduced ARMAX-based models for early hypoglycemia alarms [12].
+In addition, time series models including autoregressive integrated moving average (ARIMA) and autoregressive moving average with exogenous inputs (ARMAX) models were used for short-term glucose prediction. Prendin et al. developed ARIMA models for glucose prediction using CGM data provided by Dexcom, demonstrating the applicability of statistical time series techniques to glucose prediction [11]. Turksoy et al. introduced ARMAX-based models for early hypoglycemia alarms [12].
+
+Please see page 2 in the revised manuscript.
+
+Traditional ML-based models, such as Support Vector Machines and Random Forests, show improved performance due to their ability to process and analyze multiple input features, such as insulin doses, carbohydrate intake, and physical activity. Hamdi et al. developed support vector regression models integrated with differential evolution model to enhance the accuracy of glucose prediction [13]. Georga et al. proposed a Random Forest-based model for predicting subcutaneous glucose concentrations using physiological and behavioral features from the METABO dataset [14]. Additional ML techniques like Gaussian Process Regression and Gradient Boosting Trees have been applied to glucose prediction, showing promising results in capturing complex patterns in physiological data [15]. Zaidi et al. developed Gaussian Process models for multi-step-ahead glucose prediction using data from the Tidepool platform [16], while Alfian et al. proposed the use of XGBoost models to predict glucose levels on the DirecNet dataset [17]. Saiti et al. proposed an ensemble-based model that integrates bagging, boosting, and linear meta-regressors with a compartmental model of insulin dynamics, aiming to enhance the robustness and adaptability of glucose prediction [18]. Basile and Sannino conducted a comparative analysis of interpretable ML models for glucose prediction, including Bayesian Ridge Regression, decision trees, and boosting-based algorithms. Their findings demonstrate the effectiveness of interpretable models in clinical time series prediction, with Bayesian Ridge achieving the best average performance across patients [19].
+Traditional ML-based models, such as Support Vector Machines and Random Forests, show improved performance due to their ability to process and analyze multiple input features, such as insulin doses, carbohydrate intake, and physical activity. Hamdi et al. developed support vector regression models integrated with differential evolution model to enhance the accuracy of glucose prediction [13]. Georga et al. proposed a Random Forest-based model for predicting subcutaneous glucose concentrations using physiological and behavioral features from the METABO dataset [14]. Additional ML techniques like Gaussian Process Regression and Gradient Boosting Trees have been applied to glucose prediction, showing promising results in capturing complex patterns in physiological data [15]. Zaidi et al. developed Gaussian Process models for multi-step-ahead glucose prediction using data from the Tidepool platform [16], while Alfian et al. proposed the use of XGBoost models to predict glucose levels on the DirecNet dataset [17]. Saiti et al. proposed an ensemble-based model that integrates bagging, boosting, and linear meta-regressors with a compartmental model of insulin dynamics, aiming to enhance the robustness and adaptability of glucose prediction [18]. Basile and Sannino conducted a comparative analysis of interpretable ML models for glucose prediction, including Bayesian Ridge Regression, decision trees, and boosting-based algorithms. Their findings demonstrate the effectiveness of interpretable models in clinical time series prediction, with Bayesian Ridge achieving the best average performance across patients [19].
+
+Please see pages 2 and 3 in the revised manuscript.
+
+RNNs and their variants, particularly long short-term memory (LSTM) networks, have been widely utilized for glucose prediction. Sun et al. proposed LSTM and bidirectional LSTM models for glucose prediction using deep neural networks to model temporal dependencies in the GoCARB dataset [21]. 
+RNNs and their variants, particularly long short-term memory (LSTM) networks, have been widely utilized for glucose prediction. Sun et al. proposed LSTM and bidirectional LSTM models for glucose prediction using deep neural networks to model temporal dependencies in the GoCARB dataset [21]. 
+
+Please see page 3 in the revised manuscript.
+
+Other hybrid DL methods include the weighted decision-level fusion model, which combines outputs from multiple neural predictors through fusion strategies to enhance robustness [26], and ensemble neural networks that aggregate predictions from various LSTM-based learners [27]. GluNet employs a personalized deep architecture that processes multi-parametric patient histories for individualized prediction [28], while the autonomous-channel DL model uses parallel asynchronous LSTM channels that self-select relevant input lags [29]. Generative frameworks such as GAN with GRU aim to refine predictions through adversarial learning [30], and deep reinforcement learning models optimize LSTM weights via reward-based updates to improve prediction over long horizons [31]. Gu et al. introduced a neural physiological encoder that decomposes physiological signals using CNN-based filters [32], while Butt et al. proposed a Bi-LSTM framework enhanced by feature transformation techniques [3]. The GLIMMER model combines CNN and LSTM modules with a custom error-rate loss to enhance multistep prediction performance [33]. Zhu et al. developed models using Edge-LSTM and Dilated Recurrent Neural Networks (DRNN) to handle features across different temporal resolutions, enhancing the prediction accuracy by managing long-term dependencies [35,34]. Although these stacked architectures demonstrated some advancements in prediction capability, they frequently encountered challenges in capturing the glucose trend, especially during the analysis of varying time scales.
+Other hybrid DL methods include the weighted decision-level fusion model, which combines outputs from multiple neural predictors through fusion strategies to enhance robustness [26], and ensemble neural networks that aggregate predictions from various LSTM-based learners [27]. GluNet employs a personalized deep architecture that processes multi-parametric patient histories for individualized prediction [28], while the autonomous-channel DL model uses parallel asynchronous LSTM channels that self-select relevant input lags [29]. Generative frameworks such as GAN with GRU aim to refine predictions through adversarial learning [30], and deep reinforcement learning models optimize LSTM weights via reward-based updates to improve prediction over long horizons [31]. Gu et al. introduced a neural physiological encoder that decomposes physiological signals using CNN-based filters [32], while Butt et al. proposed a Bi-LSTM framework enhanced by feature transformation techniques [3]. The GLIMMER model combines CNN and LSTM modules with a custom error-rate loss to enhance multistep prediction performance [33]. Zhu et al. developed models using Edge-LSTM and Dilated Recurrent Neural Networks (DRNN) to handle features across different temporal resolutions, enhancing the prediction accuracy by managing long-term dependencies [35,34]. Although these stacked architectures demonstrated some advancements in prediction capability, they frequently encountered challenges in capturing the glucose trend, especially during the analysis of varying time scales.
+
+Please see page 3 in the revised manuscript.
+
+The parallel computational capability of transformers also overcomes the computational limitations associated with sequential processing in RNNs, enabling more efficient training across diverse time series applications, including on large glucose datasets. The Crossformer introduces a two-stage attention mechanism that separates temporal and dimensional attention with patch-wise processing, enabling more efficient modeling of multivariate time series [42] The edge-based temporal fusion transformer (E-TFT) adapts temporal fusion architectures for edge computing, using simplified attention mechanisms suited for deployment in resource-constrained environments [43]. The population-specific TFT model integrates demographic features into transformer-based glucose prediction, aiming for improved personalization across different patient populations [44]. Yang et al. explored the multi-head attention networks for glucose prediction, showing that attention mechanisms enhance short-term predictions [38]. These multi-head attention networks divide the attention computation into multiple heads, enabling the model to focus on different subspaces of representation and temporal patterns in parallel. In our previous study [36], we proposed a DL model that combined a stacked GRU encoder with an attention-based GRU decoder to improve the modeling of temporal dependencies in glucose time series. This model aimed to dynamically emphasize informative time steps during decoding, enhancing short-term prediction performance.
+The parallel computational capability of transformers also overcomes the computational limitations associated with sequential processing in RNNs, enabling more efficient training across diverse time series applications, including on large glucose datasets. The Crossformer introduces a two-stage attention mechanism that separates temporal and dimensional attention with patch-wise processing, enabling more efficient modeling of multivariate time series [42] The edge-based temporal fusion transformer (E-TFT) adapts temporal fusion architectures for edge computing, using simplified attention mechanisms suited for deployment in resource-constrained environments [43]. The population-specific TFT model integrates demographic features into transformer-based glucose prediction, aiming for improved personalization across different patient populations [44]. Yang et al. explored the multi-head attention networks for glucose prediction, showing that attention mechanisms enhance short-term predictions [38]. These multi-head attention networks divide the attention computation into multiple heads, enabling the model to focus on different subspaces of representation and temporal patterns in parallel. In our previous study [36], we proposed a DL model that combined a stacked GRU encoder with an attention-based GRU decoder to improve the modeling of temporal dependencies in glucose time series. This model aimed to dynamically emphasize informative time steps during decoding, enhancing short-term prediction performance.
+
+
+Please see pages 3 and 4 in the revised manuscript.
+The incorporation of these novel components enhances the TW-MRT model and provides a more comprehensive solution to the complexities of glucose prediction.
+To summarize, glucose prediction has evolved from statistical and ML models to advanced DL models, each progressively addressing the nonlinear and temporal complexities of glucose dynamics. Early models such as ARIMA, ARMAX, and tree-based ensemble methods provided initial baselines, while deep neural networks—including LSTM, Bi-LSTM, and GRU-based models—enabled the extraction of richer temporal features. Transformer-based architectures have recently emerged as powerful tools for modeling sequential data, offering greater flexibility in capturing long- and short-term dependencies through attention mechanisms. Furthermore, recent research emphasizes trend-weighting and multi-resolution analysis as critical components for adapting to the diverse temporal patterns of glucose fluctuations. This paper is an enhanced version of our previous study described in [36], expanding upon the attention-based GRU framework by introducing a novel trend-weighted, multi-resolution temporal model.
+The performance comparisons of existing models are summarized in Table 1 to provide a comprehensive overview of the current state-of-the-art in glucose prediction.
+The incorporation of these novel components enhances the TW-MRT model and provides a more comprehensive solution to the complexities of glucose prediction.
+To summarize, glucose prediction has evolved from statistical and ML models to advanced DL models, each progressively addressing the nonlinear and temporal complexities of glucose dynamics. Early models such as ARIMA, ARMAX, and tree-based ensemble methods provided initial baselines, while deep neural networks—including LSTM, Bi-LSTM, and GRU-based models—enabled the extraction of richer temporal features. Transformer-based architectures have recently emerged as powerful tools for modeling sequential data, offering greater flexibility in capturing long- and short-term dependencies through attention mechanisms. Furthermore, recent research emphasizes trend-weighting and multi-resolution analysis as critical components for adapting to the diverse temporal patterns of glucose fluctuations. This paper is an enhanced version of our previous study described in [36], expanding upon the attention-based GRU framework by introducing a novel trend-weighted, multi-resolution temporal model.
+The performance comparisons of existing models are summarized in Table 1 to provide a comprehensive overview of the current state-of-the-art in glucose prediction.
+
+
+Please see page 5 in the revised manuscript.
+
+In the Results and Discussion section, Table 5 needs to be updated. The authors should add more relevant reported literature and results, and make a comparative analysis with the present study.
+
+Thanks for this suggestion. We have updated Table 6 (previously Table 5) to include additional recent and relevant studies that report glucose prediction results, particularly those using the OhioT1DM dataset. The expanded comparison provides a clearer context for evaluating the performance of the proposed model.
+
+center278765Table 6: The performance comparison with state-of-the-art models in terms of RMSE and MAE metrics (mg/dL).
+
+30 PH
+60 PH
+Method
+RMSE
+MAE
+RMSE
+MAE
+Weighted decision level fusion [46]         
+21.90
+15.87
+35.1
+26.41
+Multi-head attention network [19]
+20.57
+-
+35.09
+-
+Ensemble neural network [52]
+19.57
+14.06
+34.93
+25.95
+Evidential DL with meta-learning [20]
+19.46
+13.25
+31.07
+22.86
+GluNet [53]
+19.28
+-
+31.83
+-
+Edge-LSTM [18]
+19.10
+13.59
+32.61
+24.25
+Population-specific TFT [62]
+19.10
+13.10
+32.30
+23.20
+Edge-based temporal fusion transformer [63]
+19.09
+13.07
+32.31
+23.24
+Autonomous channel DL [45]
+18.93
+-
+31.79
+-
+DL with IoMT and RNN [27]
+18.92
+13.46
+32.54
+24.05
+DRNNs [17]
+18.60
+-
+-
+-
+GAN with GRU [64]
+18.37
+13.1
+32.21
+23.5
+DRL using LSTM [65]
+18.32
+12.93
+-
+-
+Neural physiological encoder [66]
+17.8
+-
+-
+-
+Feature transformation Bi-LSTM [3]
+16.81
+10.8
+25.48
+18.6
+Stacked LSTM with multitask [26]
+16.06
+10.64
+30.89
+22.07
+Crossformer [67]
+15.81
+9.67
+36.12
+16.38
+Attention-based multilayer GRU [52]
+13.11
+-
+28.25
+-
+GLIMMER [68]
+-
+-
+23.97
+15.83
+Proposed model                                    
+11.37
+6.96**
+19.91
+12.76
+
+00Table 6: The performance comparison with state-of-the-art models in terms of RMSE and MAE metrics (mg/dL).
+
+30 PH
+60 PH
+Method
+RMSE
+MAE
+RMSE
+MAE
+Weighted decision level fusion [46]         
+21.90
+15.87
+35.1
+26.41
+Multi-head attention network [19]
+20.57
+-
+35.09
+-
+Ensemble neural network [52]
+19.57
+14.06
+34.93
+25.95
+Evidential DL with meta-learning [20]
+19.46
+13.25
+31.07
+22.86
+GluNet [53]
+19.28
+-
+31.83
+-
+Edge-LSTM [18]
+19.10
+13.59
+32.61
+24.25
+Population-specific TFT [62]
+19.10
+13.10
+32.30
+23.20
+Edge-based temporal fusion transformer [63]
+19.09
+13.07
+32.31
+23.24
+Autonomous channel DL [45]
+18.93
+-
+31.79
+-
+DL with IoMT and RNN [27]
+18.92
+13.46
+32.54
+24.05
+DRNNs [17]
+18.60
+-
+-
+-
+GAN with GRU [64]
+18.37
+13.1
+32.21
+23.5
+DRL using LSTM [65]
+18.32
+12.93
+-
+-
+Neural physiological encoder [66]
+17.8
+-
+-
+-
+Feature transformation Bi-LSTM [3]
+16.81
+10.8
+25.48
+18.6
+Stacked LSTM with multitask [26]
+16.06
+10.64
+30.89
+22.07
+Crossformer [67]
+15.81
+9.67
+36.12
+16.38
+Attention-based multilayer GRU [52]
+13.11
+-
+28.25
+-
+GLIMMER [68]
+-
+-
+23.97
+15.83
+Proposed model                                    
+11.37
+6.96**
+19.91
+12.76
+
+
+
+
+Please see Table 6 in the revised manuscript.
+The weighted decision level fusion achieves an RMSE of 21.90 mg/dL.  Although this model employs multiple deep neural networks with fusion strategies, it encounters challenges in distributing optimal weights across different prediction components [26]. The autonomous channel deep learning framework (RMSE: 18.93 mg/dL) processes multi-lag inputs. However, it requires computational resources to coordinate multiple asynchronous channels [29]. The GAN with GRU model demonstrates competitive performance (RMSE: 18.37 mg/dL) with adversarial training mechanisms. However, its generative framework introduces training instability and convergence challenges [30]. The neural physiological encoder (RMSE: 17.80 mg/dL) uses decomposed convolutional filters to process physiological signals, but it lacks the sophisticated temporal modeling capabilities necessary for complex glucose dynamics [32]. The feature transformation Bi-LSTM model shows promising results (RMSE: 16.81 mg/dL) through bidirectional processing and feature engineering. However, its sequential nature limits the efficiency of parallelization [3]. For longer-term predictions, GLIMMER achieves an RMSE of 23.97 mg/dL for 60-minute predictions through modified error rate calculations. However, its CNN-LSTM hybrid architecture is unable to adequately capture the multi-scale temporal dependencies essential for extended PH [33]. 
+The evidential DL model, which offers uncertainty measures, encounters challenges with data deficiency, particularly during the initial training phase, which can result in a slower adaptation to new patients. 
+The weighted decision level fusion achieves an RMSE of 21.90 mg/dL.  Although this model employs multiple deep neural networks with fusion strategies, it encounters challenges in distributing optimal weights across different prediction components [26]. The autonomous channel deep learning framework (RMSE: 18.93 mg/dL) processes multi-lag inputs. However, it requires computational resources to coordinate multiple asynchronous channels [29]. The GAN with GRU model demonstrates competitive performance (RMSE: 18.37 mg/dL) with adversarial training mechanisms. However, its generative framework introduces training instability and convergence challenges [30]. The neural physiological encoder (RMSE: 17.80 mg/dL) uses decomposed convolutional filters to process physiological signals, but it lacks the sophisticated temporal modeling capabilities necessary for complex glucose dynamics [32]. The feature transformation Bi-LSTM model shows promising results (RMSE: 16.81 mg/dL) through bidirectional processing and feature engineering. However, its sequential nature limits the efficiency of parallelization [3]. For longer-term predictions, GLIMMER achieves an RMSE of 23.97 mg/dL for 60-minute predictions through modified error rate calculations. However, its CNN-LSTM hybrid architecture is unable to adequately capture the multi-scale temporal dependencies essential for extended PH [33]. 
+The evidential DL model, which offers uncertainty measures, encounters challenges with data deficiency, particularly during the initial training phase, which can result in a slower adaptation to new patients. 
+
+Please see pages 14 in the revised manuscript.
+
+Similarly, the edge-LSTM model, which produced an RMSE of 19.10 mg/dL for the same time horizon, also demonstrates higher error rates compared to the proposed model, which highlights the limitations of LSTM-based models in capturing temporal relationships in glucose dynamics. The dilated recurrent neural network (DRNN) and the deep reinforcement learning (DRL) model using an LSTM represent notable advancements in addressing temporal complexity in glucose prediction [34]. The DRNN model achieves an RMSE of 18.60 mg/dL for 30-minute predictions by using dilated convolutions to increase the size of the receptive field and capture long-term dependencies.  The DRL using LSTM model demonstrates competitive short-term performance with an RMSE of 18.32 mg/dL and MAE of 12.93 mg/dL for 30-minute predictions, employing reinforcement learning principles to optimize LSTM parameters [31]. Despite the sophisticated training methodology, this model still exhibits a 61.1% higher RMSE compared to the proposed TW-MRT model. Recent developments in transformer-based glucose prediction have produced three models that currently define state-of-the-art performance benchmarks. The crossformer model achieves an RMSE of 15.81 mg/dL for 30-minute predictions through cross-dimensional attention mechanisms and patch-wise processing [42]. However, this model shows inconsistency in performance across different PH, with its RMSE increasing to 36.12 mg/dL for 60-minute predictions. This indicates limited robustness for extended prediction. The edge-based temporal fusion transformer (E-TFT) demonstrates competitive performance with RMSE values of 19.09 mg/dL and 32.31 mg/dL for 30 and 60-minute predictions, respectively [43]. While this model successfully implements transformer architecture on edge computing devices, it relies on generic temporal fusion mechanisms without glucose-specific physiological adaptations. The population-specific TFT achieves similar performance with RMSE values of 19.10 mg/dL and 32.30 mg/dL for 30 and 60 PH, incorporating demographic data for personalization [44]. However, this model focuses on population-level adaptation rather than the underlying glucose-insulin physiological dynamics that drive prediction accuracy. For longer PHs, such as 90 and 120 minutes, the proposed model maintains a superior performance compared to existing models. At the 120-minute PH, the RMSE of the TW-MRT model is 31.68 mg/dL, whereas the DRNN and deep reinforcement learning (DRL) using LSTM models report higher RMSE values of 47.39 mg/dL and 36.36 mg/dL, respectively. This consistent improvement across longer horizons demonstrates the robustness of the TW-MRT model, particularly in regard to its capacity to deal with fluctuating glucose levels over extended periods.
+Similarly, the edge-LSTM model, which produced an RMSE of 19.10 mg/dL for the same time horizon, also demonstrates higher error rates compared to the proposed model, which highlights the limitations of LSTM-based models in capturing temporal relationships in glucose dynamics. The dilated recurrent neural network (DRNN) and the deep reinforcement learning (DRL) model using an LSTM represent notable advancements in addressing temporal complexity in glucose prediction [34]. The DRNN model achieves an RMSE of 18.60 mg/dL for 30-minute predictions by using dilated convolutions to increase the size of the receptive field and capture long-term dependencies.  The DRL using LSTM model demonstrates competitive short-term performance with an RMSE of 18.32 mg/dL and MAE of 12.93 mg/dL for 30-minute predictions, employing reinforcement learning principles to optimize LSTM parameters [31]. Despite the sophisticated training methodology, this model still exhibits a 61.1% higher RMSE compared to the proposed TW-MRT model. Recent developments in transformer-based glucose prediction have produced three models that currently define state-of-the-art performance benchmarks. The crossformer model achieves an RMSE of 15.81 mg/dL for 30-minute predictions through cross-dimensional attention mechanisms and patch-wise processing [42]. However, this model shows inconsistency in performance across different PH, with its RMSE increasing to 36.12 mg/dL for 60-minute predictions. This indicates limited robustness for extended prediction. The edge-based temporal fusion transformer (E-TFT) demonstrates competitive performance with RMSE values of 19.09 mg/dL and 32.31 mg/dL for 30 and 60-minute predictions, respectively [43]. While this model successfully implements transformer architecture on edge computing devices, it relies on generic temporal fusion mechanisms without glucose-specific physiological adaptations. The population-specific TFT achieves similar performance with RMSE values of 19.10 mg/dL and 32.30 mg/dL for 30 and 60 PH, incorporating demographic data for personalization [44]. However, this model focuses on population-level adaptation rather than the underlying glucose-insulin physiological dynamics that drive prediction accuracy. For longer PHs, such as 90 and 120 minutes, the proposed model maintains a superior performance compared to existing models. At the 120-minute PH, the RMSE of the TW-MRT model is 31.68 mg/dL, whereas the DRNN and deep reinforcement learning (DRL) using LSTM models report higher RMSE values of 47.39 mg/dL and 36.36 mg/dL, respectively. This consistent improvement across longer horizons demonstrates the robustness of the TW-MRT model, particularly in regard to its capacity to deal with fluctuating glucose levels over extended periods.
+
+Please see pages 14 and 15 in the revised manuscript.
+
+
+The authors should check grammatical errors before submission to the next.
+
+Thank you for pointing this out. We have gone through the whole manuscript carefully and made every attempt to eliminate grammatical and spelling errors.
+
+
+Response to Reviewer 3
+The authors wish to thank you for your helpful comments. We have made every attempt to address your comments and those from the other reviewer, which are very helpful in improving the quality of our manuscript. We hope that the revised manuscript is now acceptable to you.
+
+Our responses to your comments are:
+Comments:
+While the integration of transformer mechanisms with trend weighting and multi-resolution fusion is claimed as novel, each component has been used in similar ways in other time-series prediction tasks. The manuscript does not convincingly demonstrate how their combination results in a significantly novel model
+
+Thank you for this comment. We agree that individual components such as transformer mechanisms, trend-weighting, and multi-resolution fusion have been previously explored in the context of time-series prediction. However, the novelty of our work lies not in using these mechanisms independently, but in how they are integrated and shown to be complementary in the context of glucose prediction where capturing both short-term dynamics and long-term physiological trends is critically important.
+The main contributions of this study are:
+Complementarity Demonstration: We are the first, to our knowledge, to empirically demonstrate that trend-weighting, multi-resolution fusion, and multi-parametric processing can be jointly leveraged to complement one another, enhancing prediction performance. Trend-weighting helps capture latent directional changes in glucose levels, while multi-resolution fusion strengthens the temporal robustness across different sampling frequencies. When these mechanisms are combined in our transformer framework, they address weaknesses of each other as trend-weighting alone can be unstable with sparse data, which is mitigated by the added temporal context from multi-resolution analysis.
+Domain-Specific Design & Insight: In contrast to generic time-series applications, glucose prediction requires careful consideration of physiological parameters and non-linear interdependencies (e.g., insulin dosage). Our multi-parametric processing module is explicitly designed to incorporate and align these heterogeneous inputs within the transformer-based architecture, enabling more precise contextual understanding.
+Ablation Studies Support Novel integration: Our ablation experiments (Section 4.4) validate that the combination of these mechanisms results in a statistically significant improvement in performance compared to their individual or pairwise use. This demonstrates the complementary effect of our model components rather than a mere aggregation of known techniques.
+We have further improved the manuscript to make this integrative novelty more explicit (see Section 3.2 in the revised manuscript) and to better distinguish our study from existing literature (see related work discussion in Section 2).
+
+We hope this addresses the concern of the reviewer and clarifies the contribution of our study.
+
+
+Although similar models have been used these components in other time-series applications, their integration in this work is customized to the unique characteristics of glucose dynamics. The trend-weighting mechanism allows the model to focus on short-, medium-, and long-term glucose patterns depending on the current input. This helps the model adapt to different situations, such as rapid glucose changes or slower trends. The use of multi-resolution fusion allows the model to extract information from different time scales, which is important for predicting both near-term and longer-term glucose values. By combining these components within a transformer-based framework, the model can better capture the complex patterns in glucose data. This design provides a new and effective model for accurate glucose prediction. First, our trend-weighting mechanism is physiologically grounded, targeting three glucose dynamics: (1) acute insulin response trends (0-30 minutes) capturing immediate bolus insulin effects, (2) intermediate glucose fluctuation trends (30-90 minutes) modeling complex insulin interactions, and (3) extended glucose stability trends (90-120 minutes) tracking longer-term basal insulin effects. This physiological division allows for adaptive weighting based on the physiology of diabetes rather than generic temporal patterns. Second, multi-parametric processing addresses the temporal lag between insulin and glucose, which is missing in standard transformers. Our model incorporates feature-specific temporal embeddings that consider the delayed glucose response to bolus insulin (peaking 15-45 minutes after administration) and basal insulin (onset after 1-2 hours). This ensures that the model captures the causal relationship between insulin dosing and glucose changes. Third, our multi-resolution fusion targets clinically relevant glucose monitoring scales, including short-term fluctuations (five to 15 minutes), intermediate dynamics (15 to 60 minutes), and long-term stability patterns (60 to 120 minutes), aligning multi-scale analysis with diabetes management timescales. Unlike existing transformer-based glucose prediction models that apply generic attention mechanisms, our model integrates these physiologically-motivated components within a unified framework specifically designed for glucose-insulin dynamics, enabling adaptive focus based on current glucose state and insulin activity rather than static attention patterns. The overall training process of this hybrid model is summarized in Algorithm 1, where each dataset passes through the layers sequentially and is optimized according to the model loss function 
+
+Although similar models have been used these components in other time-series applications, their integration in this work is customized to the unique characteristics of glucose dynamics. The trend-weighting mechanism allows the model to focus on short-, medium-, and long-term glucose patterns depending on the current input. This helps the model adapt to different situations, such as rapid glucose changes or slower trends. The use of multi-resolution fusion allows the model to extract information from different time scales, which is important for predicting both near-term and longer-term glucose values. By combining these components within a transformer-based framework, the model can better capture the complex patterns in glucose data. This design provides a new and effective model for accurate glucose prediction. First, our trend-weighting mechanism is physiologically grounded, targeting three glucose dynamics: (1) acute insulin response trends (0-30 minutes) capturing immediate bolus insulin effects, (2) intermediate glucose fluctuation trends (30-90 minutes) modeling complex insulin interactions, and (3) extended glucose stability trends (90-120 minutes) tracking longer-term basal insulin effects. This physiological division allows for adaptive weighting based on the physiology of diabetes rather than generic temporal patterns. Second, multi-parametric processing addresses the temporal lag between insulin and glucose, which is missing in standard transformers. Our model incorporates feature-specific temporal embeddings that consider the delayed glucose response to bolus insulin (peaking 15-45 minutes after administration) and basal insulin (onset after 1-2 hours). This ensures that the model captures the causal relationship between insulin dosing and glucose changes. Third, our multi-resolution fusion targets clinically relevant glucose monitoring scales, including short-term fluctuations (five to 15 minutes), intermediate dynamics (15 to 60 minutes), and long-term stability patterns (60 to 120 minutes), aligning multi-scale analysis with diabetes management timescales. Unlike existing transformer-based glucose prediction models that apply generic attention mechanisms, our model integrates these physiologically-motivated components within a unified framework specifically designed for glucose-insulin dynamics, enabling adaptive focus based on current glucose state and insulin activity rather than static attention patterns. The overall training process of this hybrid model is summarized in Algorithm 1, where each dataset passes through the layers sequentially and is optimized according to the model loss function 
+
+
+Please see pages 7 in the revised manuscript.
+
+In addition, the model uses convolution matrices Wconv, r for multi-resolution analysis, along with fusion and output projection matrices Wmr and Wout. The algorithmic implementation reflects these glucose-specific adaptations through several novel components. The trend projection matrix Wtrend is initialized and trained to capture glucose-physiological patterns rather than generic temporal trends. The multi-resolution convolution matrices Wconv, r  utilize kernel sizes corresponding to clinically relevant glucose monitoring intervals (3, 6, and 12 time steps, representing 15, 30, and 60-minute windows respectively), ensuring that feature extraction aligns with diabetes management timescales. Furthermore, the feature importance weights Wimp are designed to dynamically adjust the relative contribution of glucose, basal insulin, and bolus insulin based on their temporal relevance, capturing the time-varying importance of these three parameters as they interact to influence glucose dynamics.
+In addition, the model uses convolution matrices Wconv, r for multi-resolution analysis, along with fusion and output projection matrices Wmr and Wout. The algorithmic implementation reflects these glucose-specific adaptations through several novel components. The trend projection matrix Wtrend is initialized and trained to capture glucose-physiological patterns rather than generic temporal trends. The multi-resolution convolution matrices Wconv, r  utilize kernel sizes corresponding to clinically relevant glucose monitoring intervals (3, 6, and 12 time steps, representing 15, 30, and 60-minute windows respectively), ensuring that feature extraction aligns with diabetes management timescales. Furthermore, the feature importance weights Wimp are designed to dynamically adjust the relative contribution of glucose, basal insulin, and bolus insulin based on their temporal relevance, capturing the time-varying importance of these three parameters as they interact to influence glucose dynamics.
+
+Please see pages 8 in the revised manuscript.
+The model is compared only to a limited selection of prior models. Some of the most relevant recent transformer-based glucose prediction models are omitted from the comparative analysis.
+Thank you for your constructive comments. We acknowledge that our original comparison lacked recent transformer-based glucose prediction models, which are relevant to our work. This aligns with Reviewer #2's feedback requesting an expanded comparative analysis. In response to the suggestions of both reviewers, we have expanded our comparative analysis to include more state-of-the-art models, including recent transformer-based approaches. The updated comparison table provides a more comprehensive evaluation against these models across both prediction horizons. This updated analysis addresses the concerns raised by both reviewers regarding the scope of our original analysis. 
+
+Similarly, the Edge-LSTM model, which produced an RMSE of 19.10 mg/dL for the same time horizon, also demonstrates higher error rates compared to the proposed model, which highlights the limitations of LSTM-based models in capturing temporal relationships in glucose dynamics. The Dilated Recurrent Neural Network (DRNN) and the Deep Reinforcement Learning (DRL) model using an LSTM represent notable advancements in addressing temporal complexity in glucose prediction. The DRNN model achieves an RMSE of 18.60 mg/dL for 30-minute predictions by using dilated convolutions to increase the size of the receptive field and capture long-term dependencies.  The DRL using LSTM model demonstrates competitive short-term performance with an RMSE of 18.32 mg/dL and MAE of 12.93 mg/dL for 30-minute predictions, employing reinforcement learning principles to optimize LSTM parameters. Despite the sophisticated training methodology, this approach still exhibits a 61.1% higher RMSE compared to the proposed TW-MRT model. Recent developments in transformer-based glucose prediction have produced three models that currently define state-of-the-art performance benchmarks. The Crossformer model achieves an RMSE of 15.81 mg/dL for 30-minute predictions through cross-dimensional attention mechanisms and patch-wise processing. However, this model exhibits significant performance inconsistency across different prediction horizons, with its RMSE deteriorating dramatically to 36.12 mg/dL for 60-minute predictions, indicating limited robustness for extended forecasting. The Edge-based Temporal Fusion Transformer (E-TFT) demonstrates competitive performance with RMSE values of 19.09 mg/dL and 32.31 mg/dL for 30 and 60-minute predictions, respectively. While this model successfully implements transformer architecture on edge computing devices, it relies on generic temporal fusion mechanisms without glucose-specific physiological adaptations. The Population-Specific TFT achieves similar performance with RMSE values of 19.10 mg/dL and 32.30 mg/dL for 30 and 60-minute horizons, incorporating demographic data for personalization. However, this model focuses on population-level adaptation rather than the underlying glucose-insulin physiological dynamics that drive prediction accuracy.
+Similarly, the Edge-LSTM model, which produced an RMSE of 19.10 mg/dL for the same time horizon, also demonstrates higher error rates compared to the proposed model, which highlights the limitations of LSTM-based models in capturing temporal relationships in glucose dynamics. The Dilated Recurrent Neural Network (DRNN) and the Deep Reinforcement Learning (DRL) model using an LSTM represent notable advancements in addressing temporal complexity in glucose prediction. The DRNN model achieves an RMSE of 18.60 mg/dL for 30-minute predictions by using dilated convolutions to increase the size of the receptive field and capture long-term dependencies.  The DRL using LSTM model demonstrates competitive short-term performance with an RMSE of 18.32 mg/dL and MAE of 12.93 mg/dL for 30-minute predictions, employing reinforcement learning principles to optimize LSTM parameters. Despite the sophisticated training methodology, this approach still exhibits a 61.1% higher RMSE compared to the proposed TW-MRT model. Recent developments in transformer-based glucose prediction have produced three models that currently define state-of-the-art performance benchmarks. The Crossformer model achieves an RMSE of 15.81 mg/dL for 30-minute predictions through cross-dimensional attention mechanisms and patch-wise processing. However, this model exhibits significant performance inconsistency across different prediction horizons, with its RMSE deteriorating dramatically to 36.12 mg/dL for 60-minute predictions, indicating limited robustness for extended forecasting. The Edge-based Temporal Fusion Transformer (E-TFT) demonstrates competitive performance with RMSE values of 19.09 mg/dL and 32.31 mg/dL for 30 and 60-minute predictions, respectively. While this model successfully implements transformer architecture on edge computing devices, it relies on generic temporal fusion mechanisms without glucose-specific physiological adaptations. The Population-Specific TFT achieves similar performance with RMSE values of 19.10 mg/dL and 32.30 mg/dL for 30 and 60-minute horizons, incorporating demographic data for personalization. However, this model focuses on population-level adaptation rather than the underlying glucose-insulin physiological dynamics that drive prediction accuracy.
+
+Please see pages 14 and 15 in the revised manuscript.
+The entire evaluation is conducted on a single dataset, raising concerns about the generalizability and robustness of the model across diverse populations and sensor types.
+Thank you for pointing this out. To address concerns regarding generalizability, we extended our evaluation beyond the OhioT1DM dataset by incorporating experiments on the D1NAMO dataset, which includes heterogeneous sensors, missing data, and diverse patient conditions. The results of these experiments are now presented in the newly added Table 7 and Supplementary Tables S6–S7. In this extended evaluation, we retrained several state-of-the-art Transformer-based models (Crossformer, HDMixer, Informer, Fedformer, and Pathformer) on the D1NAMO dataset. TW-MRT consistently outperformed all of them in terms of RMSE and MAE. Additionally, we benchmarked TW-MRT against two D1NAMO-specific glucose prediction approaches—BAGGING metaR and Bayesian Ridge regression—and observed significant improvements, with left40178200-786765557530Table 7: Performance Comparison of TW-MRT and State-of-the-Art Time Series Models on D1NAMO Dataset
+Patient ID
+Proposed Model
+Crossformer [64]
+HDMixer [65]
+Informer [66]
+Fedformer [67]
+Pathformer [68]
+
+RMSE
+MAE
+RMSE
+MAE
+RMSE
+MAE
+RMSE
+MAE
+RMSE
+MAE
+RMSE
+MAE
+1
+15.97
+10.96
+24.6
+17.2
+17.64
+12.66
+35.46
+25.48
+29.72
+21.51
+13.68
+9.17
+2
+14.48
+8.11
+35.85
+26.66
+24.87
+17.43
+47.59
+33.96
+35.11
+27.24
+15.59
+10.02
+5
+14.99
+10.82
+20.5
+16.68
+17.72
+14.13
+35.06
+24.41
+25.31
+18.59
+11.67
+7.43
+6
+5.1
+3.8
+14.75
+11.12
+5.95
+4.59
+27.45
+22.71
+19.19
+13.74
+8.36
+5.07
+7
+7.63
+5.58
+14.04
+11.37
+15.19
+11.82
+23.86
+17.75
+12.69
+9.08
+7.09
+4.59
+8
+9.61
+7.82
+19.72
+14.22
+10.12
+7.33
+29.89
+25.76
+23.94
+16.9
+12.82
+8.57
+Average
+11.3
+7.85
+21.58
+16.24
+15.25
+11.33
+32.39
+25.01
+24.31
+17.84
+11.54
+7.48
+
+00Table 7: Performance Comparison of TW-MRT and State-of-the-Art Time Series Models on D1NAMO Dataset
+Patient ID
+Proposed Model
+Crossformer [64]
+HDMixer [65]
+Informer [66]
+Fedformer [67]
+Pathformer [68]
+
+RMSE
+MAE
+RMSE
+MAE
+RMSE
+MAE
+RMSE
+MAE
+RMSE
+MAE
+RMSE
+MAE
+1
+15.97
+10.96
+24.6
+17.2
+17.64
+12.66
+35.46
+25.48
+29.72
+21.51
+13.68
+9.17
+2
+14.48
+8.11
+35.85
+26.66
+24.87
+17.43
+47.59
+33.96
+35.11
+27.24
+15.59
+10.02
+5
+14.99
+10.82
+20.5
+16.68
+17.72
+14.13
+35.06
+24.41
+25.31
+18.59
+11.67
+7.43
+6
+5.1
+3.8
+14.75
+11.12
+5.95
+4.59
+27.45
+22.71
+19.19
+13.74
+8.36
+5.07
+7
+7.63
+5.58
+14.04
+11.37
+15.19
+11.82
+23.86
+17.75
+12.69
+9.08
+7.09
+4.59
+8
+9.61
+7.82
+19.72
+14.22
+10.12
+7.33
+29.89
+25.76
+23.94
+16.9
+12.82
+8.57
+Average
+11.3
+7.85
+21.58
+16.24
+15.25
+11.33
+32.39
+25.01
+24.31
+17.84
+11.54
+7.48
+
+up to 70% reduction in RMSE.
+Please see Table 7 in the revised manuscript.
+To ensure robust validation and demonstrate generalizability across diverse populations and sensor technologies, the experimental evaluation was conducted using two datasets: OhioT1DM and D1NAMO. The OhioT1DM dataset serves as our primary evaluation benchmark, providing comprehensive, multi-parametric data for 12 Type 1 diabetes patients over an eight-week period [58]. The experimental evaluation was conducted using the OhioT1DM, an open-access dataset that provides comprehensive, multi-parametric data for 12 Type 1 diabetes patients over an eight-week period [58]. This dataset is widely used in glucose prediction studies due to its detailed information on glucose levels, insulin doses, meal intake, and additional physiological measurements [29, 26]. The glucose levels of each individual were recorded at five-minute intervals using CGM devices, thus providing a high-resolution view of glucose fluctuations. In addition to glucose levels, the dataset comprises self-reported data on daily activities, including exercise, sleep, meal consumption, and insulin doses (both basal and bolus). The OhioT1DM dataset consists of training and testing data, with approximately 9,000 to 12,000 samples allocated for training and 2,300 to 2,900 samples for testing per patient. To validate model generalizability and robustness across different populations and sensor technologies, we conducted additional evaluation on the D1NAMO dataset [59]. D1NAMO contains CGM data sampled every 5 minutes, insulin therapy records, and additional clinical variables. It includes patients using different sensor brands (e.g., Enlite, Basis) and pump models (e.g., 530G, 630G) across varied age groups, which enables a broader assessment of model adaptability. To ensure reliable evaluation on the D1NAMO dataset, we selected a subset of patients (001, 002, 006–008) who have sufficient training data and have been previously examined in published studies. 
+To ensure robust validation and demonstrate generalizability across diverse populations and sensor technologies, the experimental evaluation was conducted using two datasets: OhioT1DM and D1NAMO. The OhioT1DM dataset serves as our primary evaluation benchmark, providing comprehensive, multi-parametric data for 12 Type 1 diabetes patients over an eight-week period [58]. The experimental evaluation was conducted using the OhioT1DM, an open-access dataset that provides comprehensive, multi-parametric data for 12 Type 1 diabetes patients over an eight-week period [58]. This dataset is widely used in glucose prediction studies due to its detailed information on glucose levels, insulin doses, meal intake, and additional physiological measurements [29, 26]. The glucose levels of each individual were recorded at five-minute intervals using CGM devices, thus providing a high-resolution view of glucose fluctuations. In addition to glucose levels, the dataset comprises self-reported data on daily activities, including exercise, sleep, meal consumption, and insulin doses (both basal and bolus). The OhioT1DM dataset consists of training and testing data, with approximately 9,000 to 12,000 samples allocated for training and 2,300 to 2,900 samples for testing per patient. To validate model generalizability and robustness across different populations and sensor technologies, we conducted additional evaluation on the D1NAMO dataset [59]. D1NAMO contains CGM data sampled every 5 minutes, insulin therapy records, and additional clinical variables. It includes patients using different sensor brands (e.g., Enlite, Basis) and pump models (e.g., 530G, 630G) across varied age groups, which enables a broader assessment of model adaptability. To ensure reliable evaluation on the D1NAMO dataset, we selected a subset of patients (001, 002, 006–008) who have sufficient training data and have been previously examined in published studies. 
+
+Please see pages 9 and 10 in the revised manuscript.
+To further validate the generalizability and robustness of the proposed TW-MRT model across diverse populations and sensor technologies, we conducted comprehensive cross-dataset evaluation on the D1NAMO dataset. This validation is crucial as it demonstrates model performance beyond the primary OhioT1DM dataset, addressing potential concerns about overfitting to specific demographic characteristics or sensor technologies. For cross-dataset validation, we evaluated TW-MRT against multiple categories of baseline models to ensure comprehensive assessment. First, we compared against state-of-the-art time series prediction models including Crossformer [64], HDMixer [65], Informer [66], FEDformer [67], and Pathformer [68]. These models represent recent advances in transformer-based time series prediction and provide strong baselines for temporal pattern modeling. Additionally, we compared against previously published diabetes-specific models that have been evaluated on D1NAMO, including BAGGING metaR [18] and Bayesian Ridge regression [19], enabling direct performance comparisons with established glucose prediction baselines. 
+The cross-dataset validation results demonstrate consistent superior performance of TW-MRT across all baseline comparisons (Table7). Against state-of-the-art time series models, TW-MRT achieved substantial improvements in both RMSE and MAE metrics across all six D1NAMO patients (001, 002, 005, 006, 007, 008). Notably, TW-MRT outperformed Crossformer with an average RMSE improvement of 10.28 mg/dL (21.58 vs 11.30 mg/dL), representing a 47.6% reduction in prediction error. Similarly, significant improvements were observed against HDMixer (4.02 mg/dL improvement), Informer (21.09 mg/dL improvement), FEDformer (13.01 mg/dL improvement), and Pathformer (0.24 mg/dL improvement). The consistent performance gains across diverse architectural model-from attention-based transformers to hierarchical dependency models—demonstrate the robustness of trend-weighting mechanism and multi-resolution transformer design.
+Furthermore, comparisons with diabetes-specific baselines previously evaluated on D1NAMO provide additional validation evidence (Tables S6-S7). Against BAGGING metaR using the same patient subset (001, 006, 007, 008), TW-MRT achieved a mean RMSE of 9.58 mg/dL compared to 17.66 mg/dL, representing a 45.7% improvement. TW-MRT demonstrated a 63.5% improvement with a mean RMSE of 0.58 mmol/L over Bayesian Ridge regression on patients 002, 007, and 008 using mmol/L units. These results are particularly significant as they represent direct comparisons with previously published diabetes prediction models using identical patient data, ensuring fair and unbiased evaluation.
+In conclusion, the proposed TW-MRT model demonstrates consistent superiority over existing state-of-the-art methods across all PHs, with notable improvements in error.
+To further validate the generalizability and robustness of the proposed TW-MRT model across diverse populations and sensor technologies, we conducted comprehensive cross-dataset evaluation on the D1NAMO dataset. This validation is crucial as it demonstrates model performance beyond the primary OhioT1DM dataset, addressing potential concerns about overfitting to specific demographic characteristics or sensor technologies. For cross-dataset validation, we evaluated TW-MRT against multiple categories of baseline models to ensure comprehensive assessment. First, we compared against state-of-the-art time series prediction models including Crossformer [64], HDMixer [65], Informer [66], FEDformer [67], and Pathformer [68]. These models represent recent advances in transformer-based time series prediction and provide strong baselines for temporal pattern modeling. Additionally, we compared against previously published diabetes-specific models that have been evaluated on D1NAMO, including BAGGING metaR [18] and Bayesian Ridge regression [19], enabling direct performance comparisons with established glucose prediction baselines. 
+The cross-dataset validation results demonstrate consistent superior performance of TW-MRT across all baseline comparisons (Table7). Against state-of-the-art time series models, TW-MRT achieved substantial improvements in both RMSE and MAE metrics across all six D1NAMO patients (001, 002, 005, 006, 007, 008). Notably, TW-MRT outperformed Crossformer with an average RMSE improvement of 10.28 mg/dL (21.58 vs 11.30 mg/dL), representing a 47.6% reduction in prediction error. Similarly, significant improvements were observed against HDMixer (4.02 mg/dL improvement), Informer (21.09 mg/dL improvement), FEDformer (13.01 mg/dL improvement), and Pathformer (0.24 mg/dL improvement). The consistent performance gains across diverse architectural model-from attention-based transformers to hierarchical dependency models—demonstrate the robustness of trend-weighting mechanism and multi-resolution transformer design.
+Furthermore, comparisons with diabetes-specific baselines previously evaluated on D1NAMO provide additional validation evidence (Tables S6-S7). Against BAGGING metaR using the same patient subset (001, 006, 007, 008), TW-MRT achieved a mean RMSE of 9.58 mg/dL compared to 17.66 mg/dL, representing a 45.7% improvement. TW-MRT demonstrated a 63.5% improvement with a mean RMSE of 0.58 mmol/L over Bayesian Ridge regression on patients 002, 007, and 008 using mmol/L units. These results are particularly significant as they represent direct comparisons with previously published diabetes prediction models using identical patient data, ensuring fair and unbiased evaluation.
+In conclusion, the proposed TW-MRT model demonstrates consistent superiority over existing state-of-the-art methods across all PHs, with notable improvements in error.
+ Please see pages 16 and 17 in the revised manuscript.
+
+The manuscript lacks statistical validation (e.g., p-values, confidence intervals) to support claims of superiority over baselines
+Thanks for the comment. To address your concern, we have added Table S5 and updated Section 4.3 (Results and Discussion) to include a comprehensive statistical validation of our model’s performance. This analysis includes paired t-tests comparing the proposed TW-MRT model to multiple baselines using patient-specific RMSE values. The results provide strong statistical support for the superiority of our model.
+208230413209Table S5: Statistical validation of TW-MRT (30-min prediction horizon)
+Baseline Model
+Mean Diff.
+95% CI
+t-statistic
+p-value
+Cohen's d
+Attention-based multilayer GRU [36]
+1.74
+[1.31, 2.16]
+9.05
+2×10-6
+2.61
+Stacked LSTM with multitask [24]
+4.68
+[2.51, 6.85]
+4.74
+6.1×10-4
+1.37
+DRL using LSTM [31]
+6.90
+[5.40, 8.41]
+10.09
+6.8×10-7
+2.91
+Weighted Decision Level Fusion [26]
+10.53
+[9.57, 11.49]
+24.08
+7.2×10-11
+6.95
+
+00Table S5: Statistical validation of TW-MRT (30-min prediction horizon)
+Baseline Model
+Mean Diff.
+95% CI
+t-statistic
+p-value
+Cohen's d
+Attention-based multilayer GRU [36]
+1.74
+[1.31, 2.16]
+9.05
+2×10-6
+2.61
+Stacked LSTM with multitask [24]
+4.68
+[2.51, 6.85]
+4.74
+6.1×10-4
+1.37
+DRL using LSTM [31]
+6.90
+[5.40, 8.41]
+10.09
+6.8×10-7
+2.91
+Weighted Decision Level Fusion [26]
+10.53
+[9.57, 11.49]
+24.08
+7.2×10-11
+6.95
+
+
+
+
+Please see Table S5 in the revised Supplementary.
+
+This considerable enhancement is largely attributable to the incorporation of a multi-resolution transformer and trend-weighting mechanism, which facilitate more precise modeling of glucose patterns in comparison to the GRU-based architecture employed in the previous study. To statistically validate and ensure the robustness of the observed improvements, we conducted paired t-tests against multiple baseline models. This analysis used studies that provided individual, patient-specific results for all 12 patients in the OhioT1DM dataset. This enabled proper paired comparisons that considered patient-specific glucose dynamics. Table 3 lists the per-patient RMSE values of the three-parameter TW-MRT configuration, which served as the reference in all paired tests. As shown in Table S5, the statistical validation demonstrates that the proposed TW-MRT model achieves highly significant improvements across all baseline comparisons. The paired t-test results show strong statistical evidence, with p-values ranging from 6.1×10-4 to 7.2×10-11. The t-statistics range from 4.74 to 24.08, demonstrating substantial differences relative to the variability in the data. The mean improvements are clinically substantial, ranging from 1.73 mg/dL with the Attention-based Multilayer GRU to 10.53 mg/dL with the Weighted Decision Level Fusion model. The 95\% confidence intervals are all narrow and positive, ranging from 1.31 to 2.16 and from 9.57 to 11.49. This confirms the precision and reliability of the observed performance gains. Notably, the effect sizes (Cohen's d) range from 1.37 to 6.95 and are all categorized as "very large," indicating exceptional practical significance in addition to statistical significance. The largest effect size, 6.95, was observed against the Weighted Decision Level Fusion model and represents a remarkably large improvement, exceeding conventional thresholds for meaningful clinical differences by a significant margin. The consistency of the statistical results obtained from multiple baseline models, combined with the significant effect sizes, suggests that the improvements achieved with the proposed TW-MRT model represent significant advancements in glucose prediction accuracy, regarding to its new architectural components and training methodology.
+This considerable enhancement is largely attributable to the incorporation of a multi-resolution transformer and trend-weighting mechanism, which facilitate more precise modeling of glucose patterns in comparison to the GRU-based architecture employed in the previous study. To statistically validate and ensure the robustness of the observed improvements, we conducted paired t-tests against multiple baseline models. This analysis used studies that provided individual, patient-specific results for all 12 patients in the OhioT1DM dataset. This enabled proper paired comparisons that considered patient-specific glucose dynamics. Table 3 lists the per-patient RMSE values of the three-parameter TW-MRT configuration, which served as the reference in all paired tests. As shown in Table S5, the statistical validation demonstrates that the proposed TW-MRT model achieves highly significant improvements across all baseline comparisons. The paired t-test results show strong statistical evidence, with p-values ranging from 6.1×10-4 to 7.2×10-11. The t-statistics range from 4.74 to 24.08, demonstrating substantial differences relative to the variability in the data. The mean improvements are clinically substantial, ranging from 1.73 mg/dL with the Attention-based Multilayer GRU to 10.53 mg/dL with the Weighted Decision Level Fusion model. The 95\% confidence intervals are all narrow and positive, ranging from 1.31 to 2.16 and from 9.57 to 11.49. This confirms the precision and reliability of the observed performance gains. Notably, the effect sizes (Cohen's d) range from 1.37 to 6.95 and are all categorized as "very large," indicating exceptional practical significance in addition to statistical significance. The largest effect size, 6.95, was observed against the Weighted Decision Level Fusion model and represents a remarkably large improvement, exceeding conventional thresholds for meaningful clinical differences by a significant margin. The consistency of the statistical results obtained from multiple baseline models, combined with the significant effect sizes, suggests that the improvements achieved with the proposed TW-MRT model represent significant advancements in glucose prediction accuracy, regarding to its new architectural components and training methodology.
+
+Please see page 16 in the revised manuscript.
+
+To ensure statistical robustness, a comprehensive statistical validation was performed using paired t-tests, confidence intervals, and effect size measures. These analyses were conducted to determine the significance and magnitude of improvements. Each of these metrics provides a different perspective on the accuracy and reliability of the model.
+To ensure statistical robustness, a comprehensive statistical validation was performed using paired t-tests, confidence intervals, and effect size measures. These analyses were conducted to determine the significance and magnitude of improvements. Each of these metrics provides a different perspective on the accuracy and reliability of the model.
+
+Please see page 10 in the revised manuscript.
+
+A Paired t-test is a statistical method used to compare two related samples or repeated measurements on the same subjects. This approach controls for subject-specific characteristics and provides more robust statistical inference than independent sample comparisons by considering individual variability through paired observations.
+The t-statistic is a standardized measure that quantifies the magnitude of the difference between two groups relative to the variability within the data. Larger absolute t-values provide stronger evidence against the null hypothesis of no difference. P-values represent the probability of observing a test statistic as extreme as or more extreme than the one calculated, assuming the null hypothesis is true. A p-value less than 0.05 is conventionally considered statistically significant, indicating strong evidence against the null hypothesis.
+95% confidence intervals provide a range of values that likely contains the true population parameter. For mean differences, confidence intervals offer insight into the precision of the estimate and the magnitude of the effect. Wide intervals indicate inaccurate predictions, while small intervals suggest precise predictions.
+Cohen's d is a standardized measure of effect size that quantifies the magnitude of the difference between two groups in terms of standard deviation units. Effect sizes are typically interpreted as small (d ≈0.2), medium (d ≈ 0.5), or large (d ≈0.8) with values exceeding 0.8 indicating a very large effect. Effect size measures complement statistical significance testing by indicating whether observed differences are practically meaningful, as statistical significance can be achieved with trivial differences given a large enough sample size.
+On the other hand, SEG was used to evaluate the clinical accuracy of the model.
+A Paired t-test is a statistical method used to compare two related samples or repeated measurements on the same subjects. This approach controls for subject-specific characteristics and provides more robust statistical inference than independent sample comparisons by considering individual variability through paired observations.
+The t-statistic is a standardized measure that quantifies the magnitude of the difference between two groups relative to the variability within the data. Larger absolute t-values provide stronger evidence against the null hypothesis of no difference. P-values represent the probability of observing a test statistic as extreme as or more extreme than the one calculated, assuming the null hypothesis is true. A p-value less than 0.05 is conventionally considered statistically significant, indicating strong evidence against the null hypothesis.
+95% confidence intervals provide a range of values that likely contains the true population parameter. For mean differences, confidence intervals offer insight into the precision of the estimate and the magnitude of the effect. Wide intervals indicate inaccurate predictions, while small intervals suggest precise predictions.
+Cohen's d is a standardized measure of effect size that quantifies the magnitude of the difference between two groups in terms of standard deviation units. Effect sizes are typically interpreted as small (d ≈0.2), medium (d ≈ 0.5), or large (d ≈0.8) with values exceeding 0.8 indicating a very large effect. Effect size measures complement statistical significance testing by indicating whether observed differences are practically meaningful, as statistical significance can be achieved with trivial differences given a large enough sample size.
+On the other hand, SEG was used to evaluate the clinical accuracy of the model.
+
+Please see page 10 in the revised manuscript.
+
+The model is applied individually to each patient but lacks analysis of inter-patient variability or adaptation performance. This is especially critical for clinical deployment.
+Thank you for your comment. To address this point, we have conducted a comprehensive inter-patient variability and subgroup performance analysis, which is now included in Section 4.3 along with a new Table S3. The TW-MRT model demonstrated consistent performance across all 12 patients, with a mean RMSE of 11.37 ± 1.88 mg/dL and a coefficient of variation of 16.5%, indicating stable predictive accuracy across a clinically diverse population.
+To evaluate adaptation and generalizability, we performed statistical comparisons across multiple subgroups, including gender, age groups, insulin pump models (530G vs. 630G), CGM sensor types (Enlite vs. Basis), and cohort years (2018 vs. 2020). All comparisons yielded non-significant results (p > 0.05), confirming that the model maintains robust performance independent of patient demographics, device specifications, or data collection periods.
+138545271260Table S SEQ Table \* ARABIC 2: Inter-Patient Variability Analysis
+Characteristic 
+ Group 1       
+ Mean ± SD
+ Group 2       
+ Mean ± SD 
+ t-statistic 
+ p-value 
+Gender         
+ Male (n=6)     
+ 11.55 ± 2.48        
+ Female (n=6)   
+ 11.20 ± 1.24        
+0.315
+0.759
+ Age Group      
+ 20–40 (n=3)    
+ 10.41 ± 2.62        
+ 40–60 (n=9)    
+ 11.69 ± 1.64        
+-1.027
+0.329
+ Pump Model     
+ 630G (n=3)     
+ 10.41 ± 2.62        
+ 530G (n=9)     
+ 11.69 ± 1.64        
+-1.027
+0.329
+ Sensor Band    
+ Enlite (n=6)   
+ 10.61 ± 1.79        
+ Basis (n=6)    
+ 12.14 ± 1.79        
+-1.48
+0.17
+ Cohort         
+ 2018 (n=6)     
+ 12.14 ± 1.79        
+ 2020 (n=6)     
+ 10.61 ± 1.79        
+1.48
+0.17
+
+
+Table S SEQ Table \* ARABIC 2: Inter-Patient Variability Analysis
+Characteristic 
+ Group 1       
+ Mean ± SD
+ Group 2       
+ Mean ± SD 
+ t-statistic 
+ p-value 
+Gender         
+ Male (n=6)     
+ 11.55 ± 2.48        
+ Female (n=6)   
+ 11.20 ± 1.24        
+0.315
+0.759
+ Age Group      
+ 20–40 (n=3)    
+ 10.41 ± 2.62        
+ 40–60 (n=9)    
+ 11.69 ± 1.64        
+-1.027
+0.329
+ Pump Model     
+ 630G (n=3)     
+ 10.41 ± 2.62        
+ 530G (n=9)     
+ 11.69 ± 1.64        
+-1.027
+0.329
+ Sensor Band    
+ Enlite (n=6)   
+ 10.61 ± 1.79        
+ Basis (n=6)    
+ 12.14 ± 1.79        
+-1.48
+0.17
+ Cohort         
+ 2018 (n=6)     
+ 12.14 ± 1.79        
+ 2020 (n=6)     
+ 10.61 ± 1.79        
+1.48
+0.17
+
+
+
+
+
+Please see Table S3 in the revised Supplementary.
+
+This highlights the robustness of the model, as it consistently maintains clinical accuracy in both patients with low prediction errors and those with higher prediction errors. Therefore, the reliability of real-time glucose monitoring systems is crucial, as inaccurate predictions have the potential to result in inappropriate medical interventions.
+To assess clinical deployment readiness, comprehensive inter-patient variability analysis was conducted across all 12 patients in the OhioT1DM dataset. The TW-MRT model demonstrated robust performance consistency with a coefficient of variation of 16.5% (mean RMSE: 11.37 ± 1.88 mg/dL, range: 7.74-14.58 mg/dL), indicating manageable variability within medical device acceptance criteria. Statistical analysis revealed minimal performance differences across patient demographics, technology specifications, or temporal cohorts (Table S3), with all p-values > 0.05, demonstrating strong generalizability across gender, age groups, pump models (630G vs 530G), sensor types (Enlite vs Basis), and data collection periods (2018 vs 2020). 
+Age group comparison between younger (20-40 years: 10.41 ± 2.62 mg/dL) and older (40-60 years: 11.69 ± 1.64 mg/dL) participants demonstrated consistent performance across age ranges (t = -1.027, p = 0.329). The younger age group showed greater performance variability (SD = 2.62 mg/dL), potentially reflecting more diverse lifestyle patterns, while the older group demonstrated more consistent performance (SD = 1.64 mg/dL). Despite these variability differences, the lack of statistical significance confirms the ability of the model to maintain reliable performance across different age demographics. These findings confirm the suitability of the model for clinical deployment with technology-agnostic performance and clear risk-stratified monitoring protocols.
+This highlights the robustness of the model, as it consistently maintains clinical accuracy in both patients with low prediction errors and those with higher prediction errors. Therefore, the reliability of real-time glucose monitoring systems is crucial, as inaccurate predictions have the potential to result in inappropriate medical interventions.
+To assess clinical deployment readiness, comprehensive inter-patient variability analysis was conducted across all 12 patients in the OhioT1DM dataset. The TW-MRT model demonstrated robust performance consistency with a coefficient of variation of 16.5% (mean RMSE: 11.37 ± 1.88 mg/dL, range: 7.74-14.58 mg/dL), indicating manageable variability within medical device acceptance criteria. Statistical analysis revealed minimal performance differences across patient demographics, technology specifications, or temporal cohorts (Table S3), with all p-values > 0.05, demonstrating strong generalizability across gender, age groups, pump models (630G vs 530G), sensor types (Enlite vs Basis), and data collection periods (2018 vs 2020). 
+Age group comparison between younger (20-40 years: 10.41 ± 2.62 mg/dL) and older (40-60 years: 11.69 ± 1.64 mg/dL) participants demonstrated consistent performance across age ranges (t = -1.027, p = 0.329). The younger age group showed greater performance variability (SD = 2.62 mg/dL), potentially reflecting more diverse lifestyle patterns, while the older group demonstrated more consistent performance (SD = 1.64 mg/dL). Despite these variability differences, the lack of statistical significance confirms the ability of the model to maintain reliable performance across different age demographics. These findings confirm the suitability of the model for clinical deployment with technology-agnostic performance and clear risk-stratified monitoring protocols.
+
+Please see page 13 in the revised manuscript.
+
+Despite using a feature importance layer, the paper provides no detailed analysis or visualization to explain model decisions or how features contribute to predictions.
+Thank you for your constructive comments. To address this concern, we have added a detailed visualization and analysis of the learned feature importance weights to the revised Supplementary Material (Figure S1). Specifically:
+
+Figure S1 (a) illustrates the initial vs. final learned weights for CGM, basal insulin, and bolus insulin, showing how the model down-weights less informative features (e.g., bolus) while maintaining high attention to CGM.
+Figure S1 (b) presents a heatmap of importance weight evolution over training epochs, highlighting the early adaptation behavior of the model.
+Figure S1 (c) provides a line plot showing the smooth and converging trajectories of feature weights over time, further demonstrating the stability and learning behavior of the mechanism.
+These visualizations collectively support our claim that the feature importance layer helps the model prioritize the most relevant physiological signals while suppressing noise.
+Additionally, we have provided a GIF animation of the feature importance evolution across epochs in the project’s GitHub repository:
+https://github.com/atilimkoca/glucose-prediction-TW-MRT
+We believe this enriched analysis improves the transparency and interpretability of our model’s internal decision-making process.
+This layer employs a parameterized approach, which enables the model to learn the relative importance of each feature. As shown in Figure S1 (a), the final learned weights diverge from their uniform initialization, with the importance of CGM slightly increased while the importance of both basal and bolus insulin decreased substantially. Figure S1 (b) shows the evolution of these weights as a heatmap over the training process. CGM consistently maintains high importance, while the weights of insulin-related features decay as training progresses. Figure S1 (c) further clarifies this trend by providing a line plot that tracks the importance of each feature across epochs. These visualizations demonstrate how the model selectively emphasizes the most informative physiological signals by giving more weight to basal insulin during periods of stability while suppressing less relevant inputs.
+This layer employs a parameterized approach, which enables the model to learn the relative importance of each feature. As shown in Figure S1 (a), the final learned weights diverge from their uniform initialization, with the importance of CGM slightly increased while the importance of both basal and bolus insulin decreased substantially. Figure S1 (b) shows the evolution of these weights as a heatmap over the training process. CGM consistently maintains high importance, while the weights of insulin-related features decay as training progresses. Figure S1 (c) further clarifies this trend by providing a line plot that tracks the importance of each feature across epochs. These visualizations demonstrate how the model selectively emphasizes the most informative physiological signals by giving more weight to basal insulin during periods of stability while suppressing less relevant inputs.
+
+Please see page 8 in the revised manuscript.
+
+The actual incremental benefit of the trend-weighting mechanism over simple attention-based weighting is not thoroughly justified or visualized.
+Thanks for your comments. We agree that demonstrating the incremental benefit over simple attention mechanism is crucial for validating our architectural design choices. In response to your comment, we have conducted a comprehensive comparison between our proposed trend-weighting mechanism and simple attention-based weighting.
+-238125803910
+00
+190501022985Table S4: Performance Comparison of Trend-Weighting Mechanism vs. Simple Attention-Based Weighting for 30 PH
+Patient
+Trend-Weighting
+Simple Attention
+
+RMSE
+MAE
+RMSE
+MAE
+540
+12.97
+8.18
+13.12
+8.08
+544 
+9.67
+5.91
+13.18
+8.75
+552
+7.74
+4.47
+7.78
+5.02
+559
+10.52
+6.23
+11.19
+6.62
+563
+11.54
+6.91
+13.45
+9.03
+567
+11.22
+6.84
+12.21
+7.51
+570
+9.70
+6.15
+9.98
+6.42
+575
+14.58
+7.86
+14.55
+8.20
+584
+12.81
+7.85
+12.56
+7.68
+588
+11.39
+7.46
+11.36
+7.50
+591
+13.41
+8.96
+16.18
+11.54
+596
+10.93
+6.70
+10.99
+6.76
+Average
+11.37
+6.96
+12.21
+7.76
+
+00Table S4: Performance Comparison of Trend-Weighting Mechanism vs. Simple Attention-Based Weighting for 30 PH
+Patient
+Trend-Weighting
+Simple Attention
+
+RMSE
+MAE
+RMSE
+MAE
+540
+12.97
+8.18
+13.12
+8.08
+544 
+9.67
+5.91
+13.18
+8.75
+552
+7.74
+4.47
+7.78
+5.02
+559
+10.52
+6.23
+11.19
+6.62
+563
+11.54
+6.91
+13.45
+9.03
+567
+11.22
+6.84
+12.21
+7.51
+570
+9.70
+6.15
+9.98
+6.42
+575
+14.58
+7.86
+14.55
+8.20
+584
+12.81
+7.85
+12.56
+7.68
+588
+11.39
+7.46
+11.36
+7.50
+591
+13.41
+8.96
+16.18
+11.54
+596
+10.93
+6.70
+10.99
+6.76
+Average
+11.37
+6.96
+12.21
+7.76
+
+We have added Table S4 to the supplementary materials, which provides a direct patient-by-patient comparison of our trend-weighting approach versus simple attention mechanisms for the 30-minute prediction horizon. The results demonstrate clear and consistent superiority of our model.
+Please see Table S4 in the revised Supplementary.
+
+Furthermore, we conducted a comparison against a simple attention-based weighting baseline (Table S4) to demonstrate the incremental benefits of our proposed trend-weighting mechanism over traditional attention mechanisms. This analysis directly addresses whether our physiologically motivated trend-weighting provides meaningful improvements over standard attention mechanisms. The results clearly show the superiority of the trend-weighting mechanism, which achieved an average RMSE of 11.37 mg/dL, compared to 12.21 mg/dL for the simple attention baseline (+0.84 mg/dL improvement; 6.9% reduction in prediction error). Similarly, mean absolute error (MAE) improved from 7.76 mg/dL to 6.96 mg/dL, representing a 10.3% enhancement in prediction accuracy. Patient-level analysis reveals consistent improvements across all 12 patients, with the most substantial gains observed in patients with higher glucose variability (e.g., patient 591, with an RMSE improvement from 16.18 to 13.41 mg/dL). This consistency across patients demonstrates that the trend-weighting mechanism provides robust benefits across diverse glucose dynamics patterns. It confirms that our physiologically grounded approach to temporal weighting offers advantages over traditional attention mechanisms for glucose prediction tasks.
+Furthermore, we conducted a comparison against a simple attention-based weighting baseline (Table S4) to demonstrate the incremental benefits of our proposed trend-weighting mechanism over traditional attention mechanisms. This analysis directly addresses whether our physiologically motivated trend-weighting provides meaningful improvements over standard attention mechanisms. The results clearly show the superiority of the trend-weighting mechanism, which achieved an average RMSE of 11.37 mg/dL, compared to 12.21 mg/dL for the simple attention baseline (+0.84 mg/dL improvement; 6.9% reduction in prediction error). Similarly, mean absolute error (MAE) improved from 7.76 mg/dL to 6.96 mg/dL, representing a 10.3% enhancement in prediction accuracy. Patient-level analysis reveals consistent improvements across all 12 patients, with the most substantial gains observed in patients with higher glucose variability (e.g., patient 591, with an RMSE improvement from 16.18 to 13.41 mg/dL). This consistency across patients demonstrates that the trend-weighting mechanism provides robust benefits across diverse glucose dynamics patterns. It confirms that our physiologically grounded approach to temporal weighting offers advantages over traditional attention mechanisms for glucose prediction tasks.
+
+Please see pages 13 and 14 in the revised manuscript.
+
+The use of UKS for noise reduction is mentioned but not compared to alternative smoothing approaches, such as EMA, Savitzky-Golay, or wavelet filtering.
+Thanks for this comment. In response, we conducted a comprehensive comparison between the Unscented Kalman Smoother (UKS) and several widely used noise reduction techniques, including Exponential Moving Average (EMA), Savitzky-Golay filtering, Simple Moving Average, and Wavelet Filtering. The results are presented in the newly added Table S8.
+This patient-level comparison evaluated each method using RMSE and MAE metrics across all 12 patients. UKS consistently outperformed the other methods, achieving the lowest average RMSE (11.37 mg/dL) and MAE (6.96 mg/dL). In contrast, the best-performing alternative—Savitzky-Golay filtering—yielded higher average errors (RMSE: 12.14 mg/dL, MAE: 7.40 mg/dL). These results confirm that UKS provides more accurate and stable noise reduction for CGM signal preprocessing in our glucose prediction pipeline.
+To validate the choice of UKS for noise reduction, we compared it against alternative smoothing techniques including exponential smoothing, Savitzky-Golay filtering, moving average, and wavelet filtering (Table S8). UKS demonstrated superior performance with the lowest RMSE (11.37 mg/dL) and MAE (6.96 mg/dL), outperforming Savitzky-Golay (12.14 RMSE), wavelet filtering (12.14 RMSE), moving average (12.03 RMSE), and exponential smoothing (11.85 RMSE). This validates UKS as the optimal preprocessing techniques for our glucose prediction task.
+To validate the choice of UKS for noise reduction, we compared it against alternative smoothing techniques including exponential smoothing, Savitzky-Golay filtering, moving average, and wavelet filtering (Table S8). UKS demonstrated superior performance with the lowest RMSE (11.37 mg/dL) and MAE (6.96 mg/dL), outperforming Savitzky-Golay (12.14 RMSE), wavelet filtering (12.14 RMSE), moving average (12.03 RMSE), and exponential smoothing (11.85 RMSE). This validates UKS as the optimal preprocessing techniques for our glucose prediction task.
+
+Please see page 18 in the revised manuscript.
+-518160246380
+00
+-318682510465Table S8: Comparative Analysis of Smoothing Techniques for Glucose Signal Processing
+Patient
+Exponential
+Savitzky-Golay
+Moving Average
+Wavelet
+UKS
+
+RMSE
+MAE
+RMSE
+MAE
+RMSE
+MAE
+RMSE
+MAE
+RMSE
+MAE
+540
+13.45
+8.50
+13.90
+8.80
+13.65
+8.68
+13.65
+8.46
+12.97
+8.18
+544 
+10.05
+6.11
+10.30
+6.21
+10.21
+6.15
+10.46
+6.31
+9.67
+5.91
+552
+8.05
+4.59
+8.24
+4.58
+8.10
+4.66
+8.31
+4.82
+7.74
+4.47
+559
+10.93
+6.51
+11.31
+6.73
+11.15
+6.65
+11.41
+6.69
+10.52
+6.23
+563
+12.20
+7.33
+12.55
+7.55
+12.51
+7.54
+12.61
+7.19
+11.54
+6.91
+567
+11.71
+7.07
+12.08
+7.42
+11.89
+7.33
+11.97
+7.11
+11.22
+6.84
+570
+10.53
+6.82
+10.39
+6.65
+10.54
+6.80
+10.25
+6.44
+9.70
+6.15
+575
+15.03
+8.39
+14.95
+8.13
+14.93
+8.08
+15.74
+8.39
+14.58
+7.86
+584
+13.27
+8.21
+13.76
+8.45
+13.77
+8.53
+13.84
+8.40
+12.81
+7.85
+588
+11.95
+7.89
+12.15
+8.04
+12.14
+8.11
+11.78
+7.64
+11.39
+7.46
+591
+13.62
+8.58
+14.02
+8.82
+13.90
+8.85
+13.78
+8.54
+13.41
+8.96
+596
+11.39
+7.08
+12.07
+7.45
+11.56
+7.33
+11.94
+7.11
+10.93
+6.70
+Average
+11.85
+7.26
+12.14
+7.40
+12.03
+7.39
+12.14
+7.26
+11.37
+6.96
+
+00Table S8: Comparative Analysis of Smoothing Techniques for Glucose Signal Processing
+Patient
+Exponential
+Savitzky-Golay
+Moving Average
+Wavelet
+UKS
+
+RMSE
+MAE
+RMSE
+MAE
+RMSE
+MAE
+RMSE
+MAE
+RMSE
+MAE
+540
+13.45
+8.50
+13.90
+8.80
+13.65
+8.68
+13.65
+8.46
+12.97
+8.18
+544 
+10.05
+6.11
+10.30
+6.21
+10.21
+6.15
+10.46
+6.31
+9.67
+5.91
+552
+8.05
+4.59
+8.24
+4.58
+8.10
+4.66
+8.31
+4.82
+7.74
+4.47
+559
+10.93
+6.51
+11.31
+6.73
+11.15
+6.65
+11.41
+6.69
+10.52
+6.23
+563
+12.20
+7.33
+12.55
+7.55
+12.51
+7.54
+12.61
+7.19
+11.54
+6.91
+567
+11.71
+7.07
+12.08
+7.42
+11.89
+7.33
+11.97
+7.11
+11.22
+6.84
+570
+10.53
+6.82
+10.39
+6.65
+10.54
+6.80
+10.25
+6.44
+9.70
+6.15
+575
+15.03
+8.39
+14.95
+8.13
+14.93
+8.08
+15.74
+8.39
+14.58
+7.86
+584
+13.27
+8.21
+13.76
+8.45
+13.77
+8.53
+13.84
+8.40
+12.81
+7.85
+588
+11.95
+7.89
+12.15
+8.04
+12.14
+8.11
+11.78
+7.64
+11.39
+7.46
+591
+13.62
+8.58
+14.02
+8.82
+13.90
+8.85
+13.78
+8.54
+13.41
+8.96
+596
+11.39
+7.08
+12.07
+7.45
+11.56
+7.33
+11.94
+7.11
+10.93
+6.70
+Average
+11.85
+7.26
+12.14
+7.40
+12.03
+7.39
+12.14
+7.26
+11.37
+6.96
+
+
+Please see Table S8 in the revised Supplementary.
+
+While inference time is mentioned, the training time, model complexity (parameters), and deployment feasibility on edge devices are not adequately addressed.
+Thank you for your comment. We have addressed the concerns regarding model complexity, deployment feasibility, and practicality-performance trade-offs through two key improvements:
+Model Complexity and Deployment: Section 4.2 has been updated with a detailed analysis of model complexity, reporting a total of 462,346 trainable parameters, a compact size of 1.76 MB, and efficient inference performance (12.9 ms per sample, 77.5 samples/second), confirming the model’s suitability for real-time and resource-constrained applications. To contextualize this efficiency, our model is 240× smaller than BERT-base and over 300,000× smaller than GPT-3, making it highly suitable for real-time deployment on resource-constrained medical devices. Moreover, we included the training time per epoch (≈5 seconds) and specified the hardware used (Intel i9-9940X CPU, NVIDIA RTX 2080Ti GPU), offering a complete picture of the computational demands.
+Trade-Offs via Ablation Study: To further investigate the practicality-performance balance, we revised Subsection 4.4 (Ablation Study) and added Table 8, which includes both performance (RMSE, standard deviation) and parameter count for each configuration. By systematically removing individual and combined components (e.g., time-aware embedding, feature importance weighting, glucose trend-weighting), we observed performance degradations of up to +1.57 mg/dL RMSE and complexity reductions up to ~45%. These results illustrate the role of each component and help identify lighter-weight variants of the model that may still offer strong performance with lower deployment cost.
+Together, these additions comprehensively address both the computational feasibility and structural trade-offs of the proposed TW-MRT model.
+The TW-MRT model demonstrates exceptional computational efficiency with 462,346 total parameters and a compact 1.76 MB model size, achieving optimal balance between predictive accuracy and computational practicality.  To contextualize this efficiency, our model is 240 times smaller than BERT-base (110 million parameters) and 378,000 times smaller than GPT-3 (175 billion parameters), while maintaining transformer capabilities for medical prediction. The analysis of inference performance reveals a time of 12.9 milliseconds per prediction and a rate of 77.5 predictions per second. The model requires only 1.84 MB of memory for inference, whereas BERT-base requires approximately 440 MB and GPT-2 requires 468 MB. This 238-fold reduction in memory usage enables deployment on resource-constrained medical devices, which would be difficult with traditional transformer models.
+The experiments were carried out using two identical hardware platforms, both equipped with an Intel(R) Core i9-9940X processor and an NVIDIA GeForce GTX 2080 Ti GPU.
+The TW-MRT model demonstrates exceptional computational efficiency with 462,346 total parameters and a compact 1.76 MB model size, achieving optimal balance between predictive accuracy and computational practicality.  To contextualize this efficiency, our model is 240 times smaller than BERT-base (110 million parameters) and 378,000 times smaller than GPT-3 (175 billion parameters), while maintaining transformer capabilities for medical prediction. The analysis of inference performance reveals a time of 12.9 milliseconds per prediction and a rate of 77.5 predictions per second. The model requires only 1.84 MB of memory for inference, whereas BERT-base requires approximately 440 MB and GPT-2 requires 468 MB. This 238-fold reduction in memory usage enables deployment on resource-constrained medical devices, which would be difficult with traditional transformer models.
+The experiments were carried out using two identical hardware platforms, both equipped with an Intel(R) Core i9-9940X processor and an NVIDIA GeForce GTX 2080 Ti GPU.
+
+Please see page 11 in the revised manuscript.
+
+243840343654Table 8: Comprehensive ablation study results for 30-minute PH on OhioT1DM dataset.
+Model Configuration
+RMSE (mg/dL)
+Std Dev
+Parameters
+Proposed Model (Full)
+11.37
+-
+92,233
+Single Component Ablations:
+
+
+
+Without Time-Aware Embedding
+12.65
+1.63
+92,041
+Without Feature Importance
+12.80
+1.83
+51,017
+Without Multi-Resolution Fusion
+12.94
+1.81
+50,825
+Without Glucose Trend-Weighting
+12.81
+1.94
+92,038
+Without UKS
+12.93
+1.86
+51,020
+Dual Component Ablations:
+
+
+
+Without Time-Aware + Feature Importance
+12.74
+1.66
+92,041
+Without Time-Aware + Multi-Resolution
+12.80
+1.78
+50,828
+Without Time-Aware + Glucose Trend
+12.59
+1.63
+91,849
+Without Feature Importance + Multi-Resolution
+12.94
+1.80
+51,017
+Without Multi-Resolution + Glucose Trend
+12.72
+1.89
+50,825
+Triple Component Ablations:
+
+
+
+Without Time-Aware + Feature + Multi-Res
+12.86
+1.73
+50,825
+Without Feature + Multi-Res + Glucose Trend
+12.67
+1.84
+50,822
+Baseline Comparisons:
+
+
+
+Basic Transformer Only
+12.88
+1.66
+50,630
+Lightweight Model (Mobile)
+12.67
+1.84
+50,822
+
+00Table 8: Comprehensive ablation study results for 30-minute PH on OhioT1DM dataset.
+Model Configuration
+RMSE (mg/dL)
+Std Dev
+Parameters
+Proposed Model (Full)
+11.37
+-
+92,233
+Single Component Ablations:
+
+
+
+Without Time-Aware Embedding
+12.65
+1.63
+92,041
+Without Feature Importance
+12.80
+1.83
+51,017
+Without Multi-Resolution Fusion
+12.94
+1.81
+50,825
+Without Glucose Trend-Weighting
+12.81
+1.94
+92,038
+Without UKS
+12.93
+1.86
+51,020
+Dual Component Ablations:
+
+
+
+Without Time-Aware + Feature Importance
+12.74
+1.66
+92,041
+Without Time-Aware + Multi-Resolution
+12.80
+1.78
+50,828
+Without Time-Aware + Glucose Trend
+12.59
+1.63
+91,849
+Without Feature Importance + Multi-Resolution
+12.94
+1.80
+51,017
+Without Multi-Resolution + Glucose Trend
+12.72
+1.89
+50,825
+Triple Component Ablations:
+
+
+
+Without Time-Aware + Feature + Multi-Res
+12.86
+1.73
+50,825
+Without Feature + Multi-Res + Glucose Trend
+12.67
+1.84
+50,822
+Baseline Comparisons:
+
+
+
+Basic Transformer Only
+12.88
+1.66
+50,630
+Lightweight Model (Mobile)
+12.67
+1.84
+50,822
+
+
+
+
+Please see Table 8 in the revised manuscript.
+
+There is no experiment or simulation considering real-life glucose variations due to exercise, illness, or skipped meals, which would test the model's robustness.
+Thank you very much for the constructive comment. We agree that the proposed approach should ideally be tested under real-life scenarios such as exercise, illness, or skipped meals, as you have rightly pointed out. However, these specific scenarios are not represented in the existing dataset, and to our knowledge, there are no publicly available datasets that include such conditions.
+Collecting data under these circumstances would require multidisciplinary collaboration, particularly with medical institutions, and would involve obtaining ethical approvals and managing related paperwork. Unfortunately, we are currently not in a position to initiate such collaborations or collect new data in the short term.
+We acknowledge your comments and would like to consider real-life glucose variations due to exercise, illness, or skipped meals in our future work.
+
+
+
+The model only considers glucose, basal, and bolus insulin but does not incorporate temporally relevant inputs such as circadian patterns, sleep quality, or stress events.
+Thanks for this comment. The input feature selection for the TW-MRT model was guided by systematic data availability analysis across the OhioT1DM dataset. We conducted comprehensive correlation analysis using heat maps to identify the features consistently available across all 12 patients, which revealed that glucose, basal insulin, bolus insulin, and carbohydrate intake were the most complete and reliable data streams. This data-driven approach ensured that our model could be applied uniformly across all patients without missing data complications that would compromise training or evaluation consistency.
+Our feature selection aligns with established literature standards in glucose prediction, where continuous glucose monitoring (CGM), insulin delivery data, and carbohydrate intake represent the most commonly utilized and validated inputs across major studies. These core physiological signals have demonstrated robust predictive capability in numerous published works.
+While we acknowledge that additional temporal features such as circadian patterns, sleep quality metrics, or stress indicators could potentially enhance prediction accuracy, several practical considerations guided our current approach: (1) these features are not consistently available across the OhioT1DM dataset, (2) their inclusion would limit model applicability to patients with specialized monitoring devices, and (3) our correlation analysis indicated that the selected features provided optimal prediction performance within the available data constraints. 
+We have updated the Conclusion section to highlight future work on integrating wearable sensor data—such as sleep, activity, and stress—which could enable more personalized and accurate glucose predictions through multi-modal physiological monitoring.
+In future work, the TW-MRT model could be extended to include self-learning capabilities, allowing it to adapt to individual user data and refine its predictions over time. Additionally, integrating multi-modal data from wearable sensors—such as sleep patterns, physical activity, and stress levels—may further enhance prediction accuracy and personalization.
+In future work, the TW-MRT model could be extended to include self-learning capabilities, allowing it to adapt to individual user data and refine its predictions over time. Additionally, integrating multi-modal data from wearable sensors—such as sleep patterns, physical activity, and stress levels—may further enhance prediction accuracy and personalization.
+
+Please see pages 18 and 19 in the revised manuscript.
+
+The resolution separation (short, mid, long-term) is arbitrarily defined, and there's no sensitivity analysis or validation to support these boundaries.
+Thanks for the constructive comments. We agree that systematic validation is essential to demonstrate that our temporal resolution separations are data-driven rather than arbitrary design choices.
+In response to your comment, we have conducted comprehensive sensitivity analysis examining different trend-weighting boundary configurations ranging from 1 to 5 categories (Table S1). This evaluation demonstrates that our short-term, mid-term, and long-term trend categorization represents an evidence-based architectural choice that optimally balances temporal pattern capture with model complexity. The analysis confirms that 3 boundaries provide the ideal granularity for capturing glucose temporal dynamics without unnecessary over-segmentation.
+We have added this validation to the trend-weighting mechanism description in Section 3 (Methods) and included the detailed sensitivity analysis as Table S1 in the supplementary materials.
+This mechanism is designed to detect and emphasize significant glucose trends by transforming the time-embedded input sequence into multiple trend vectors: short-term, mid-term, and long-term. This transformation involves the mapping of the input sequence into trend-specific vectors, which are created using a trend projection matrix. The choice of three trend categories (short-term, mid-term, long-term) was validated through sensitivity analysis across 1-5 boundary configurations (Table S1), with the 3-boundary design achieving optimal performance.
+This mechanism is designed to detect and emphasize significant glucose trends by transforming the time-embedded input sequence into multiple trend vectors: short-term, mid-term, and long-term. This transformation involves the mapping of the input sequence into trend-specific vectors, which are created using a trend projection matrix. The choice of three trend categories (short-term, mid-term, long-term) was validated through sensitivity analysis across 1-5 boundary configurations (Table S1), with the 3-boundary design achieving optimal performance.
+
+-247650663575Table S1: Sensitivity Analysis of Trend-Weighting Boundary Configurations for 30-Minute Prediction Horizon
+Patient
+1 Boundry
+2 Boundry
+3 Boundry
+4 Boundry
+5 Boundry
+
+RMSE
+MAE
+RMSE
+MAE
+RMSE
+MAE
+RMSE
+MAE
+RMSE
+MAE
+540
+13.35
+8.39
+13.38
+8.42
+12.97
+8.18
+14.00
+8.74
+13.77
+8.74
+544 
+9.70
+5.95
+9.62
+5.87
+9.67
+5.91
+9.85
+6.08
+9.92
+6.16
+552
+7.67
+4.27
+7.84
+4.44
+7.74
+4.47
+7.69
+4.32
+7.84
+4.52
+559
+10.90
+6.52
+10.65
+6.37
+10.52
+6.23
+10.76
+6.41
+10.90
+6.56
+563
+11.66
+7.05
+11.64
+6.96
+11.54
+6.91
+11.72
+7.08
+11.85
+7.12
+567
+12.12
+7.49
+11.53
+6.99
+11.22
+6.84
+11.52
+6.99
+12.52
+7.96
+570
+9.64
+6.11
+9.79
+6.24
+9.70
+6.15
+9.74
+6.15
+9.87
+6.33
+575
+14.15
+7.87
+14.25
+8.13
+14.58
+7.86
+14.63
+8.33
+14.16
+7.81
+584
+12.98
+7.96
+12.73
+7.78
+12.81
+7.85
+12.72
+7.77
+12.88
+7.94
+588
+11.36
+7.42
+11.46
+7.63
+11.39
+7.46
+11.49
+7.56
+11.28
+7.32
+591
+13.15
+8.26
+13.20
+8.31
+13.41
+8.96
+13.21
+8.30
+12.94
+8.07
+596
+11.26
+7.36
+10.95
+7.02
+10.93
+6.70
+11.30
+6.83
+11.21
+6.75
+Average
+11.50
+7.05
+11.42
+7.01
+11.37
+6.96
+11.55
+7.05
+11.60
+7.11
+
+00Table S1: Sensitivity Analysis of Trend-Weighting Boundary Configurations for 30-Minute Prediction Horizon
+Patient
+1 Boundry
+2 Boundry
+3 Boundry
+4 Boundry
+5 Boundry
+
+RMSE
+MAE
+RMSE
+MAE
+RMSE
+MAE
+RMSE
+MAE
+RMSE
+MAE
+540
+13.35
+8.39
+13.38
+8.42
+12.97
+8.18
+14.00
+8.74
+13.77
+8.74
+544 
+9.70
+5.95
+9.62
+5.87
+9.67
+5.91
+9.85
+6.08
+9.92
+6.16
+552
+7.67
+4.27
+7.84
+4.44
+7.74
+4.47
+7.69
+4.32
+7.84
+4.52
+559
+10.90
+6.52
+10.65
+6.37
+10.52
+6.23
+10.76
+6.41
+10.90
+6.56
+563
+11.66
+7.05
+11.64
+6.96
+11.54
+6.91
+11.72
+7.08
+11.85
+7.12
+567
+12.12
+7.49
+11.53
+6.99
+11.22
+6.84
+11.52
+6.99
+12.52
+7.96
+570
+9.64
+6.11
+9.79
+6.24
+9.70
+6.15
+9.74
+6.15
+9.87
+6.33
+575
+14.15
+7.87
+14.25
+8.13
+14.58
+7.86
+14.63
+8.33
+14.16
+7.81
+584
+12.98
+7.96
+12.73
+7.78
+12.81
+7.85
+12.72
+7.77
+12.88
+7.94
+588
+11.36
+7.42
+11.46
+7.63
+11.39
+7.46
+11.49
+7.56
+11.28
+7.32
+591
+13.15
+8.26
+13.20
+8.31
+13.41
+8.96
+13.21
+8.30
+12.94
+8.07
+596
+11.26
+7.36
+10.95
+7.02
+10.93
+6.70
+11.30
+6.83
+11.21
+6.75
+Average
+11.50
+7.05
+11.42
+7.01
+11.37
+6.96
+11.55
+7.05
+11.60
+7.11
+
+-457835311150
+00
+Please see page 8 in the revised manuscript.
+Please see Table S1 in the revised Supplementary.
+
+The SEG-based evaluation is reported without showing the full SEG plot across patients. Clinical claims based on limited patient samples may be overstated.
+Thank you for this important observation. In response, we have extended our SEG-based evaluation by including Surveillance Error Grid (SEG) plots for all patients in the supplementary material (Figure S3). This comprehensive visualization enables a broader and more transparent assessment of the clinical reliability of our model across the entire subject pool. In the main manuscript, we continue to present representative SEG plots (Figure 3) for two patients—one with the lowest and one with the highest RMSE—to illustrate the best and worst-case prediction scenarios. 
+Therefore, the reliability of real-time glucose monitoring systems is crucial, as inaccurate predictions have the potential to result in inappropriate medical interventions. To strengthen the clinical relevance, we included SEG plots for all evaluated patients in the supplementary material (Figure S3).
+Therefore, the reliability of real-time glucose monitoring systems is crucial, as inaccurate predictions have the potential to result in inappropriate medical interventions. To strengthen the clinical relevance, we included SEG plots for all evaluated patients in the supplementary material (Figure S3).
+
+Please see page 12 in the revised manuscript.
+Although the code is available on GitHub, there is no detailed configuration or training logs shared, nor Docker support for true reproducibility.
+Thank you very much for your supportive comments. We completely agree that true reproducibility requires more than just source code availability. In response to your concerns, we have enhanced our GitHub repository (https://github.com/atilimkoca/glucose-prediction-TW-MRT) with comprehensive reproducibility infrastructure:
+1. Complete configuration management via YAML files with all hyperparameters documented
+2. Comprehensive logging system with detailed training logs, TensorBoard integration, and complete experiment tracking
+3. Full Docker support with containerized environments for true reproducibility
+4. Detailed documentation in REPRODUCIBILITY.md with step-by-step instructions
+These enhancements ensure that researchers can reproduce our exact experimental setup and results with minimal setup requirements. The Docker containerization particularly addresses environment consistency across different systems, while the comprehensive logging allows for detailed analysis of training dynamics and model behavior.
+
+In Table 2 and elsewhere, patient IDs are inconsistently referenced (e.g., Patient 570 appears twice with different values), raising concerns about data preprocessing accuracy.
+Thank you for pointing this out. We have corrected the inconsistency in patient IDs—the second occurrence of Patient 570 was a typographical error and has been corrected to Patient 575. This correction has been reflected in the revised version of the manuscript. Please note that this table is now labeled as Table 3. This correction does not affect any of our analyses, conclusions, or statistical comparisons since the underlying performance data was accurate - only the patient ID label needed correction. All other tables (Tables 4, 5, etc.) correctly reference patient 575 and are consistent with the corrected values.
+The authors must strengthen their novelty claim through clearer architectural innovation or empirical justification.
+Thank you for this comment. As mentioned in our response to Comment 1, we have addressed similar concerns about the novelty and integration of our architectural components. Additionally, we have made several key enhancements to strengthen the empirical validation:
+Enhanced Generalizability Validation:
+Extended evaluation to the D1NAMO dataset to verify model generalizability across diverse populations and sensor technologies
+Results demonstrate consistent superior performance, confirming robustness beyond the original OhioT1DM dataset.
+Comprehensive Ablation Analysis:
+Expanded ablation studies (Table 8) validate the contribution of each component individually and in combination
+Results confirm that the integrated architecture yields statistically significant improvements over individual components
+As detailed in our response to Comment 1 and the revised Section 3.2, our contribution lies in the empirically validated integration of these components within a glucose-specific framework, rather than the individual mechanisms themselves. The cross-dataset validation and comprehensive ablation studies provide strong empirical evidence supporting the novelty and effectiveness of our combined approach.
+A broader evaluation on at least one more external dataset (e.g., D1NAMO, Pima) is essential.
+Thanks for your constructive suggestions. As also addressed in Comment 3, we have expanded our experimental evaluation beyond the OhioT1DM dataset by incorporating additional experiments on the multivariate D1NAMO dataset, which features diverse sensor types, patient characteristics, and temporal variability. This addition allows for a more comprehensive assessment of the model’s generalizability. To support this evaluation, we added Table 7 and Supplementary Tables S6–S7, where the proposed TW-MRT model is compared against several state-of-the-art Transformer-based time series models (Crossformer, HDMixer, Informer, Fedformer, and Pathformer), as well as two D1NAMO-specific baselines (BAGGING metaR and Bayesian Ridge regression). The TW-MRT model consistently outperformed all alternatives in terms of RMSE and MAE, with improvements reaching up to 70% RMSE reduction. These results demonstrate that the proposed model generalizes effectively across datasets, sensor configurations, and patient populations, reinforcing its potential for real-world and clinical deployment.
+Statistical validation of performance differences must be included.
+Thanks for your insightful comments. As mentioned in our response to Comment 4, we have added Table S5 and updated Section 4.3 to include a comprehensive statistical validation of our model’s superiority over baseline model. This analysis involves paired t-tests on patient-specific RMSE values across all 12 subjects in the OhioT1DM dataset. We report mean differences, 95% confidence intervals, p-values, t-statistics, and Cohen’s d effect sizes. All comparisons yielded statistically significant improvements (p < 0.001), with large to very large effect sizes (Cohen’s d up to 4.675), confirming that the performance gains of the proposed TW-MRT model are both statistically and clinically meaningful.
+A deeper interpretability analysis (e.g., SHAP, attention map visualization) should be provided.
+Thanks for your constructive suggestions. In response, we have added two complementary interpretability analyses to the Supplementary:
+Attention Weight Visualization (Figure S5 (a)): We visualized the temporal attention weights to highlight how the model distributes focus across past time steps. The results demonstrate that the model places greater emphasis on recent glucose values, particularly at time t-0, confirming its alignment with physiological intuition and short-term glucose dynamics.
+SHAP-Based Feature Importance Analysis (Figure S5 (b)): We computed SHAP values to evaluate the relative contribution of each input feature. The analysis revealed that CGM values are the primary driver of model predictions (mean SHAP value: 1.6208), while basal insulin, bolus insulin, and carbohydrate intake contributed minimally. This supports the earlier parameter selection findings and validates the model’s reliance on clinically meaningful features.
+We have included these results in the Results section and believe they significantly strengthen the transparency and explainability of the proposed model.
+Model interpretability was examined through visualization of attention weights and analysis of feature importance based on SHAP. Figure S5 (a) illustrates the temporal focus of the model and reveals that recent timesteps, particularly t-0, receive the highest attention weights. This suggests that the model places greater emphasis on the most recent glucose values during prediction, which aligns with physiological expectations. SHAP analysis (Figure S5 (b)) quantifies the contribution of each input feature, complementing this finding. CGM values emerged as the dominant factor influencing predictions (mean SHAP value: 1.6208), while other variables, such as basal insulin, bolus insulin, and carbohydrate intake, contributed minimally. These results are consistent with the parameter selection findings and confirm that the model relies on clinically meaningful and physiologically relevant inputs to generate accurate prediction.
+Model interpretability was examined through visualization of attention weights and analysis of feature importance based on SHAP. Figure S5 (a) illustrates the temporal focus of the model and reveals that recent timesteps, particularly t-0, receive the highest attention weights. This suggests that the model places greater emphasis on the most recent glucose values during prediction, which aligns with physiological expectations. SHAP analysis (Figure S5 (b)) quantifies the contribution of each input feature, complementing this finding. CGM values emerged as the dominant factor influencing predictions (mean SHAP value: 1.6208), while other variables, such as basal insulin, bolus insulin, and carbohydrate intake, contributed minimally. These results are consistent with the parameter selection findings and confirm that the model relies on clinically meaningful and physiologically relevant inputs to generate accurate prediction.
+
+Please see page 13 in the revised manuscript.
+777875256848
+(a)
+
+(b)
+Figure S5: Model Interpretability Analysis: (a) Attention Weight Visualization and (b) SHAP Feature Importance Analysis
+
+00
+(a)
+
+(b)
+Figure S5: Model Interpretability Analysis: (a) Attention Weight Visualization and (b) SHAP Feature Importance Analysis
+
+
+
+
+Please see Figure S5 in the revised Supplementary.
+
+Clinical relevance claims must be tempered or supported with stronger, broader evidence (multiple patients, more metrics).
+Thanks for this helpful comment. In response, we have strengthened the empirical foundation of our study by evaluating the proposed TW-MRT model on the multivariate D1NAMO dataset, which includes diverse sensor types and patient profiles. This complements the original results on the OhioT1DM dataset and helps to assess generalizability across different real-world conditions.
+As detailed in Table 7 and Supplementary Tables S6–S7, we report performance across multiple patients and include two standard metrics—RMSE and MAE—to ensure consistent and interpretable evaluation. Moreover, we compared our model against both classical baselines (e.g., Bayesian Ridge, BAGGING metaR) and Transformer-based architectures (e.g., Fedformer, Informer), with TW-MRT consistently outperforming all alternatives. We further explored clinical relevance by adding SEG analyses for D1NAMO patients 1, 2, 5, 6, 7, and 8 (Supplementary Figure S4), complementing the full OhioT1DM SEG set (Figure S3). While the results are promising, we agree that they do not yet constitute sufficient evidence for broad clinical generalization.
+Accordingly, we have revised the manuscript to moderate our statements about clinical applicability (see Section 4.3), clarifying that our findings are preliminary and require further validation on larger, more diverse cohorts and with clinically meaningful metrics.
+Despite these differences, the majority of predictions for both patients exhibited a green rating on the SEG, indicating that the model is clinically reliable even in the worst-case scenario. This highlights the robustness of the model, as it consistently maintains clinical accuracy in both patients with low prediction errors and those with higher prediction errors. This suggests that the model may maintain clinically acceptable accuracy across patients with varying prediction errors, highlighting its potential robustness. Therefore, the reliability of real-time glucose monitoring systems is crucial, as inaccurate predictions have the potential to result in inappropriate medical interventions. To strengthen the clinical relevance, we included SEG plots for all evaluated patients in the supplementary material (Figure S3). We extended the SEG analysis to the D1NAMO dataset. Figure S4 presents the plots for patients 1, 2, 5, 6, 7, and 8. These evaluations suggest that the model may perform acceptably across different datasets and patient profiles. However, further validation is necessary to support broader generalization.
+Despite these differences, the majority of predictions for both patients exhibited a green rating on the SEG, indicating that the model is clinically reliable even in the worst-case scenario. This highlights the robustness of the model, as it consistently maintains clinical accuracy in both patients with low prediction errors and those with higher prediction errors. This suggests that the model may maintain clinically acceptable accuracy across patients with varying prediction errors, highlighting its potential robustness. Therefore, the reliability of real-time glucose monitoring systems is crucial, as inaccurate predictions have the potential to result in inappropriate medical interventions. To strengthen the clinical relevance, we included SEG plots for all evaluated patients in the supplementary material (Figure S3). We extended the SEG analysis to the D1NAMO dataset. Figure S4 presents the plots for patients 1, 2, 5, 6, 7, and 8. These evaluations suggest that the model may perform acceptably across different datasets and patient profiles. However, further validation is necessary to support broader generalization.
+
+Please see pages 12 and 13 in the revised manuscript.
+
+Model complexity and deployment implications need to be discussed.
+Thanks for the constructive comments. We have enhanced our hyperparameter section (Section 4.2) to include comprehensive model complexity analysis and deployment considerations, addressing implementation clarity concerns with specific metrics: 462,346 parameters, 1.76 MB model size, 12.9 ms inference time, and deployment feasibility analysis.
+The TW-MRT model demonstrates exceptional computational efficiency with 462,346 total parameters and a compact 1.76 MB model size, achieving optimal balance between predictive accuracy and computational practicality.  To contextualize this efficiency, our model is 240 times smaller than BERT-base (110 million parameters) and 378,000 times smaller than GPT-3 (175 billion parameters), while maintaining transformer capabilities for medical prediction. The analysis of inference performance reveals a time of 12.9 milliseconds per prediction and a rate of 77.5 predictions per second. The model requires only 1.84 MB of memory for inference, whereas BERT-base requires approximately 440 MB and GPT-2 requires 468 MB. This 238-fold reduction in memory usage enables deployment on resource-constrained medical devices, which would be difficult with traditional transformer models.
+The experiments were carried out using two identical hardware platforms, both equipped with an Intel(R) Core i9-9940X processor and an NVIDIA GeForce GTX 2080 Ti GPU.
+The TW-MRT model demonstrates exceptional computational efficiency with 462,346 total parameters and a compact 1.76 MB model size, achieving optimal balance between predictive accuracy and computational practicality.  To contextualize this efficiency, our model is 240 times smaller than BERT-base (110 million parameters) and 378,000 times smaller than GPT-3 (175 billion parameters), while maintaining transformer capabilities for medical prediction. The analysis of inference performance reveals a time of 12.9 milliseconds per prediction and a rate of 77.5 predictions per second. The model requires only 1.84 MB of memory for inference, whereas BERT-base requires approximately 440 MB and GPT-2 requires 468 MB. This 238-fold reduction in memory usage enables deployment on resource-constrained medical devices, which would be difficult with traditional transformer models.
+The experiments were carried out using two identical hardware platforms, both equipped with an Intel(R) Core i9-9940X processor and an NVIDIA GeForce GTX 2080 Ti GPU.
+
+Please see page 11 in the revised manuscript.
+
+Ambiguous patient data identifiers and unclear data preprocessing steps must be clarified.
+Thank you for your nice summary above. To improve transparency and reproducibility, we have revised Section 4.2 to clearly specify the preprocessing steps and patient data used in our study. In particular, we now explicitly list the patient IDs (540, 544, 552, 559, 563, 567, 570, 575, 584, 588, 591, and 596) from the OhioT1DM dataset that were included in the analysis.
+We also provide a detailed description of the preprocessing pipeline, which includes handling of missing values through linear interpolation and forward/backward filling, noise reduction using Unscented Kalman Smoothing (UKS) with clearly defined parameters, feature normalization using StandardScaler, and a sequential 80/20 train-validation split to preserve temporal integrity. These enhancements improve clarity and ensure that the preprocessing process is both well-documented and repeatable. The corresponding revisions can be found in Section 2.6 and Section 4.2 of the manuscript.
+The model was trained for a maximum of 200 epochs, with the best-performing epoch selected based on the lowest loss value.
+Furthermore, we applied the preprocessing pipeline to the OhioT1DM dataset for patients with the following IDs: 540, 544, 552, 559, 563, 567, 570, 575, 584, 588, 591, and 596. This systematic approach ensured the quality of the data and the performance of the model. Missing values in the CGM data were handled using linear interpolation, followed by backward and forward filling for any remaining gaps.
+UKS was implemented using Merwe scaled sigma points with the following optimized parameters: α= 0.001 (sigma point spread), β = 2.0 (Gaussian distribution parameter), κ = 0 (scaling factor), measurement noise variance R = 0.1, process noise variance Q = 0.1, and initial covariance scaling P × 10. This smoothing process effectively reduced noise while preserving glucose trend fidelity.
+Feature normalization was performed using StandardScaler to ensure a zero mean and unit variance across all input features. The dataset was split into training and validation sets using a 80/20 ratio with sequential (non-shuffled) partitioning to preserve the temporal order that is essential for time series prediction.
+The model was trained for a maximum of 200 epochs, with the best-performing epoch selected based on the lowest loss value.
+Furthermore, we applied the preprocessing pipeline to the OhioT1DM dataset for patients with the following IDs: 540, 544, 552, 559, 563, 567, 570, 575, 584, 588, 591, and 596. This systematic approach ensured the quality of the data and the performance of the model. Missing values in the CGM data were handled using linear interpolation, followed by backward and forward filling for any remaining gaps.
+UKS was implemented using Merwe scaled sigma points with the following optimized parameters: α= 0.001 (sigma point spread), β = 2.0 (Gaussian distribution parameter), κ = 0 (scaling factor), measurement noise variance R = 0.1, process noise variance Q = 0.1, and initial covariance scaling P × 10. This smoothing process effectively reduced noise while preserving glucose trend fidelity.
+Feature normalization was performed using StandardScaler to ensure a zero mean and unit variance across all input features. The dataset was split into training and validation sets using a 80/20 ratio with sequential (non-shuffled) partitioning to preserve the temporal order that is essential for time series prediction.
+
+Please see pages 11 in the revised manuscript.
+Additionally, forward and backward filling are two commonly used imputation techniques. These techniques propagate known values to fill adjacent gaps, ensuring continuity without introducing discontinuities.  Forward filling uses the previous value, while backward filling uses the next one. Maintaining temporal sequence is crucial in time series analysis, as missing data can obscure patterns and reduce the capacity of the model to learn temporal dependencies.
+Additionally, forward and backward filling are two commonly used imputation techniques. These techniques propagate known values to fill adjacent gaps, ensuring continuity without introducing discontinuities.  Forward filling uses the previous value, while backward filling uses the next one. Maintaining temporal sequence is crucial in time series analysis, as missing data can obscure patterns and reduce the capacity of the model to learn temporal dependencies.
+
+Please see page 5 in the revised manuscript.
+These heatmaps are constructed using correlation coefficients (e.g., Pearson’s r), which quantify the strength and direction of the relationship between each feature and the output. The coefficient ranges from –1 to 1, where values close to –1 or 1 indicate strong negative or positive correlation, respectively, and values near 0 indicate weak or no linear relationship. The heatmap guides the selection of features with the highest predictive value, ensuring that the model focuses on informative inputs while minimizing the influence of irrelevant or weakly correlated parameters.
+These heatmaps are constructed using correlation coefficients (e.g., Pearson’s r), which quantify the strength and direction of the relationship between each feature and the output. The coefficient ranges from –1 to 1, where values close to –1 or 1 indicate strong negative or positive correlation, respectively, and values near 0 indicate weak or no linear relationship. The heatmap guides the selection of features with the highest predictive value, ensuring that the model focuses on informative inputs while minimizing the influence of irrelevant or weakly correlated parameters.
+
+Please see page 5 in the revised manuscript.
+UKS improves data quality by predicting hidden states and filtering of the series, which removes short-term fluctuations that may hide important trends. Unlike the traditional Kalman filter, which relies on linearization, the unscented Kalman filter uses the unscented transform to propagate the mean and covariance through nonlinear functions without making a linear approximation. Specifically, UKS uses scaled sigma points, as introduced by van der Merwe. These are deterministically chosen samples that capture the distribution of the input state. These sigma points are passed through the nonlinear system, and their weighted outcomes are used to reconstruct the posterior mean and covariance more accurately.
+UKS improves data quality by predicting hidden states and filtering of the series, which removes short-term fluctuations that may hide important trends. Unlike the traditional Kalman filter, which relies on linearization, the unscented Kalman filter uses the unscented transform to propagate the mean and covariance through nonlinear functions without making a linear approximation. Specifically, UKS uses scaled sigma points, as introduced by van der Merwe. These are deterministically chosen samples that capture the distribution of the input state. These sigma points are passed through the nonlinear system, and their weighted outcomes are used to reconstruct the posterior mean and covariance more accurately.
+
+Please see page 6 in the revised manuscript.
+Consider simplifying the model or adding an ablation that removes one or more components to analyze practicality vs. performance trade-offs.
+Thanks for this suggestion. To address this, we have added a comprehensive ablation study table (Table 8) in the revised manuscript and updated Subsection 4.4 (Ablation Study) accordingly. This table systematically evaluates the individual and combined contributions of key architectural components, including time-aware embeddings, feature importance weighting, multi-resolution fusion, glucose trend-weighting, and unscented Kalman smoothing (UKS).
+Each variant was tested under the same 30-minute prediction horizon to ensure comparability. The results demonstrate that removing any of these components results in a noticeable degradation in performance (up to +1.57 mg/dL RMSE), confirming that each plays a distinct and complementary role in overall accuracy. Additionally, we report the standard deviation and parameter count for each configuration to provide further insights into trade-offs between model complexity and predictive performance.
+
+

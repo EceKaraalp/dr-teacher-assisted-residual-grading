@@ -1,0 +1,158 @@
+{
+  "fraction_0.1": {
+    "gated_vs_ce": {
+      "mean_difference": -0.02407466852595656,
+      "percentile95": [
+        -0.056688301353463845,
+        0.006681068716651992
+      ],
+      "replicates": 10000,
+      "seed": 20261018,
+      "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+      "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+    },
+    "equal_vs_ce": {
+      "mean_difference": -0.04297566026353165,
+      "percentile95": [
+        -0.07348929830892556,
+        -0.013550750796963017
+      ],
+      "replicates": 10000,
+      "seed": 20261018,
+      "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+      "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+    },
+    "gated_qwk_per_seed": [
+      0.7172560067202867,
+      0.8092056493150157,
+      0.8294530829925088
+    ],
+    "equal_qwk_per_seed": [
+      0.6986368861882083,
+      0.8003639286969331,
+      0.8002109489299445
+    ],
+    "ce_qwk_per_seed": [
+      0.7532532113490076,
+      0.8182285199578888,
+      0.8566570132987844
+    ]
+  },
+  "fraction_0.25": {
+    "gated_vs_ce": {
+      "mean_difference": -0.004218645713260731,
+      "percentile95": [
+        -0.02878895126499992,
+        0.0195751714904668
+      ],
+      "replicates": 10000,
+      "seed": 20261018,
+      "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+      "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+    },
+    "equal_vs_ce": {
+      "mean_difference": -0.17126373929289654,
+      "percentile95": [
+        -0.20938920818944748,
+        -0.13185705827080996
+      ],
+      "replicates": 10000,
+      "seed": 20261018,
+      "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+      "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+    },
+    "gated_qwk_per_seed": [
+      0.8290973713290357,
+      0.8608293194210546,
+      0.8684720779996508
+    ],
+    "equal_qwk_per_seed": [
+      0.33125388556605995,
+      0.8557178515515047,
+      0.8702917508932689
+    ],
+    "ce_qwk_per_seed": [
+      0.8452167565594711,
+      0.8560253516031506,
+      0.8698125977269014
+    ]
+  },
+  "fraction_0.5": {
+    "gated_vs_ce": {
+      "mean_difference": -0.016249364381810016,
+      "percentile95": [
+        -0.03446238020970031,
+        0.0006778982677265119
+      ],
+      "replicates": 10000,
+      "seed": 20261018,
+      "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+      "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+    },
+    "equal_vs_ce": {
+      "mean_difference": -0.030062021116873727,
+      "percentile95": [
+        -0.05439226577004212,
+        -0.008007396208818199
+      ],
+      "replicates": 10000,
+      "seed": 20261018,
+      "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+      "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+    },
+    "gated_qwk_per_seed": [
+      0.8629980952016311,
+      0.8806894742624226,
+      0.8892174223067324
+    ],
+    "equal_qwk_per_seed": [
+      0.8693633061217755,
+      0.8664259141005887,
+      0.8556778013432308
+    ],
+    "ce_qwk_per_seed": [
+      0.8987764128123955,
+      0.9006646416649123,
+      0.8822120304389083
+    ]
+  },
+  "fraction_1.0": {
+    "gated_vs_ce": {
+      "mean_difference": 0.00025174942155870017,
+      "percentile95": [
+        -0.01883791797380391,
+        0.019510442582175592
+      ],
+      "replicates": 10000,
+      "seed": 20261018,
+      "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+      "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+    },
+    "equal_vs_ce": {
+      "mean_difference": 0.003080589261281889,
+      "percentile95": [
+        -0.015151885024777868,
+        0.021452784032119743
+      ],
+      "replicates": 10000,
+      "seed": 20261018,
+      "unit": "shared image indices across three fixed seed pairs; not pooled repeated images",
+      "limitations": "conditional on trained models; no patient clustering or multiple-comparison adjustment"
+    },
+    "gated_qwk_per_seed": [
+      0.9067051861073429,
+      0.9008639359150502,
+      0.8913563266551594
+    ],
+    "equal_qwk_per_seed": [
+      0.9099390712751562,
+      0.9000728410087898,
+      0.897400055912776
+    ],
+    "ce_qwk_per_seed": [
+      0.8908553902594617,
+      0.8982190442887632,
+      0.9090957658646515
+    ]
+  }
+}

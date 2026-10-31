@@ -1,0 +1,62 @@
+{
+  "2020440_manuscript_completed_experiments_clean.docx": {
+    "paragraphs": 253,
+    "tables": 21,
+    "pictures": 4,
+    "sha256": "4457083072c3c86008d1f874de099d16e1225cc83d46139697e1593f56995065"
+  },
+  "2020440_manuscript_completed_experiments_highlighted.docx": {
+    "paragraphs": 253,
+    "tables": 21,
+    "pictures": 4,
+    "sha256": "1d503590de79589b1ddae84b12c47d669b7b66ccd85cbd72fb9c44e4e49e94c9"
+  },
+  "2020440_Response2reviewers_completed_experiments.docx": {
+    "paragraphs": 85,
+    "tables": 0,
+    "pictures": 0,
+    "sha256": "a9f0b595ddd1171bce321e0ad958bcc722e9137f7cebbac3b20294d4d3830a79"
+  },
+  "2020440_completed_experiments_evidence.docx": {
+    "paragraphs": 39,
+    "tables": 10,
+    "pictures": 6,
+    "sha256": "f133c0a275ab54921dae319b803d8ae15409f19c39e5cee4e83c598fd9f37fac"
+  },
+  "2020440_completed_experiments_author_checks.docx": {
+    "paragraphs": 16,
+    "tables": 0,
+    "pictures": 0,
+    "sha256": "da34a2cabc5cc7cea7ef05065af315af455cc421c63982e76f17db600dd6e1c3"
+  },
+  "checks": {
+    "original_sources_unchanged": true,
+    "all_26_original_comments_preserved_once": true,
+    "all_26_answers_present": true,
+    "clean_and_highlighted_text_identical": true,
+    "numbered_equations": 8,
+    "references_preserved": 48,
+    "table_captions_in_order": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "figure_captions_in_order": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "main_path_metrics_contrasts_and_benchmark_rechecked": true,
+    "stale_headline_metrics_removed": true,
+    "images_and_data_tables_within_text_width": true,
+    "visual_word_pdf_pagination": "Not rendered: no installed Word/LibreOffice executable found. Author visual proofing required."
+  }
+}

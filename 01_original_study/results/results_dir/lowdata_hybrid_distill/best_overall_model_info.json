@@ -1,0 +1,7 @@
+{
+  "model": "TS_ConvNeXtTiny_Residual",
+  "seed": 62,
+  "qwk": 0.9192318208797291,
+  "source_checkpoint": "results\\lowdata_hybrid_distill\\TS_ConvNeXtTiny_Residual\\seed_62\\best_model.pth",
+  "saved_checkpoint": "results\\lowdata_hybrid_distill\\best_overall_model.pth"
+}

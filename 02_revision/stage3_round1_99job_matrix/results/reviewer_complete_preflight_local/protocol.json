@@ -1,0 +1,759 @@
+{
+  "protocol": {
+    "version": 1,
+    "seeds": [
+      42,
+      52,
+      62
+    ],
+    "split": "frozen historical 2928/367/367; test exposed historically",
+    "selection": "validation QWK; never choose arm, temperature, preprocessing or fraction from test scores",
+    "student_training": "original joint gated output, detached teacher; equal inference is reported separately",
+    "independent_baseline": "student_ce optimizes standalone student weighted CE",
+    "teacher_buffers": "historical updating behavior except teacher_eval control",
+    "preprocessing": {
+      "raw": "RGB bilinear 224, float32 0..255",
+      "imagenet": "RGB bilinear 224, /255, ImageNet mean/std",
+      "retinal": "CLAHE on LAB L channel at cached 224 resolution; then ImageNet normalization"
+    },
+    "fractions": "nested class-stratified subsets; ALL teacher/student labels restricted to subset",
+    "augmentation": "student training only; H/V flip .5, rotation +/-20 deg, brightness/contrast .9..1.1",
+    "student": {
+      "epochs": 70,
+      "patience": 10,
+      "lr": 0.0002,
+      "batch": 16
+    },
+    "teacher1": {
+      "epochs": 110,
+      "patience": 15,
+      "lr": 0.001
+    },
+    "teacher2": {
+      "epochs": 120,
+      "patience": 18,
+      "lr": 0.0001
+    },
+    "optimizer": "AdamW; weight decay 1e-4; clip norm 1; float32",
+    "scheduler": "CosineAnnealingWarmRestarts T_0=10 T_mult=2",
+    "single_temperature": "T=2 predefined; not selected by test",
+    "test_policy": "separate explicit evaluation stage after all training is complete",
+    "runs": [
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 42,
+        "stage": "teacher1",
+        "arm": ""
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 42,
+        "stage": "teacher2",
+        "arm": ""
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 42,
+        "stage": "student",
+        "arm": "joint_ce"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 42,
+        "stage": "student",
+        "arm": "joint_single_kd"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 42,
+        "stage": "student",
+        "arm": "joint_multi_kd"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 42,
+        "stage": "student",
+        "arm": "joint_ordinal"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 42,
+        "stage": "student",
+        "arm": "joint_hinge"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 42,
+        "stage": "student",
+        "arm": "joint_full_no_entropy"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 42,
+        "stage": "student",
+        "arm": "joint_full"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 42,
+        "stage": "student",
+        "arm": "student_ce"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 42,
+        "stage": "student",
+        "arm": "teacher2_only"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 42,
+        "stage": "student",
+        "arm": "augmentation"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 42,
+        "stage": "student",
+        "arm": "teacher_eval"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 52,
+        "stage": "teacher1",
+        "arm": ""
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 52,
+        "stage": "teacher2",
+        "arm": ""
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 52,
+        "stage": "student",
+        "arm": "joint_ce"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 52,
+        "stage": "student",
+        "arm": "joint_single_kd"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 52,
+        "stage": "student",
+        "arm": "joint_multi_kd"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 52,
+        "stage": "student",
+        "arm": "joint_ordinal"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 52,
+        "stage": "student",
+        "arm": "joint_hinge"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 52,
+        "stage": "student",
+        "arm": "joint_full_no_entropy"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 52,
+        "stage": "student",
+        "arm": "joint_full"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 52,
+        "stage": "student",
+        "arm": "student_ce"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 52,
+        "stage": "student",
+        "arm": "teacher2_only"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 52,
+        "stage": "student",
+        "arm": "augmentation"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 52,
+        "stage": "student",
+        "arm": "teacher_eval"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 62,
+        "stage": "teacher1",
+        "arm": ""
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 62,
+        "stage": "teacher2",
+        "arm": ""
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 62,
+        "stage": "student",
+        "arm": "joint_ce"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 62,
+        "stage": "student",
+        "arm": "joint_single_kd"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 62,
+        "stage": "student",
+        "arm": "joint_multi_kd"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 62,
+        "stage": "student",
+        "arm": "joint_ordinal"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 62,
+        "stage": "student",
+        "arm": "joint_hinge"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 62,
+        "stage": "student",
+        "arm": "joint_full_no_entropy"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 62,
+        "stage": "student",
+        "arm": "joint_full"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 62,
+        "stage": "student",
+        "arm": "student_ce"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 62,
+        "stage": "student",
+        "arm": "teacher2_only"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 62,
+        "stage": "student",
+        "arm": "augmentation"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 1.0,
+        "seed": 62,
+        "stage": "student",
+        "arm": "teacher_eval"
+      },
+      {
+        "preprocessing": "imagenet",
+        "fraction": 1.0,
+        "seed": 42,
+        "stage": "teacher1",
+        "arm": ""
+      },
+      {
+        "preprocessing": "imagenet",
+        "fraction": 1.0,
+        "seed": 42,
+        "stage": "teacher2",
+        "arm": ""
+      },
+      {
+        "preprocessing": "imagenet",
+        "fraction": 1.0,
+        "seed": 42,
+        "stage": "student",
+        "arm": "joint_full"
+      },
+      {
+        "preprocessing": "imagenet",
+        "fraction": 1.0,
+        "seed": 42,
+        "stage": "student",
+        "arm": "student_ce"
+      },
+      {
+        "preprocessing": "imagenet",
+        "fraction": 1.0,
+        "seed": 52,
+        "stage": "teacher1",
+        "arm": ""
+      },
+      {
+        "preprocessing": "imagenet",
+        "fraction": 1.0,
+        "seed": 52,
+        "stage": "teacher2",
+        "arm": ""
+      },
+      {
+        "preprocessing": "imagenet",
+        "fraction": 1.0,
+        "seed": 52,
+        "stage": "student",
+        "arm": "joint_full"
+      },
+      {
+        "preprocessing": "imagenet",
+        "fraction": 1.0,
+        "seed": 52,
+        "stage": "student",
+        "arm": "student_ce"
+      },
+      {
+        "preprocessing": "imagenet",
+        "fraction": 1.0,
+        "seed": 62,
+        "stage": "teacher1",
+        "arm": ""
+      },
+      {
+        "preprocessing": "imagenet",
+        "fraction": 1.0,
+        "seed": 62,
+        "stage": "teacher2",
+        "arm": ""
+      },
+      {
+        "preprocessing": "imagenet",
+        "fraction": 1.0,
+        "seed": 62,
+        "stage": "student",
+        "arm": "joint_full"
+      },
+      {
+        "preprocessing": "imagenet",
+        "fraction": 1.0,
+        "seed": 62,
+        "stage": "student",
+        "arm": "student_ce"
+      },
+      {
+        "preprocessing": "retinal",
+        "fraction": 1.0,
+        "seed": 42,
+        "stage": "teacher1",
+        "arm": ""
+      },
+      {
+        "preprocessing": "retinal",
+        "fraction": 1.0,
+        "seed": 42,
+        "stage": "teacher2",
+        "arm": ""
+      },
+      {
+        "preprocessing": "retinal",
+        "fraction": 1.0,
+        "seed": 42,
+        "stage": "student",
+        "arm": "joint_full"
+      },
+      {
+        "preprocessing": "retinal",
+        "fraction": 1.0,
+        "seed": 42,
+        "stage": "student",
+        "arm": "student_ce"
+      },
+      {
+        "preprocessing": "retinal",
+        "fraction": 1.0,
+        "seed": 52,
+        "stage": "teacher1",
+        "arm": ""
+      },
+      {
+        "preprocessing": "retinal",
+        "fraction": 1.0,
+        "seed": 52,
+        "stage": "teacher2",
+        "arm": ""
+      },
+      {
+        "preprocessing": "retinal",
+        "fraction": 1.0,
+        "seed": 52,
+        "stage": "student",
+        "arm": "joint_full"
+      },
+      {
+        "preprocessing": "retinal",
+        "fraction": 1.0,
+        "seed": 52,
+        "stage": "student",
+        "arm": "student_ce"
+      },
+      {
+        "preprocessing": "retinal",
+        "fraction": 1.0,
+        "seed": 62,
+        "stage": "teacher1",
+        "arm": ""
+      },
+      {
+        "preprocessing": "retinal",
+        "fraction": 1.0,
+        "seed": 62,
+        "stage": "teacher2",
+        "arm": ""
+      },
+      {
+        "preprocessing": "retinal",
+        "fraction": 1.0,
+        "seed": 62,
+        "stage": "student",
+        "arm": "joint_full"
+      },
+      {
+        "preprocessing": "retinal",
+        "fraction": 1.0,
+        "seed": 62,
+        "stage": "student",
+        "arm": "student_ce"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.1,
+        "seed": 42,
+        "stage": "teacher1",
+        "arm": ""
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.1,
+        "seed": 42,
+        "stage": "teacher2",
+        "arm": ""
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.1,
+        "seed": 42,
+        "stage": "student",
+        "arm": "joint_full"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.1,
+        "seed": 42,
+        "stage": "student",
+        "arm": "student_ce"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.1,
+        "seed": 52,
+        "stage": "teacher1",
+        "arm": ""
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.1,
+        "seed": 52,
+        "stage": "teacher2",
+        "arm": ""
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.1,
+        "seed": 52,
+        "stage": "student",
+        "arm": "joint_full"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.1,
+        "seed": 52,
+        "stage": "student",
+        "arm": "student_ce"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.1,
+        "seed": 62,
+        "stage": "teacher1",
+        "arm": ""
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.1,
+        "seed": 62,
+        "stage": "teacher2",
+        "arm": ""
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.1,
+        "seed": 62,
+        "stage": "student",
+        "arm": "joint_full"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.1,
+        "seed": 62,
+        "stage": "student",
+        "arm": "student_ce"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.25,
+        "seed": 42,
+        "stage": "teacher1",
+        "arm": ""
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.25,
+        "seed": 42,
+        "stage": "teacher2",
+        "arm": ""
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.25,
+        "seed": 42,
+        "stage": "student",
+        "arm": "joint_full"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.25,
+        "seed": 42,
+        "stage": "student",
+        "arm": "student_ce"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.25,
+        "seed": 52,
+        "stage": "teacher1",
+        "arm": ""
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.25,
+        "seed": 52,
+        "stage": "teacher2",
+        "arm": ""
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.25,
+        "seed": 52,
+        "stage": "student",
+        "arm": "joint_full"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.25,
+        "seed": 52,
+        "stage": "student",
+        "arm": "student_ce"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.25,
+        "seed": 62,
+        "stage": "teacher1",
+        "arm": ""
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.25,
+        "seed": 62,
+        "stage": "teacher2",
+        "arm": ""
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.25,
+        "seed": 62,
+        "stage": "student",
+        "arm": "joint_full"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.25,
+        "seed": 62,
+        "stage": "student",
+        "arm": "student_ce"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.5,
+        "seed": 42,
+        "stage": "teacher1",
+        "arm": ""
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.5,
+        "seed": 42,
+        "stage": "teacher2",
+        "arm": ""
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.5,
+        "seed": 42,
+        "stage": "student",
+        "arm": "joint_full"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.5,
+        "seed": 42,
+        "stage": "student",
+        "arm": "student_ce"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.5,
+        "seed": 52,
+        "stage": "teacher1",
+        "arm": ""
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.5,
+        "seed": 52,
+        "stage": "teacher2",
+        "arm": ""
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.5,
+        "seed": 52,
+        "stage": "student",
+        "arm": "joint_full"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.5,
+        "seed": 52,
+        "stage": "student",
+        "arm": "student_ce"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.5,
+        "seed": 62,
+        "stage": "teacher1",
+        "arm": ""
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.5,
+        "seed": 62,
+        "stage": "teacher2",
+        "arm": ""
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.5,
+        "seed": 62,
+        "stage": "student",
+        "arm": "joint_full"
+      },
+      {
+        "preprocessing": "raw",
+        "fraction": 0.5,
+        "seed": 62,
+        "stage": "student",
+        "arm": "student_ce"
+      }
+    ]
+  },
+  "protocol_sha256": "3bf5fad96c9e7836e641ee96e5f02bb598527b067d153434b2d6fdbe22b361a1",
+  "code_sha256": "87c3bef9181f58adb0c6b569e4b6556183df8f0c05da6075a9f2f2580999aab2",
+  "csv_sha256": "b2a3479695922e62c83c94a1a9ef669b4b6d68cc26a1d7090ebedecdd7dd79a5",
+  "cache_sha256": "03ae18b25fd50af259dd43a709415dde8bf5ab612c5f8a235f00ccb1a4d4f84e",
+  "manifest_sha256": "c185dc432225e2f74ab0621207acca2045cda3332a0c5c2d2d43df550b47a23a",
+  "environment": {
+    "python": "3.12.9 (tags/v3.12.9:fdb8142, Feb  4 2025, 15:27:58) [MSC v.1942 64 bit (AMD64)]",
+    "torch": "2.9.1+cpu",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "torch": "2.9.1",
+      "torchvision": "0.24.1",
+      "timm": "1.0.30",
+      "numpy": "2.3.5",
+      "pandas": "3.0.1",
+      "scikit-learn": "1.8.0",
+      "Pillow": "12.0.0",
+      "matplotlib": "3.10.8"
+    },
+    "cuda": null,
+    "gpu": "CPU"
+  }
+}
